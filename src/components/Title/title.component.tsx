@@ -11,7 +11,9 @@ export const Title = ({
 		<>
 			<h1 className={styles}>
 				{textMain}
-				<span className='text-brandColorGreen'>{textSpan}</span>
+				<span className={textSpan ? 'text-brandColorGreen' : 'hidden'}>
+					{textSpan}
+				</span>
 			</h1>
 		</>
 	)

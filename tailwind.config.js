@@ -8,8 +8,10 @@ module.exports = {
 				brandColorGreen: '#008F65',
 				lightPrimary: '#F3F3F3',
 				lightGrey: '#F6F6F6',
-				darkGrey: '#F6F6F6',
-				strokeDarker: '#515151',
+				darkGrey: '#',
+				surfaceDarkPrimary: '#1C1C1C',
+				surfaceDarkSecondary: '#2B2B2B',
+				strokeDarker: '#515151'
 			},
 			screens: {
 				xs: '480px',
@@ -20,7 +22,8 @@ module.exports = {
 				xl: '1700px'
 			},
 			backgroundImage: {
-				gifBackground: "url('./src/assets/bg-intro.gif')"
+				backgroundIntro: "url('./src/assets/bg-intro.gif')",
+				backgroundServices: "url('./src/assets/bg-services.svg')"
 			}
 		},
 		plugins: []
