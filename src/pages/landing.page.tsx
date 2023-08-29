@@ -1,10 +1,15 @@
 import { Navbar } from '../components/Navbar/navbar.component'
-import { styles } from '../constants/styles-constants'
+import { IntroSection } from '../components/IntroSection/intro-section.component'
+import { Divider } from '../components/Divider/divider.component'
+import { AboutSection } from '../components/AboutSection/about-section.component'
 
 export const Landing = () => {
 	return (
-		<div className={`${styles.paddingX} pt-6`}>
-			<Navbar></Navbar>
+		<div className={`pt-6 text-darkPrimary`}>
+			<Navbar />
+			<IntroSection />
+			<Divider/>
+			<AboutSection />
 		</div>
 	)
 }

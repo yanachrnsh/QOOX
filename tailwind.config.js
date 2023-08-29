@@ -4,21 +4,25 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				text_dark_primary: '#212121',
-				brand_color_green: '#008F65',
-				text_light_primary: '#F3F3F3',
-				light_grey: '#F6F6F6',
-				dark_grey: '#F6F6F6'
+				darkPrimary: '#212121',
+				brandColorGreen: '#008F65',
+				lightPrimary: '#F3F3F3',
+				lightGrey: '#F6F6F6',
+				darkGrey: '#F6F6F6',
+				strokeDarker: '#515151',
 			},
 			screens: {
-				xs: "480px",
-				ss: "620px",
-				sm: "768px",
-				md: "1060px",
-				lg: "1200px",
-				xl: "1700px",
+				xs: '480px',
+				ss: '620px',
+				sm: '768px',
+				md: '1060px',
+				lg: '1200px',
+				xl: '1700px'
 			},
-		}
-	},
-	plugins: []
+			backgroundImage: {
+				gifBackground: "url('./src/assets/bg-intro.gif')"
+			}
+		},
+		plugins: []
+	}
 }
