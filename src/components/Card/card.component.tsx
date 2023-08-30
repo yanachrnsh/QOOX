@@ -1,5 +1,3 @@
-import { styles } from '../../constants/styles-constants'
-
 export const Card = ({
 	src = '',
 	title,
@@ -9,19 +7,22 @@ export const Card = ({
 	src?: string
 	title: string
 	text: string
-	cardStyles?: string
+	cardStyles: {
+		block: string
+		img: string
+		title: string
+		text: string
+	}
 }) => {
 	return (
-		<div
-			className={`${styles.flexCard}  bg-lightGrey rounded-2xl p-4 sm:p-6 ${cardStyles}`}
-		>
+		<div className={cardStyles.block}>
 			<img
 				src={src}
 				alt={title}
-				className={src ? `w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]` : 'hidden'}
+				className={src ? `${cardStyles.img}` : 'hidden'}
 			/>
-			<h4 className={`${styles.headingh4} text-brandColorGreen`}>{title}</h4>
-			<p className='text-start sm:w-[90%] md:w-[100%]'>{text}</p>
+			<h4 className={cardStyles.title}>{title}</h4>
+			<p className={cardStyles.text}>{text}</p>
 		</div>
 	)
 }

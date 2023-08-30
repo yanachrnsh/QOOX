@@ -5,7 +5,7 @@ import { navLinks } from '../../constants/content-constants'
 import { styles } from '../../constants/styles-constants'
 import { Button } from '../Button/button.component'
 
-export const Navbar = () => {
+export const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	useEffect(() => {
@@ -13,7 +13,7 @@ export const Navbar = () => {
 	}, [])
 
 	return (
-		<nav
+		<header
 			className={`${styles.paddingX} flex flex-1 justify-between items-center max-w-7xl m-auto`}
 		>
 			<Image />
@@ -25,7 +25,7 @@ export const Navbar = () => {
 				)}
 			</div>
 			<Menu isMenuOpen={isMenuOpen} />
-		</nav>
+		</header>
 	)
 }
 
@@ -35,7 +35,7 @@ const Menu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 		: ` hidden sm:flex sm:flex-row align-center`
 
 	return (
-		<div className={activClass}>
+		<nav className={activClass}>
 			{navLinks.map((link: { id: string; title: string }) => (
 				<Link key={link.id}>{link.title}</Link>
 			))}
@@ -44,7 +44,7 @@ const Menu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 				classNameDiv='py-2 px-4 mt-[40px] flex justify-center text-center w-[90%] rounded border-2 border-brandColorGreen sm:mt-0 sm:py-0 ml-[20px] md:ml-[40px]'
 				classNameBtn='text-center min-w-[100px] text-brandColorGreen'
 			/>
-		</div>
+		</nav>
 	)
 }
 

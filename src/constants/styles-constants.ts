@@ -9,14 +9,16 @@ export const styles = {
 	marginX: 'xs:mx-4 mx-4 md:mx-[60px]',
 
 	sectionCol:
-		'flex flex-col pt-[88px] pb-[88px] sm:pt-[100px] sm:pb-[100px] max-w-7xl md:m-auto',
+		'flex flex-col pt-[88px] pb-[88px] sm:pt-[100px] sm:pb-[100px] max-w-7xl md:mx-auto',
 	sectionRow:
 		'flex md:flex-row flex-col pt-[60px] pb-[300px] sm:pt-[160px] md:pb-[225px] bg-gifBackground bg-auto bg-no-repeat bg-bottom md:bg-right',
 
 	headingh1:
 		'text-[32px] ss:text-[56px] leading-[35px] ss:leading-[61px] w-full font-semibold',
 
-	headingh3: 'text-[24px] leading-[29px] font-semibold',
+	headingh2: 'text-[20px] leading-[29px] font-semibold',
+
+	headingh3: 'text-[24px] leading-[30px] font-semibold',
 
 	headingh4:
 		'text-[18px] leading-[27px] font-medium sm:text-[20px] sm:leading-[30px]',
@@ -26,5 +28,21 @@ export const styles = {
 }
 
 export const layout = {
-	sectionDark: `${styles.paddingX} ${styles.marginX} ${styles.sectionCol} text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-auto bg-no-repeat bg-right rounded-3xl`
+	sectionDark: `${styles.paddingX} ${styles.marginX} ${styles.sectionCol} text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-auto bg-no-repeat bg-right rounded-3xl `
 }
+
+export const card = {
+	cardImg: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]',
+	blockLightGrey: `${styles.flexCard}  bg-lightGrey text-darkPrimary rounded-2xl p-4 sm:p-6`,
+	blockDarkGrey: `${styles.flexCard}  bg-darkGrey text-lightPrimary rounded-2xl p-4 sm:p-6 min-w-[300px] m-w-[350px]`,
+	textLight: 'text-start sm:w-[90%] md:w-[100%] text-lightPrimary',
+	textDark: 'text-start sm:w-[90%] md:w-[100%] text-darkPrimary',
+	titleGreen: `${styles.headingh4} text-brandColorGreen`,
+	titleGrey: `${styles.headingh3} text-brandColorGreen`,
+	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
+}
+
+// export const hover ={
+// 	hoverBlock: `relative m-auto ease-in`,
+// 	hoverImg: 
+// }

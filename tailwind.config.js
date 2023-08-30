@@ -8,9 +8,8 @@ module.exports = {
 				brandColorGreen: '#008F65',
 				lightPrimary: '#F3F3F3',
 				lightGrey: '#F6F6F6',
-				darkGrey: '#',
+				darkGrey: '#2B2B2B',
 				surfaceDarkPrimary: '#1C1C1C',
-				surfaceDarkSecondary: '#2B2B2B',
 				strokeDarker: '#515151'
 			},
 			screens: {

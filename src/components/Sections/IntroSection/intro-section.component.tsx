@@ -1,15 +1,15 @@
-import { TitleDescription } from '../TitleDescription/title-description.component'
-import { Button } from '../Button/button.component'
-import { Title } from '../Title/title.component'
-import { SubTitle } from '../SubTitle/subtitle.component'
-import { SubTitleTop } from '../SubTitleTop/subtitle-top.component'
-import { styles } from '../../constants/styles-constants'
+import { TitleDescription } from '../../TitleDescription/title-description.component'
+import { Button } from '../../Button/button.component'
+import { Title } from '../../Title/title.component'
+import { SubTitle } from '../../SubTitle/subtitle.component'
+import { SubTitleTop } from '../../SubTitleTop/subtitle-top.component'
+import { styles } from '../../../constants/styles-constants'
 
 export const IntroSection = () => {
 	return (
 		<section
 			id='intro'
-			className={`flex md:flex-row flex-col pt-[60px] pb-[300px] sm:pt-[160px] md:pb-[225px] bg-backgroundIntro bg-auto bg-no-repeat bg-bottom md:bg-right`}
+			className={`flex md:flex-row flex-col pt-[60px] pb-[300px] sm:pt-[160px] md:pb-[225px] bg-backgroundIntro bg-auto bg-no-repeat bg-bottom md:bg-right max-w-7xl md:m-auto`}
 		>
 			<TitleDescription>
 				<SubTitleTop
