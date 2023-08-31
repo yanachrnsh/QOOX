@@ -8,6 +8,9 @@ export const styles = {
 	paddingY: 'xs:py-[88px] py-[100px]',
 	marginX: 'xs:mx-4 mx-4 md:mx-[60px]',
 
+	titleParagraphContainer:
+		'${styles.paddingX} flex flex-col items-start  max-w-7xl md:m-auto',
+
 	sectionCol:
 		'flex flex-col pt-[88px] pb-[88px] sm:pt-[100px] sm:pb-[100px] max-w-7xl md:mx-auto',
 	sectionRow:

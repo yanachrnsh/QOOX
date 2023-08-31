@@ -27,7 +27,7 @@ export const ServicesSection = () => {
 
 	return (
 		<section className={`${layout.sectionDark}`}>
-			<Title textMain='Our Services' styles={`${styles.headingh1} pb-10`} />
+			<Title text='Our Services' styles={`${styles.headingh1} pb-10`} />
 			<div className={isLgScreen ? 'grid grid-cols-3 gap-6' : ''}>
 				{isLgScreen ? (
 					<ServicesCard />

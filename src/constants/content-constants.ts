@@ -98,41 +98,25 @@ export const caseStudies = [
 		id: 'case-study-1',
 		src: '../../src/assets/iphone-case.png',
 		title: 'Name of a Project',
-		subTitle:
+		paragraph:
 			'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.',
-		subTitleTop: 'Type of Project'
+		subTitle: 'Type of Project'
 	},
 	{
 		id: 'case-study-2',
 		src: '../../src/assets/iphone-case.png',
 		title: 'Name of a Project2',
-		subTitle:
+		paragraph:
 			'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.',
-		subTitleTop: 'Type of Project2'
+		subTitle: 'Type of Project2'
 	},
 	{
 		id: 'case-study-3',
 		src: '../../src/assets/iphone-case.png',
 		title: 'Name of a Project2',
-		subTitle:
+		paragraph:
 			'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.',
-		subTitleTop: 'Type of Project2'
+		subTitle: 'Type of Project2'
 	}
 ]
 
-// const titles = [
-// 	{
-// 		id: 'intro',
-// 		title: 'Powerful IT Solutions to Drive Your Business Success',
-// 		titleSpan: 'Success',
-// 		subtitle:
-// 			'We are a leading company providing cutting-edge technology solutions that drive business growth and help you stay ahead in the digital era. With our expertise and commitment to excellence, we offer a broad range of services to meet your business needs.'
-// 	},
-//   {
-// 		id: 'about',
-// 		title: 'About Us',
-// 		titleSpan: 'Success',
-// 		subtitle:
-// 			'We are a leading company providing cutting-edge technology solutions that drive business growth and help you stay ahead in the digital era. With our expertise and commitment to excellence, we offer a broad range of services to meet your business needs.'
-// 	}
-// ]

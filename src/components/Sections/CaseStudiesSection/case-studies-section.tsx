@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { styles } from '../../../constants/styles-constants'
 import {
-	TitleDescription,
 	Button,
 	Title,
-	SubTitle,
-	SubTitleTop
+	Paragraph,
+	SubTitle
 } from '../../index'
 import { caseStudies } from '../../../constants/content-constants'
 
@@ -30,25 +29,25 @@ export const CaseStudiesSection = () => {
 				style={{ transform: `translate(-${activeIndex * 100}%)` }}
 			>
 				{caseStudies.map(item => (
-					<TitleDescription key={item.id}>
-						<SubTitleTop
-							textMain={item.subTitleTop}
+					<div className={styles.titleParagraphContainer} key={item.id}>
+						<SubTitle
+							text={item.subTitle}
 							styles={`${styles.paragraph} md:w-[70%] w-[100%]`}
 						/>
 						<Title
 							styles={`${styles.headingh1} pb-4 md:w-[70%] w-[100%]`}
-							textMain={item.title}
+							text={item.title}
 						/>
-						<SubTitle
+						<Paragraph
 							styles={`${styles.paragraph} pb-[40px] md:w-[70%] w-[100%]  ss:w-[80%] font-normal `}
-							text={item.subTitle}
+							text={item.paragraph}
 						/>
 						<Button
 							classNameBtn=' w-[100%]'
 							classNameDiv=' ss:w-[30%] min-w-[200px] w-[100%] text-lightPrimary bg-brandColorGreen py-2 px-6 rounded text-center '
 							text='View Full Case'
 						/>
-					</TitleDescription>
+					</div>
 				))}
 			</div>
 			<button

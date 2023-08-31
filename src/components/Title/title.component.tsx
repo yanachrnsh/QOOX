@@ -1,18 +1,18 @@
 export const Title = ({
 	styles,
-	textMain,
-	textSpan = ''
+	text,
+	textColored = ''
 }: {
 	styles: any
-	textMain: any
-	textSpan?: any
+	text: any
+	textColored?: any
 }) => {
 	return (
 		<>
 			<h1 className={styles}>
-				{textMain}
-				<span className={textSpan ? 'text-brandColorGreen' : 'hidden'}>
-					{textSpan}
+				{text}
+				<span className={textColored ? 'text-brandColorGreen' : 'hidden'}>
+					{textColored}
 				</span>
 			</h1>
 		</>
