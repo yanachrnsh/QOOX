@@ -44,5 +44,7 @@ export const card = {
 
 // export const hover ={
 // 	hoverBlock: `relative m-auto ease-in`,
-// 	hoverImg: 
+// 	hoverImg:
 // }
+
+export const hoverBlock = `before:bg-lightPrimary before:hover:rounded-xl before:hover:w-[100%] before:hover:h-[100%] w-10 h-10  `

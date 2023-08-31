@@ -1,8 +1,10 @@
-import { TitleDescription } from '../../TitleDescription/title-description.component'
-import { Button } from '../../Button/button.component'
-import { Title } from '../../Title/title.component'
-import { SubTitle } from '../../SubTitle/subtitle.component'
-import { SubTitleTop } from '../../SubTitleTop/subtitle-top.component'
+import {
+	TitleDescription,
+	Button,
+	Title,
+	SubTitle,
+	SubTitleTop
+} from '../../index'
 import { styles } from '../../../constants/styles-constants'
 
 export const IntroSection = () => {

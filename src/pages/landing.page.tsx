@@ -3,6 +3,7 @@ import { IntroSection } from '../components/Sections/IntroSection/intro-section.
 import { Divider } from '../components/Divider/divider.component'
 import { AboutSection } from '../components/Sections/AboutSection/about-section.component'
 import { ServicesSection } from '../components/Sections/ServicesSection/services-section.component'
+import { CaseStudiesSection } from '../components/Sections/CaseStudiesSection/case-studies-section'
 
 export const Landing = () => {
 	return (
@@ -12,6 +13,7 @@ export const Landing = () => {
 			<Divider />
 			<AboutSection />
 			<ServicesSection />
+			<CaseStudiesSection />
 		</div>
 	)
 }

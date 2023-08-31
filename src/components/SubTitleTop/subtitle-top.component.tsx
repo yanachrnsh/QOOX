@@ -5,7 +5,7 @@ export const SubTitleTop = ({
 }: {
 	styles: string
 	textMain: string
-	textSpan: string
+	textSpan?: string
 }) => {
 	return (
 		<>

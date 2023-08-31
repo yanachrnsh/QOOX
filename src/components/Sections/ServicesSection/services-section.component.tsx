@@ -1,31 +1,29 @@
-import { Title } from '../../Title/title.component'
 import { useState, useEffect, useRef } from 'react'
+import { Title, Card, Scroll } from '../../index'
 import { styles, layout, card } from '../../../constants/styles-constants'
-import { Card } from '../../Card/card.component'
 import { services } from '../../../constants/content-constants'
-import { Scroll } from '../../Scroll/scroll.component'
 import icon from '../../../assets/arrow-right.svg'
-
+import { useGetCurrentDimension } from '../../../hooks/useGetCurrentDimension'
 
 export const ServicesSection = () => {
-	const [width, setWidth] = useState(0)
+	const [scrollWidth, setScrollWidth] = useState(0)
 	const [isLgScreen, setIsLgScreen] = useState(false)
-	 const svg = useRef<HTMLImageElement>(null)
-
+	const [isHover, setIsHover] = useState(false)
 	const carousel = useRef<HTMLInputElement>(null)
-
-	const screenWidth = window.innerWidth
+	const { width } = useGetCurrentDimension()
 
 	useEffect(() => {
 		carousel.current !== null &&
-			setWidth(carousel.current.scrollWidth - carousel.current?.offsetWidth)
+			setScrollWidth(
+				carousel.current.scrollWidth - carousel.current?.offsetWidth
+			)
 
-		screenWidth >= 1200 && setIsLgScreen(true)
-	}, [])
-
-	if (svg.current !== null) {
-		console.log(svg.current.getBoundingClientRect())
-	}
+		if (width >= 1200) {
+			setIsLgScreen(true)
+		} else {
+			setIsLgScreen(false)
+		}
+	}, [width])
 
 	return (
 		<section className={`${layout.sectionDark}`}>
@@ -34,20 +32,31 @@ export const ServicesSection = () => {
 				{isLgScreen ? (
 					<ServicesCard />
 				) : (
-					<Scroll carousel={carousel} width={width}>
+					<Scroll carousel={carousel} width={scrollWidth}>
 						<ServicesCard />
 					</Scroll>
 				)}
-				<div className='p-4 bg-brandColorGreen hover-overlay2 relative m-auto ease-in '>
-					Discover Our Expertise
-					<p>Text</p>
-					<img
-						ref={svg}
-						src={icon}
-						width='25px'
-						height='24px'
-						className='bg-lightPrimary'
-					></img>
+
+				<div
+					className='p-9 bg-brandColorGreen relative rounded-xl mt-6 mb-22 sm:w-[60%] sm:self-start sm:p-20 lg:w-[100%] lg:h-[100%] lg:mt-0 lg:mb-0'
+					onMouseEnter={() => setIsHover(true)}
+					onMouseLeave={() => setIsHover(false)}
+				>
+					<p className={isHover ? ` text-brandColorGreen z-10` : ``}>
+						Discover Our Expertise
+					</p>
+					<div
+						className={
+							isHover
+								? `bg-lightPrimary rounded-xl w-[100%] h-[100%] absolute top-1/2 right-0 -translate-y-1/2 transition-all duration-200 ease-in z-5`
+								: `bg-lightPrimar absolute top-1/2 right-0 -translate-y-1/2 rounded-full w-10 h-10 transition-all duration-200 ease-in z-5`
+						}
+					>
+						<img
+							src={icon}
+							className={`bg-lightPrimary opacity-1/2 w-10 h-10 absolute top-1/2 right-0 pr-5 -translate-y-1/2 rounded-full z-5 pointer-events-none`}
+						></img>
+					</div>
 				</div>
 			</div>
 		</section>

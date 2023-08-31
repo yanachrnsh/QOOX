@@ -1,8 +1,5 @@
-import { Title } from '../../Title/title.component'
-import { SubTitle } from '../../SubTitle/subtitle.component'
-import { TitleSmall } from '../../TitleSmall/title-small.component'
+import { Title, SubTitle, Card, TitleSmall } from '../../index'
 import { styles, card } from '../../../constants/styles-constants'
-import { Card } from '../../Card/card.component'
 import { about } from '../../../constants/content-constants'
 
 export const AboutSection = () => {
