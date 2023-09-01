@@ -10,7 +10,8 @@ module.exports = {
 				lightGrey: '#F6F6F6',
 				darkGrey: '#2B2B2B',
 				surfaceDarkPrimary: '#1C1C1C',
-				strokeDarker: '#515151'
+				strokeDarker: '#515151', 
+				backgroundMain: "#fffdff"
 			},
 			screens: {
 				xs: '480px',

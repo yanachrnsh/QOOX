@@ -1,18 +1,16 @@
 import { FC } from 'react'
-interface ButtonProps {
-	classNameDiv: string
-	classNameBtn: string
+
+export interface IButton {
 	text: string
+	svg?: string
 }
 
-export const Button: FC<ButtonProps> = ({
-	classNameDiv,
-	classNameBtn,
-	text
-}) => {
+export const Button: FC<IButton> = ({ text, svg }) => {
 	return (
-		<div className={classNameDiv}>
-			<button className={classNameBtn}>{text}</button>
+		<div className=' w-[100%]'>
+			<button className='ss:w-[30%] min-w-[200px] max-w-[100%] text-lightPrimary bg-brandColorGreen py-2 px-6 rounded text-center '>
+				{text}
+			</button>
 		</div>
 	)
 }

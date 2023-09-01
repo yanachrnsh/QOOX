@@ -3,7 +3,6 @@ import logo from '../../assets/logo.svg'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { navLinks } from '../../constants/content-constants'
 import { styles } from '../../constants/styles-constants'
-import { Button } from '../Button/button.component'
 
 export const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -31,7 +30,7 @@ export const Header = () => {
 
 const Menu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 	const activClass = isMenuOpen
-		? ` flex flex-col justify-start items-center fixed top-[80px] w-[100%] h-[400px] left-0 bg-white z-10 sm:hidden sidebar`
+		? ` flex flex-col justify-start items-center fixed top-[80px] w-[100%] h-[400px] left-0 bg-backgroundMain z-10 sm:hidden sidebar`
 		: ` hidden sm:flex sm:flex-row align-center`
 
 	return (
@@ -39,11 +38,12 @@ const Menu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 			{navLinks.map((link: { id: string; title: string }) => (
 				<Link key={link.id}>{link.title}</Link>
 			))}
-			<Button
-				text='Send request'
-				classNameDiv='py-2 px-4 mt-[40px] flex justify-center text-center w-[90%] rounded border-2 border-brandColorGreen sm:mt-0 sm:py-0 ml-[20px] md:ml-[40px]'
-				classNameBtn='text-center min-w-[100px] text-brandColorGreen'
-			/>
+			<div className=' flex justify-center text-center rounded border-2 border-brandColorGreen  mt-[40px] sm:mt-0 ml-[20px] md:ml-[40px]  min-w-[150px] text-brandColorGreen'>
+				<a href='' className='w-[100%] py-2 px-4 sm:py-0 '>
+					{' '}
+					Send request
+				</a>
+			</div>
 		</nav>
 	)
 }

@@ -11,7 +11,7 @@ export const Scroll = ({
 	children: ReactNode
 }) => {
 	return (
-		<motion.div ref={carousel} className='cursor-grab overflow-hidden'>
+		<motion.div ref={carousel} className='cursor-grab overflow-hidden '>
 			<motion.div
 				drag='x'
 				dragConstraints={{ right: 0, left: -width }}

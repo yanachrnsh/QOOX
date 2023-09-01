@@ -96,27 +96,105 @@ export const about = [
 export const caseStudies = [
 	{
 		id: 'case-study-1',
-		src: '../../src/assets/iphone-case.png',
-		title: 'Name of a Project',
-		paragraph:
-			'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.',
-		subTitle: 'Type of Project'
+		src: '../../src/assets/iphone-case.svg',
+		title: {
+			text: 'Name of a Project'
+		},
+		paragraph: {
+			text: 'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.'
+		},
+
+		subTitle: {
+			text: 'Type of Project'
+		},
+		button: {
+			text: 'View Full Case'
+		}
 	},
 	{
 		id: 'case-study-2',
-		src: '../../src/assets/iphone-case.png',
-		title: 'Name of a Project2',
-		paragraph:
-			'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.',
-		subTitle: 'Type of Project2'
+		src: '../../src/assets/iphone-case.svg',
+		title: {
+			text: 'Name of a Project 2'
+		},
+		paragraph: {
+			text: 'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.'
+		},
+
+		subTitle: {
+			text: 'Type of Project 2'
+		},
+		button: {
+			text: 'View Full Case'
+		}
 	},
 	{
 		id: 'case-study-3',
-		src: '../../src/assets/iphone-case.png',
-		title: 'Name of a Project2',
-		paragraph:
-			'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.',
-		subTitle: 'Type of Project2'
+		src: '../../src/assets/iphone-case.svg',
+		title: {
+			text: 'Name of a Project 3'
+		},
+		paragraph: {
+			text: 'Lorem ipsum dolor sit amet consectetur. Posuere pellentesque morbi placerat nisl et ornare. Feugiat nulla augue est orci lacinia diam montes tristique maecenas. Lacus vel sit est volutpat. Blandit bibendum vitae risus fermentum pretium.'
+		},
+
+		subTitle: {
+			text: 'Type of Project 3'
+		},
+		button: {
+			text: 'View Full Case'
+		}
 	}
 ]
 
+export const aboutTitleParagraph = {
+	id: 'about-title-paragraph-1',
+	title: {
+		text: 'About Us'
+	},
+	paragraph: {
+		text: 'Our mission is ',
+		textColored: 'simple',
+		textAfter:
+			': to empower businesses with the right technology solutions that drive growth, enhance efficiency, and foster innovation. We are committed to delivering exceptional value, exceptional service, and exceptional results.'
+	},
+
+	subTitle: {
+		text: 'Welcome to',
+		textColored: 'QOOX'
+	},
+	button: 'Unlock Your Potential'
+}
+
+export const intro = {
+	id: 'intro-1',
+	title: {
+		text: 'Powerful IT Solutions to Drive Your Business ',
+		titleColored: 'Success'
+	},
+	paragraph: {
+		text: 'We are a leading company providing cutting-edge technology solutions that drive business growth and help you stay ahead in the digital era. With our expertise and commitment to excellence, we offer a broad range of services to meet your business needs.'
+	},
+
+	subTitle: {
+		text: 'Welcome to ',
+		textColored: 'QOOX'
+	},
+	button: {
+		text: 'Unlock Your Potential'
+	}
+}
+
+export const industries = {
+	id: 'industries-1',
+	title: {
+		text: 'Industries We Serve'
+	},
+	paragraph: {
+		text: 'At ',
+		textColored: 'QOOX, ',
+		textAfter:
+			'we specialize in providing tailored IT solutions for a wide range of industries. Our expertise and experience enable us to understand the unique challenges and opportunities that businesses in different sectors face. We are proud to serve the following industries.'
+	},
+	button: { text: 'Empower Your Industry' }
+}

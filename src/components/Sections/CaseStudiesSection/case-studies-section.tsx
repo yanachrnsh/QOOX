@@ -1,73 +1,94 @@
-import { useState } from 'react'
-import { styles } from '../../../constants/styles-constants'
-import {
-	Button,
-	Title,
-	Paragraph,
-	SubTitle
-} from '../../index'
+import { ReactElement, useState } from 'react'
+import { ContainerLarge } from '../../index'
+import { motion } from 'framer-motion'
+import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs'
 import { caseStudies } from '../../../constants/content-constants'
+import { styles, container } from '../../../constants/styles-constants'
 
 export const CaseStudiesSection = () => {
-	const [activeIndex, setActiveIndex] = useState(0)
+	const [pageIndex, setPageIndex] = useState(0)
 
-	const updateIndex = (newIndex: number) => {
-		if (newIndex < 0) {
-			newIndex = 0
-		} else if (newIndex >= caseStudies.length) {
-			newIndex = caseStudies.length - 1
+	const nextPage = () => {
+		if (pageIndex === caseStudies.length - 1) {
+			setPageIndex(0)
+			return
 		}
 
-		setActiveIndex(newIndex)
+		setPageIndex(prev => prev + 1)
 	}
+
+	const prevPage = () => {
+		if (pageIndex === 0) {
+			setPageIndex(caseStudies.length - 1)
+			return
+		}
+
+		setPageIndex(prev => prev - 1)
+	}
+
 	return (
 		<section
-			className={`${styles.sectionCol} ${styles.paddingX} sm:text-center sm:items-center items-start overflow-hidden`}
+			className={`${styles.sectionCol} ${styles.paddingX}  ${container.titleParagraphContainer}`}
 		>
-			<div
-				className={`whitespace-nowrap ease-in shadow-sm`}
-				style={{ transform: `translate(-${activeIndex * 100}%)` }}
-			>
-				{caseStudies.map(item => (
-					<div className={styles.titleParagraphContainer} key={item.id}>
-						<SubTitle
-							text={item.subTitle}
-							styles={`${styles.paragraph} md:w-[70%] w-[100%]`}
-						/>
-						<Title
-							styles={`${styles.headingh1} pb-4 md:w-[70%] w-[100%]`}
-							text={item.title}
-						/>
-						<Paragraph
-							styles={`${styles.paragraph} pb-[40px] md:w-[70%] w-[100%]  ss:w-[80%] font-normal `}
-							text={item.paragraph}
-						/>
-						<Button
-							classNameBtn=' w-[100%]'
-							classNameDiv=' ss:w-[30%] min-w-[200px] w-[100%] text-lightPrimary bg-brandColorGreen py-2 px-6 rounded text-center '
-							text='View Full Case'
-						/>
-					</div>
-				))}
+			<SwiperContainer pageIndex={pageIndex} />
+
+			<div className='hidden md:flex md:gap-8 md:self-center pt-16 '>
+				<PageButton handleClick={prevPage}>
+					<BsArrowLeftCircle className='text-brandColorGreen' size={34} />
+				</PageButton>
+				<PageButton handleClick={nextPage}>
+					<BsArrowRightCircle className='text-brandColorGreen' size={34} />
+				</PageButton>
 			</div>
-			<button
-				className='button-arrow'
-				onClick={() => {
-					updateIndex(activeIndex - 1)
-				}}
-			>
-				prev
-				{/* <span class='material-symbols-outlined'>arrow_forward_ios</span> */}
-			</button>
-			<button
-				className='button-arrow'
-				onClick={() => {
-					updateIndex(activeIndex + 1)
-				}}
-			>
-				Next
-				{/* <span class='material-symbols-outlined'>arrow_forward_ios</span> */}
-			</button>
 		</section>
 	)
+}
+
+const SwiperContainer = ({ pageIndex }: { pageIndex: number }) => {
+	return (
+		<>
+			{caseStudies.map((content, index) => (
+				<motion.div
+					key={content.id}
+					className={`${index === pageIndex ? 'active' : ''}`}
+				>
+					{index === pageIndex && (
+						<motion.div
+							key={content.id}
+							initial={{ opacity: 0, x: -20 }}
+							animate={{ opacity: 1, x: 0 }}
+							exit={{ opacity: 0, x: 20 }}
+							transition={{ duration: 0.8, ease: 'easeInOut' }}
+						>
+							<div className='flex flex-col-reverse md:flex-row md:justify-between md:items-center md:gap-10 md:min-h-[500px]'>
+								<img
+									src={content.src}
+									alt={content.title.text}
+									className=' max-w-[100%] p-16 md:p-0 md:max-w-[50%]'
+								></img>
+								<div>
+									<ContainerLarge
+										subTitle={content.subTitle}
+										title={content.title}
+										paragraph={content.paragraph}
+										button={content.button}
+									/>
+								</div>
+							</div>
+						</motion.div>
+					)}
+				</motion.div>
+			))}
+		</>
+	)
+}
+
+const PageButton = ({
+	handleClick,
+	children
+}: {
+	handleClick: () => void
+	children: ReactElement
+}) => {
+	return <button onClick={() => handleClick()}>{children}</button>
 }
