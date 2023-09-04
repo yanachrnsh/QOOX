@@ -15,7 +15,7 @@ export const IndustriesSection: FC = () => {
 	const [activeItemIndex, setActiveItemIndex] = useState<number>(0)
 	return (
 		<section
-			className={`${styles.flexCard} ${styles.paddingX} ${styles.paddingY} md:flex-row items-start`}
+			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY} items-center  md:min-h-[800px]`}
 		>
 			<div>
 				<ContainerSmall
@@ -42,7 +42,7 @@ const DropdownList: FC<DropdownListProps> = ({
 	setActiveItemIndex
 }) => {
 	return (
-		<div className={`flex flex-col gap-4 md:gap-6 pt-12 w-[100%]`}>
+		<div className={`flex flex-col gap-4 md:gap-6 pt-12`}>
 			{industriesDropdown.map((item, index) => (
 				<div key={item.id}>
 					<DropdownItem

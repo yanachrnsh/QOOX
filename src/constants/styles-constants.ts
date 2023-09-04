@@ -3,6 +3,7 @@ export const styles = {
 	flexStart: 'flex justify-center items-start',
 
 	flexCard: 'flex flex-col items-start gap-2 sm:gap-4',
+	gridCard: 'grid grid-cols-1 md:grid-cols-2 gap-4',
 
 	paddingX: 'xs:px-4 px-4 md:px-[60px]',
 	paddingY: 'xs:py-[88px] py-[100px]',
