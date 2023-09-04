@@ -198,3 +198,30 @@ export const industries = {
 	},
 	button: { text: 'Empower Your Industry' }
 }
+
+export const industriesDropdown = [
+	{
+		id: 'industries-dropdown-1',
+		title: 'Media and Social',
+		paragraph:
+			'In the fast-paced world of media and social platforms, staying ahead of the curve is crucial. We offer innovative IT solutions that help media companies, content creators, and social platforms thrive in this dynamic landscape. From content management systems and social media analytics to interactive user experiences, our solutions empower you to engage your audience and drive growth.'
+	},
+	{
+		id: 'industries-dropdown-2',
+		title: 'Retail and Logistics',
+		paragraph:
+			'In the fast-paced world of media and social platforms, staying ahead of the curve is crucial. We offer innovative IT solutions that help media companies, content creators, and social platforms thrive in this dynamic landscape. From content management systems and social media analytics to interactive user experiences, our solutions empower you to engage your audience and drive growth.'
+	},
+	{
+		id: 'industries-dropdown-3',
+		title: 'Finance and Fintech / Banking and Capital Markets',
+		paragraph:
+			'In the fast-paced world of media and social platforms, staying ahead of the curve is crucial. We offer innovative IT solutions that help media companies, content creators, and social platforms thrive in this dynamic landscape. From content management systems and social media analytics to interactive user experiences, our solutions empower you to engage your audience and drive growth.'
+	},
+	{
+		id: 'industries-dropdown-4',
+		title: 'E-commerce',
+		paragraph:
+			'In the fast-paced world of media and social platforms, staying ahead of the curve is crucial. We offer innovative IT solutions that help media companies, content creators, and social platforms thrive in this dynamic landscape. From content management systems and social media analytics to interactive user experiences, our solutions empower you to engage your audience and drive growth.'
+	}
+]

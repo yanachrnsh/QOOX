@@ -8,6 +8,7 @@ import {
 	ContainerLarge,
 	ContainerSmall
 } from './SectionContainer/section-container.component'
+import { Divider } from './Divider/divider.component'
 
 export {
 	Button,
@@ -17,5 +18,6 @@ export {
 	Card,
 	Scroll,
 	ContainerLarge,
+	Divider,
 	ContainerSmall
 }

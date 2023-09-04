@@ -9,7 +9,7 @@ export const IntroSection = () => {
 			className={`flex md:flex-row flex-col pt-[60px] pb-[300px] sm:pt-[160px] md:pb-[225px] bg-backgroundIntro bg-auto bg-no-repeat bg-bottom md:bg-right max-w-7xl md:m-auto`}
 		>
 			<div className={`${container.titleParagraphContainer}`}>
-				<div className='pr-[200px]'>
+				<div className='sm:pr-[200px]'>
 					<ContainerLarge
 						subTitle={intro.subTitle}
 						title={intro.title}

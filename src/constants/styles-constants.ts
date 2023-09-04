@@ -8,8 +8,6 @@ export const styles = {
 	paddingY: 'xs:py-[88px] py-[100px]',
 	marginX: 'xs:mx-4 mx-4 md:mx-[60px]',
 
-
-
 	sectionCol:
 		'flex flex-col pt-[88px] pb-[88px] sm:pt-[100px] sm:pb-[100px] max-w-7xl md:mx-auto',
 	sectionRow:
@@ -18,9 +16,9 @@ export const styles = {
 	headingh1:
 		'text-[32px] ss:text-[56px] leading-[35px] ss:leading-[61px] w-full font-semibold',
 
-	headingh2: 'text-[20px] leading-[29px] font-semibold',
+	headingh2: 'text-[24px] leading-[30px] font-medium',
 
-	headingh3: 'text-[24px] leading-[30px] font-semibold',
+	headingh3: 'text-[20px] leading-[29px] font-semibold',
 
 	headingh4:
 		'text-[18px] leading-[27px] font-medium sm:text-[20px] sm:leading-[30px]',
@@ -34,7 +32,7 @@ export const layout = {
 }
 
 export const container = {
-	titleParagraphContainer: `${styles.paddingX} flex flex-col items-start  max-w-7xl md:m-auto`,
+	titleParagraphContainer: `${styles.paddingX} flex flex-col items-start  max-w-7xl md:m-auto`
 }
 
 export const card = {
@@ -44,7 +42,7 @@ export const card = {
 	textLight: 'text-start sm:w-[90%] md:w-[100%] text-lightPrimary',
 	textDark: 'text-start sm:w-[90%] md:w-[100%] text-darkPrimary',
 	titleGreen: `${styles.headingh4} text-brandColorGreen`,
-	titleGrey: `${styles.headingh3} text-brandColorGreen`,
+	titleGrey: `${styles.headingh2} text-brandColorGreen`,
 	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
 }
 

@@ -14,7 +14,7 @@ export const Paragraph: FC<IParagraph> = ({
 }) => {
 	return (
 		<>
-			<p className={`${styles.paragraph} pb-[40px] max-w-[100%]  font-normal `}>
+			<p className={`${styles.paragraph} pb-[40px] max-w-[100%]`}>
 				{text}
 				<span className='text-brandColorGreen font-bold'>{textColored}</span>
 				{textAfter}
