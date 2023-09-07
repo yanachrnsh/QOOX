@@ -11,6 +11,7 @@ module.exports = {
 				darkGrey: '#2B2B2B',
 				surfaceDarkPrimary: '#1C1C1C',
 				strokeDarker: '#515151', 
+				strokerLighter: '#9A9A9A',
 				backgroundMain: "#fffdff"
 			},
 			screens: {

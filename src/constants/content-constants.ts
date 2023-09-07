@@ -21,6 +21,8 @@
 //   },
 // ];
 
+
+
 export const navLinks = [
 	{
 		id: 'about',
@@ -223,5 +225,130 @@ export const industriesDropdown = [
 		title: 'E-commerce',
 		paragraph:
 			'In the fast-paced world of media and social platforms, staying ahead of the curve is crucial. We offer innovative IT solutions that help media companies, content creators, and social platforms thrive in this dynamic landscape. From content management systems and social media analytics to interactive user experiences, our solutions empower you to engage your audience and drive growth.'
+	}
+]
+
+export const industriesNeeds = {
+	id: 'industries-needs-1',
+	title: {
+		text: 'How We Cater to Your Industry-Specific Needs'
+	},
+	paragraph: {
+		text: 'At ',
+		textColored: 'QOOX, ',
+		textAfter: `we understand that each industry has its unique requirements and challenges. We take a customer-centric approach to address your specific needs, ensuring that our solutions align with your business goals. Here's how we cater to your industry-specific needs.`
+	}
+}
+
+export const industriesNeedsCards = [
+	{
+		id: 'industries-needs-card-1',
+		src: '../../src/assets/industries-needs-knowledge.svg',
+		title: 'In-Depth Industry Knowledge',
+		text: 'In the fast-paced world of media and social platforms, staying ahead of the curve is crucial. We offer innovative IT solutions that help media companies, content creators, and social platforms thrive in this dynamic landscape. From content management systems and social media analytics to interactive user experiences, our solutions empower you to engage your audience and drive growth. '
+	},
+	{
+		id: 'industries-needs-card-2',
+		src: '../../src/assets/industries-needs-approach.svg',
+		title: 'Customized Approach',
+		text: `We tailor our solutions to match your industry's specific workflows, compliance standards, and user expectations. Our team works closely with you to identify pain points and devise strategies that address your industry-specific challenges.`
+	},
+	{
+		id: 'industries-needs-card-3',
+		src: '../../src/assets/industries-needs-scalable.svg',
+		title: 'Scalable and Agile Solutions',
+		text: `We design our solutions with scalability and flexibility in mind. As your business grows and evolves, our solutions can adapt and scale to meet your changing needs, ensuring long-term success and a competitive edge.`
+	},
+	{
+		id: 'industries-needs-card-4',
+		src: '../../src/assets/industries-needs-security.svg',
+		title: 'Security and Compliance',
+		text: 'Industries such as finance and e-commerce require a high level of security and compliance. We implement robust security measures and adhere to industry-specific regulations to protect sensitive data and maintain the trust of your customers. '
+	}
+]
+
+export const technologies = {
+	id: 'technologies-1',
+	title: {
+		text: 'Our Technology Stack'
+	},
+	paragraph: {
+		text: 'At ',
+		textColored: 'QOOX, ',
+		textAfter: `we pride ourselves on our expertise in utilizing a wide range of technologies, frameworks, and tools to deliver innovative and efficient IT solutions. Our team of skilled professionals is proficient in the following technologies.`
+	}
+}
+
+export const technologiesCards = [
+	{
+		id: 'technologies-card-1',
+		svg: '../../src/assets/technologiesIcons/python.svg',
+		title: 'Python'
+	}, 
+	{
+		id: 'technologies-card-2',
+		svg: '../../src/assets/technologiesIcons/java.svg',
+		title: 'Java'
+	}, 
+	{
+		id: 'technologies-card-3',
+		svg: '../../src/assets/technologiesIcons/kafka.svg',
+		title: 'Kafka'
+	}, 	{
+		id: 'technologies-card-4',
+		svg: '../../src/assets/technologiesIcons/elasticsearch.svg',
+		title: 'Elasticsearch'
+	}, 
+	{
+		id: 'technologies-card-5',
+		svg: '../../src/assets/technologiesIcons/amazon_aws.svg',
+		title: 'Amazon AWS'
+	}, 
+	{
+		id: 'technologies-card-6',
+		svg: '../../src/assets/technologiesIcons/html-css.svg',
+		title: 'HTML/CSS'
+	}, 	{
+		id: 'technologies-card-7',
+		svg: '../../src/assets/technologiesIcons/docker.svg',
+		title: 'Docker'
+	}, 	{
+		id: 'technologies-card-8',
+		svg: '../../src/assets/technologiesIcons/oracle.svg',
+		title: 'Oracle DB'
+	}, 	{
+		id: 'technologies-card-9',
+		svg: '../../src/assets/technologiesIcons/postgresql.svg',
+		title: 'PostgreSQL'
+	}, 	{
+		id: 'technologies-card-10',
+		svg: '../../src/assets/technologiesIcons/angular.svg',
+		title: 'Angular'
+	}, 	{
+		id: 'technologies-card-11',
+		svg: '../../src/assets/technologiesIcons/mongodb.svg',
+		title: 'MongoDB'
+	}, 	{
+		id: 'technologies-card-12',
+		svg: '../../src/assets/technologiesIcons/hibernate.svg',
+		title: 'Hibernate'
+	}, 	{
+		id: 'technologies-card-13',
+		svg: '../../src/assets/technologiesIcons/spring.svg',
+		title: 'Spring'
+	}, 	{
+		id: 'technologies-card-14',
+		svg: '../../src/assets/technologiesIcons/javaScript.svg',
+		title: 'JavaScript'
+	}, 
+	{
+		id: 'technologies-card-15',
+		svg: '../../src/assets/technologiesIcons/react.svg',
+		title: 'React / Redux'
+	}, 
+	{
+		id: 'technologies-card-16',
+		svg: '../../src/assets/technologiesIcons/kubernetes.svg',
+		title: 'Kubernetes'
 	}
 ]

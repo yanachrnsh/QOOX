@@ -8,16 +8,17 @@ import { TitleParagraph } from '../../SectionContainer/section-container.compone
 
 export const AboutSection = () => {
 	return (
-		<section
-			className={`${styles.sectionCol} ${styles.paddingX} sm:text-center sm:items-center items-start`}
-		>
-			<TitleParagraph
-				title={aboutTitleParagraph.title}
-				paragraph={aboutTitleParagraph.paragraph}
-			/>
-			<h3 className={`${styles.headingh2} pb-[32px] md:pb-[40px]`}>
-				<p>"Why choose us?"</p>
-			</h3>
+		<section className={`${styles.sectionCol} ${styles.paddingX}`}>
+			<div className='lg:text-center lg:max-w-[850px] lg:m-auto'>
+				<TitleParagraph
+					title={aboutTitleParagraph.title}
+					paragraph={aboutTitleParagraph.paragraph}
+				/>
+				<h3 className={`${styles.headingh2} pb-[32px] md:pb-[40px]`}>
+					<p>"Why choose us?"</p>
+				</h3>
+			</div>
+
 			<div className='grid auto-cols-auto sm:grid-cols-2 md:grid-cols-3 sm:last:col-span-2 gap-4 md:gap-6'>
 				{about.map((item: any) => (
 					<Card

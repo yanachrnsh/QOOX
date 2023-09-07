@@ -43,7 +43,7 @@ export const card = {
 	textLight: 'text-start sm:w-[90%] md:w-[100%] text-lightPrimary',
 	textDark: 'text-start sm:w-[90%] md:w-[100%] text-darkPrimary',
 	titleGreen: `${styles.headingh4} text-brandColorGreen`,
-	titleGrey: `${styles.headingh2} text-brandColorGreen`,
+	titleGrey: `${styles.headingh2} text-lightPrimary`,
 	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
 }
 

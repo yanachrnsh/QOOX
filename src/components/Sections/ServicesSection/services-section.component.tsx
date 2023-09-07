@@ -1,23 +1,17 @@
-import { useState, useEffect, useRef } from 'react'
 import { Title, Card, Scroll } from '../../index'
-import {  layout, card } from '../../../constants/styles-constants'
+import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
+import { layout, card } from '../../../constants/styles-constants'
 import { services } from '../../../constants/content-constants'
 import icon from '../../../assets/arrow-right.svg'
 
 export const ServicesSection = () => {
-	const [scrollWidth, setScrollWidth] = useState(0)
-	const carousel = useRef<HTMLInputElement>(null)
-
-	useEffect(() => {
-		carousel.current !== null &&
-			setScrollWidth(
-				carousel.current.scrollWidth - carousel.current?.offsetWidth
-			)
-	}, [])
+	const { scrollWidth, carousel } = userScrollCarousel()
 
 	return (
 		<section className={`${layout.sectionDark}`}>
-			<Title text='Our Services' />
+			<div className='pb-[40px] lg:pb-[70px]'>
+				<Title text='Our Services' />
+			</div>
 
 			<div className='hidden lg:grid lg:grid-cols-3 lg:gap-6'>
 				<ServicesCard />
@@ -67,6 +61,7 @@ const Button = () => {
 			>
 				<img
 					src={icon}
+					alt="icon"
 					className={`bg-lightPrimary opacity-1/2 w-10 h-10 absolute top-1/2 right-0 pr-5 -translate-y-1/2 rounded-full z-5 pointer-events-none`}
 				></img>
 			</div>

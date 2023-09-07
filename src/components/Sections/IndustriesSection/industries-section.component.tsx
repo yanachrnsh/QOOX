@@ -15,7 +15,7 @@ export const IndustriesSection: FC = () => {
 	const [activeItemIndex, setActiveItemIndex] = useState<number>(0)
 	return (
 		<section
-			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY} items-center  md:min-h-[800px]`}
+			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY} items-center min-h-[1100px] md:min-h-[800px]`}
 		>
 			<div>
 				<ContainerSmall
@@ -42,7 +42,7 @@ const DropdownList: FC<DropdownListProps> = ({
 	setActiveItemIndex
 }) => {
 	return (
-		<div className={`flex flex-col gap-4 md:gap-6 pt-12`}>
+		<div className={`flex flex-col gap-4 md:gap-6 `}>
 			{industriesDropdown.map((item, index) => (
 				<div key={item.id}>
 					<DropdownItem
@@ -91,7 +91,7 @@ const DropdownItem: FC<DropdownItemProps> = ({
 	return (
 		<motion.div className={`flex flex-col gap-4 pb-4 md:pb-6`}>
 			<div className=' flex flex-row justify-between items-center'>
-				<h3 className={`${styles.headingh3} `}>{title}</h3>
+				<h3 className={`${styles.headingh3} flex-1`}>{title}</h3>
 				{index === activeItemIndex ? (
 					<BsFillArrowDownCircleFill
 						className='text-brandColorGreen cursor-pointer'
