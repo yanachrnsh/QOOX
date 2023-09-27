@@ -338,7 +338,7 @@ export const technologiesCards = [
 		title: 'Spring'
 	}, 	{
 		id: 'technologies-card-14',
-		svg: '../../src/assets/technologiesIcons/javaScript.svg',
+		svg: '../../src/assets/technologiesIcons/JS.svg',
 		title: 'JavaScript'
 	}, 
 	{

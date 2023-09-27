@@ -1,4 +1,8 @@
 import { TitleParagraph } from '../../SectionContainer/section-container.component'
+import { Ref, ReactNode, FC } from 'react'
+import { motion } from 'framer-motion'
+import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
+import { Button } from '../ServicesSection/services-section.component'
 import {
 	technologies,
 	technologiesCards
@@ -6,36 +10,89 @@ import {
 import { styles } from '../../../constants/styles-constants'
 
 export const TechnologiesSection = () => {
+	const { scrollWidth, carousel } = userScrollCarousel()
+
+	const cardsFirstLine = technologiesCards.slice(
+		0,
+		technologiesCards.length / 2
+	)
+	const cardsSecondLine = technologiesCards.slice(
+		technologiesCards.length / 2,
+		technologiesCards.length
+	)
 	return (
-		<section
-			className={`${styles.sectionCol} ${styles.paddingX} lg:text-center lg:items-center items-start`}
-		>
-			<div className='lg:text-center lg:max-w-[850px] lg:m-auto'>
+		<section className={`${styles.sectionCol} ${styles.paddingX} `}>
+			<div className='lg:text-center lg:max-w-[850px] lg:m-auto lg:items-center items-start'>
 				<TitleParagraph
 					title={technologies.title}
 					paragraph={technologies.paragraph}
 				/>
 			</div>
-			<div className='grid grid-col-8 lg:grid-cols-6'>
-				<TechnologiesCard />
+			<div className='flex sm:hidden'>
+				<TechnologiesCardCarousel carousel={carousel} scrollWidth={scrollWidth}>
+					<div className='flex gap-4'>
+						<TechnologiesCard cards={cardsFirstLine} />
+					</div>
+					<div className='flex gap-4'>
+						<TechnologiesCard cards={cardsSecondLine} />
+					</div>
+				</TechnologiesCardCarousel>
 			</div>
+
+			<div className='hidden sm:grid grid-cols-8 sm:grid-cols-4 gap-4 lg:gap-6 w-[100%] '>
+				<TechnologiesCard cards={technologiesCards} />
+			</div>
+			<Button style='flex lg:hidden' />
 		</section>
 	)
 }
 
-const TechnologiesCard = () => {
+interface Cards {
+	id: string
+	svg: string
+	title: string
+}
+const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 	return (
 		<>
-			{technologiesCards.map(card => (
-				<div className='flex flex-col items-start p-6 maw-w-[200px]'>
+			{cards.map(card => (
+				<div
+					key={card.id}
+					className='flex flex-col items-start p-6 gap-2 w-[180px] bg-lightGrey'
+				>
 					<img
 						src={card.svg}
 						alt={card.title}
-						className='w-[60px] h-[60px]'
+						className='w-[40px] h-[40px]'
 					></img>
-					<span>{card.title}</span>
+					<span className={`${styles.span}`}>{card.title}</span>
 				</div>
 			))}
+			<Button style='col-span-2 py-0 px-0 hidden lg:flex' />
 		</>
+	)
+}
+
+interface TechnologiesCardCarousel {
+	carousel: Ref<HTMLInputElement>
+	scrollWidth: number
+	children: ReactNode
+}
+
+const TechnologiesCardCarousel: FC<TechnologiesCardCarousel> = ({
+	carousel,
+	scrollWidth,
+	children
+}) => {
+	return (
+		<motion.div ref={carousel} className='cursor-grab overflow-hidden '>
+			<motion.div
+				drag='x'
+				dragConstraints={{ right: 0, left: -scrollWidth }}
+				className={`grid grid-rows-2 gap-4 w-[100%]`}
+			>
+				{children}
+			</motion.div>
+		</motion.div>
 	)
 }

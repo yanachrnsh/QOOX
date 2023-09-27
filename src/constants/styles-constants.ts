@@ -25,7 +25,8 @@ export const styles = {
 		'text-[18px] leading-[27px] font-medium sm:text-[20px] sm:leading-[30px]',
 
 	paragraph:
-		'text-[16px] leading-[24px] font-medium sm:leading-[30px] sm:text-[20px]'
+		'text-[16px] leading-[24px] font-medium sm:leading-[30px] sm:text-[20px]',
+	span: 'text-[20px] leading-[30px] font-medium'
 }
 
 export const layout = {
