@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				darkPrimary: '#212121',
+				darkSecondary: '#585858',
 				brandColorGreen: '#008F65',
 				lightPrimary: '#F3F3F3',
 				lightGrey: '#F6F6F6',
@@ -12,7 +13,8 @@ module.exports = {
 				surfaceDarkPrimary: '#1C1C1C',
 				strokeDarker: '#515151', 
 				strokerLighter: '#9A9A9A',
-				backgroundMain: "#fffdff"
+				backgroundMain: "#fffdff", 
+				
 			},
 			screens: {
 				xs: '480px',

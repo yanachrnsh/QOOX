@@ -21,8 +21,6 @@
 //   },
 // ];
 
-
-
 export const navLinks = [
 	{
 		id: 'about',
@@ -284,71 +282,92 @@ export const technologiesCards = [
 		id: 'technologies-card-1',
 		svg: '../../src/assets/technologiesIcons/python.svg',
 		title: 'Python'
-	}, 
+	},
 	{
 		id: 'technologies-card-2',
 		svg: '../../src/assets/technologiesIcons/java.svg',
 		title: 'Java'
-	}, 
+	},
 	{
 		id: 'technologies-card-3',
 		svg: '../../src/assets/technologiesIcons/kafka.svg',
 		title: 'Kafka'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-4',
 		svg: '../../src/assets/technologiesIcons/elasticsearch.svg',
 		title: 'Elasticsearch'
-	}, 
+	},
 	{
 		id: 'technologies-card-5',
 		svg: '../../src/assets/technologiesIcons/amazon_aws.svg',
 		title: 'Amazon AWS'
-	}, 
+	},
 	{
 		id: 'technologies-card-6',
 		svg: '../../src/assets/technologiesIcons/html-css.svg',
 		title: 'HTML/CSS'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-7',
 		svg: '../../src/assets/technologiesIcons/docker.svg',
 		title: 'Docker'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-8',
 		svg: '../../src/assets/technologiesIcons/oracle.svg',
 		title: 'Oracle DB'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-9',
 		svg: '../../src/assets/technologiesIcons/postgresql.svg',
 		title: 'PostgreSQL'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-10',
 		svg: '../../src/assets/technologiesIcons/angular.svg',
 		title: 'Angular'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-11',
 		svg: '../../src/assets/technologiesIcons/mongodb.svg',
 		title: 'MongoDB'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-12',
 		svg: '../../src/assets/technologiesIcons/hibernate.svg',
 		title: 'Hibernate'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-13',
 		svg: '../../src/assets/technologiesIcons/spring.svg',
 		title: 'Spring'
-	}, 	{
+	},
+	{
 		id: 'technologies-card-14',
 		svg: '../../src/assets/technologiesIcons/JS.svg',
 		title: 'JavaScript'
-	}, 
+	},
 	{
 		id: 'technologies-card-15',
 		svg: '../../src/assets/technologiesIcons/react.svg',
 		title: 'React / Redux'
-	}, 
+	},
 	{
 		id: 'technologies-card-16',
 		svg: '../../src/assets/technologiesIcons/kubernetes.svg',
 		title: 'Kubernetes'
 	}
 ]
+
+export const contactUs = {
+	id: 'contactUs-1',
+	title: {
+		text: 'Contact Us'
+	},
+	paragraph: {
+		text: 'The ',
+		textColored: 'time to act ',
+		textAfter: `is now. Take the first step towards transforming your business into a digital powerhouse. Fill out the form below and let us be your guide on this exciting journey of innovation, growth, and success. Get ready to witness the true power of technology!`
+	}
+}

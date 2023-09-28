@@ -30,16 +30,16 @@ export const TechnologiesSection = () => {
 			</div>
 			<div className='flex sm:hidden'>
 				<TechnologiesCardCarousel carousel={carousel} scrollWidth={scrollWidth}>
-					<div className='flex gap-4'>
+					<div className='flex  justify-between gap-4'>
 						<TechnologiesCard cards={cardsFirstLine} />
 					</div>
-					<div className='flex gap-4'>
+					<div className='flex justify-between gap-4'>
 						<TechnologiesCard cards={cardsSecondLine} />
 					</div>
 				</TechnologiesCardCarousel>
 			</div>
 
-			<div className='hidden sm:grid grid-cols-8 sm:grid-cols-4 gap-4 lg:gap-6 w-[100%] '>
+			<div className='hidden sm:grid grid-cols-8 sm:grid-cols-4 lg:grid-cols-6  gap-4 lg:gap-6 w-[100%] '>
 				<TechnologiesCard cards={technologiesCards} />
 			</div>
 			<Button style='flex lg:hidden' />
@@ -58,17 +58,17 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 			{cards.map(card => (
 				<div
 					key={card.id}
-					className='flex flex-col items-start p-6 gap-2 w-[180px] bg-lightGrey'
+					className={`flex flex-col items-start justify-center p-6 gap-2 bg-lightGrey min-w-[180px]`}
 				>
 					<img
 						src={card.svg}
 						alt={card.title}
 						className='w-[40px] h-[40px]'
 					></img>
-					<span className={`${styles.span}`}>{card.title}</span>
+					<span className={`${styles.span} `}>{card.title}</span>
 				</div>
 			))}
-			<Button style='col-span-2 py-0 px-0 hidden lg:flex' />
+			<Button style='col-span-2 hidden lg:flex sm:p-0 ' />
 		</>
 	)
 }

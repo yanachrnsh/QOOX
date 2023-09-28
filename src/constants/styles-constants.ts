@@ -26,7 +26,10 @@ export const styles = {
 
 	paragraph:
 		'text-[16px] leading-[24px] font-medium sm:leading-[30px] sm:text-[20px]',
-	span: 'text-[20px] leading-[30px] font-medium'
+	span: 'text-[20px] leading-[30px] font-medium',
+
+	formInputs:
+		'border-b border-strokeDarker py-6 px-2 lg:px-4 w-[100%] focus:outline-none focus:border-2 focus:border-brandColorGreen '
 }
 
 export const layout = {

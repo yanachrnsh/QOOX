@@ -4,7 +4,8 @@ import { ServicesSection } from './ServicesSection/services-section.component'
 import { CaseStudiesSection } from './CaseStudiesSection/case-studies-section'
 import { IndustriesSection } from './IndustriesSection/industries-section.component'
 import { IndustriesNeedsSection } from './IndustriesNeedsSection/industries-needs-section.component'
-import {TechnologiesSection} from "./TechnologiesSection/technologies-section"
+import {TechnologiesSection} from "./TechnologiesSection/technologies-section.component"
+import { ContactUsSection } from './ContactUs/contact-us.section.component'
 
 export {
   IntroSection, 
@@ -13,5 +14,6 @@ export {
   CaseStudiesSection, 
   IndustriesSection, 
   IndustriesNeedsSection, 
-  TechnologiesSection
+  TechnologiesSection, 
+  ContactUsSection
 }

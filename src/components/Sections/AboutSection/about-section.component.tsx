@@ -15,7 +15,7 @@ export const AboutSection = () => {
 					paragraph={aboutTitleParagraph.paragraph}
 				/>
 				<h3 className={`${styles.headingh2} pb-[32px] md:pb-[40px]`}>
-					<p>"Why choose us?"</p>
+					<p>Why choose us?</p>
 				</h3>
 			</div>
 

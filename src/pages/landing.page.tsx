@@ -7,7 +7,8 @@ import {
 	CaseStudiesSection,
 	IndustriesSection,
 	IndustriesNeedsSection,
-	TechnologiesSection
+	TechnologiesSection,
+	ContactUsSection
 } from '../components/Sections'
 
 export const Landing = () => {
@@ -23,6 +24,8 @@ export const Landing = () => {
 			<IndustriesSection />
 			<IndustriesNeedsSection />
 			<TechnologiesSection />
+			<Divider />
+			<ContactUsSection />
 		</div>
 	)
 }
