@@ -3,15 +3,19 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import { styles } from '../../../constants/styles-constants'
 import { TitleParagraph } from '../../SectionContainer/section-container.component'
 import { contactUs } from '../../../constants/content-constants'
-
-interface UserData {
-	name: string
-	email: string
-	project?: string
-}
+import { UserData } from '../../../api/dto/usetData.dto'
+import { useSubmitUserData } from '../../../api/user/useSubmitUserData'
 
 export const ContactUsSection = () => {
-	const onSubmit: SubmitHandler<UserData> = data => console.log(data)
+	const { mutate, isLoading, isError, isSuccess } = useSubmitUserData()
+
+	const onSubmit: SubmitHandler<UserData> = data => {
+		console.log(data)
+		mutate(data)
+
+	}
+
+
 
 	return (
 		<section
@@ -33,7 +37,6 @@ interface ContactFormProps {
 }
 
 const ContactForm: FC<ContactFormProps> = ({ onSubmit }) => {
-
 	const {
 		register,
 		handleSubmit,
