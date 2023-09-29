@@ -50,7 +50,9 @@ export const ContactUsSection = () => {
 					<ContactForm onSubmit={onSubmit}></ContactForm>
 				)}
 			</section>
-			<h3 className={`${styles.headingh3} text-brandColorGreen absolute bottom-0`}>
+			<h3
+				className={`${styles.headingh3} text-brandColorGreen absolute bottom-0 pb-1`}
+			>
 				Don't Wait! Your Future Awaits
 			</h3>
 		</section>

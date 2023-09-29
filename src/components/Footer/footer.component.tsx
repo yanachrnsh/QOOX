@@ -6,7 +6,7 @@ import { styles } from '../../constants/styles-constants'
 export const Footer = () => {
 	return (
 		<footer
-			className={`${styles.paddingX} grid grid-cols-4 gap-8 sm:flex justify-between items-center py-3 sm:py-7`}
+			className={`${styles.paddingX} grid grid-cols-4 gap-8 sm:flex justify-between items-center py-3 sm:py-7 max-w-7xl m-auto`}
 		>
 			<div className='row-span-2 col-start-1 col-end-3 row-start-2 row-end-3'>
 				<Logo />
