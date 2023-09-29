@@ -8,9 +8,10 @@ import { useSubmitUserData } from '../../../api/user/useSubmitUserData'
 import { z, TypeOf } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
+import { BiError } from 'react-icons/bi'
 
 export const ContactUsSection = () => {
-	const { mutate, isLoading, isError, isSuccess } = useSubmitUserData()
+	const { mutate, isError, isSuccess } = useSubmitUserData()
 
 	const onSubmit: SubmitHandler<UserData> = data => {
 		mutate(data)
@@ -27,7 +28,13 @@ export const ContactUsSection = () => {
 						paragraph={contactUs.paragraph}
 					/>
 				</div>
-				{isSuccess ? (
+				{isError && (
+					<div className='flex justify-center items-center gap-2 py-[180px] md:py-0'>
+						<BiError size={24} className='text-rose-600' />
+						<h1>Oops, something went wrong. Please try again later!</h1>
+					</div>
+				)}
+				{isSuccess && (
 					<div className='flex justify-center items-center gap-2 py-[180px] md:py-0'>
 						<BsFillCheckCircleFill
 							size={24}
@@ -37,11 +44,13 @@ export const ContactUsSection = () => {
 							Your application has been sent. We will reach you out really soon!
 						</h1>
 					</div>
-				) : (
+				)}
+
+				{!isSuccess && !isError && (
 					<ContactForm onSubmit={onSubmit}></ContactForm>
 				)}
 			</section>
-			<h3 className={`styles.headingh3 text-brandColorGreen absolute bottom-0`}>
+			<h3 className={`${styles.headingh3} text-brandColorGreen absolute bottom-0`}>
 				Don't Wait! Your Future Awaits
 			</h3>
 		</section>

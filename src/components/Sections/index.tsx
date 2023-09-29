@@ -6,6 +6,7 @@ import { IndustriesSection } from './IndustriesSection/industries-section.compon
 import { IndustriesNeedsSection } from './IndustriesNeedsSection/industries-needs-section.component'
 import {TechnologiesSection} from "./TechnologiesSection/technologies-section.component"
 import { ContactUsSection } from './ContactUs/contact-us.section.component'
+import { Footer } from '../Footer/footer.component'
 
 export {
   IntroSection, 
@@ -15,5 +16,6 @@ export {
   IndustriesSection, 
   IndustriesNeedsSection, 
   TechnologiesSection, 
-  ContactUsSection
+  ContactUsSection, 
+  Footer
 }

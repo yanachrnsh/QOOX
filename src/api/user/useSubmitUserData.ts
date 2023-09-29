@@ -7,6 +7,6 @@ export const submitUserData = async (userData: UserData) => {
 }
 
 export const useSubmitUserData = () => {
-	const { mutate, isLoading, isError, isSuccess } = useMutation(submitUserData)
-	return { mutate, isLoading, isError, isSuccess }
+	const { mutate, isLoading, isError, isSuccess, error } = useMutation(submitUserData)
+	return { mutate, isLoading, isError, isSuccess , error }
 }
