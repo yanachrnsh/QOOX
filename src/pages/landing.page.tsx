@@ -26,6 +26,7 @@ export const Landing = () => {
 			<TechnologiesSection />
 			<Divider />
 			<ContactUsSection />
+			<Divider />
 		</div>
 	)
 }

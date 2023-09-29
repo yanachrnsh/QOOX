@@ -5,32 +5,56 @@ import { TitleParagraph } from '../../SectionContainer/section-container.compone
 import { contactUs } from '../../../constants/content-constants'
 import { UserData } from '../../../api/dto/usetData.dto'
 import { useSubmitUserData } from '../../../api/user/useSubmitUserData'
+import { z, TypeOf } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { BsFillCheckCircleFill } from 'react-icons/bs'
 
 export const ContactUsSection = () => {
 	const { mutate, isLoading, isError, isSuccess } = useSubmitUserData()
 
 	const onSubmit: SubmitHandler<UserData> = data => {
-		console.log(data)
 		mutate(data)
-
 	}
-
-
 
 	return (
 		<section
-			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY} items-center min-h-[1100px] md:min-h-[800px]  max-w-7xl  md:mx-auto`}
+			className={`${styles.paddingX} ${styles.paddingY} max-w-7xl  md:mx-auto relative`}
 		>
-			<div>
-				<TitleParagraph
-					title={contactUs.title}
-					paragraph={contactUs.paragraph}
-				/>
-			</div>
-			<ContactForm onSubmit={onSubmit}></ContactForm>
+			<section className={`${styles.gridCard} items-center `}>
+				<div>
+					<TitleParagraph
+						title={contactUs.title}
+						paragraph={contactUs.paragraph}
+					/>
+				</div>
+				{isSuccess ? (
+					<div className='flex justify-center items-center gap-2 py-[180px] md:py-0'>
+						<BsFillCheckCircleFill
+							size={24}
+							className=' bg-backgroundMain text-brandColorGreen'
+						/>
+						<h1>
+							Your application has been sent. We will reach you out really soon!
+						</h1>
+					</div>
+				) : (
+					<ContactForm onSubmit={onSubmit}></ContactForm>
+				)}
+			</section>
+			<h3 className={`styles.headingh3 text-brandColorGreen absolute bottom-0`}>
+				Don't Wait! Your Future Awaits
+			</h3>
 		</section>
 	)
 }
+
+const contactFormSchema = z.object({
+	name: z.string().min(2, { message: 'Name is required' }),
+	email: z.string().email({ message: 'A valid email is required' }),
+	project: z.string().optional()
+})
+
+type ContactFormSchema = TypeOf<typeof contactFormSchema>
 
 interface ContactFormProps {
 	onSubmit: (userData: UserData) => void
@@ -41,33 +65,62 @@ const ContactForm: FC<ContactFormProps> = ({ onSubmit }) => {
 		register,
 		handleSubmit,
 		formState: { errors }
-	} = useForm<UserData>()
+	} = useForm<ContactFormSchema>({
+		mode: 'onChange',
+		resolver: zodResolver(contactFormSchema)
+	})
 
 	return (
 		<form className='text-darkSecondary' onSubmit={handleSubmit(onSubmit)}>
+			<p
+				className={`${
+					errors.name ? 'visible' : 'invisible'
+				} text-rose-600 h-[20px] my-2`}
+			>
+				{errors.name?.message}
+			</p>
 			<input
 				type='text'
 				placeholder='Name'
 				className={`${styles.formInputs}`}
 				{...register('name', { required: true })}
 			/>
+
+			<p
+				className={`${
+					errors.email ? 'visible' : 'invisible'
+				} text-rose-600 h-[20px] my-2`}
+			>
+				{errors.email?.message}
+			</p>
 			<input
 				type='email'
 				placeholder='Email'
 				className={`${styles.formInputs}`}
 				{...register('email', { required: true })}
 			/>
+
+			<p
+				className={`${
+					errors.project ? 'visible' : 'invisible'
+				} text-rose-600 h-[20px] my-2`}
+			>
+				{errors.project?.message}
+			</p>
 			<input
 				type='text'
 				className={`${styles.formInputs}`}
 				placeholder='Just a few words about your project (Optional)'
 				{...register('project', { required: false })}
 			/>
-			<input
-				type='submit'
-				placeholder='Contact Us'
-				className='text-lightPrimary bg-brandColorGreen py-2 px-6 w-[100%] mt-10 cursor-pointer'
-			/>
+
+			<div>
+				<input
+					type='submit'
+					placeholder='Contact Us'
+					className='text-lightPrimary bg-brandColorGreen py-2 px-6 w-[100%] mt-16 cursor-pointer'
+				/>
+			</div>
 		</form>
 	)
 }
