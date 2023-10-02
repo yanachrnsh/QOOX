@@ -1,5 +1,6 @@
 import { Logo } from '../Logo/logo.component'
 import { navLinks } from '../../constants/content-constants'
+import { motion } from 'framer-motion'
 import { AiOutlineCopyrightCircle } from 'react-icons/ai'
 import { styles } from '../../constants/styles-constants'
 
@@ -16,9 +17,17 @@ export const Footer = () => {
 				{navLinks.map((link: { id: string; title: string }) => (
 					<div
 						key={link.id}
-						className={`sm:py-1 sm:px-4 py-4 px-0 items-start sm:text-center  w-[100%] cursor-pointer`}
+						className={`sm:py-1 sm:px-4 py-4 px-0 items-start sm:text-center w-[100%] cursor-pointer hover:text-brandColorGreenHover`}
 					>
-						<p>{link.title}</p>
+						<a href={`#${link.id}`}>
+							<motion.button
+								whileHover={{ y: -1 }}
+								initial={{ y: 0 }}
+								exit={{ y: 0 }}
+							>
+								{link.title}
+							</motion.button>
+						</a>
 					</div>
 				))}
 			</div>

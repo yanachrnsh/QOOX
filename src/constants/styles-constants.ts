@@ -6,7 +6,7 @@ export const styles = {
 	gridCard: 'grid grid-cols-1 md:grid-cols-2 gap-4',
 
 	paddingX: 'xs:px-4 px-4 md:px-[60px]',
-	paddingY: 'xs:py-[88px] py-[100px] h-screen',
+	paddingY: 'py-[88px] sm:py-[100px]',
 	marginX: 'xs:mx-4 mx-4 md:mx-[60px]',
 
 	sectionCol:
@@ -14,22 +14,19 @@ export const styles = {
 	sectionRow:
 		'flex md:flex-row flex-col pt-[60px] pb-[300px] sm:pt-[160px] md:pb-[225px] bg-gifBackground bg-auto bg-no-repeat bg-bottom md:bg-right',
 
-	headingh1:
-		'text-[32px] ss:text-[56px] leading-[35px] ss:leading-[61px] w-full font-semibold',
+	headingh1: 'text-3xl ss:text-6xl w-full font-semibold',
 
-	headingh2: 'text-[24px] leading-[30px] font-medium',
+	headingh2: 'text-2xl font-medium',
 
-	headingh3: 'text-[20px] leading-[29px] font-semibold',
+	headingh3: 'text-xl font-semibold',
 
-	headingh4:
-		'text-[18px] leading-[27px] font-medium sm:text-[20px] sm:leading-[30px]',
+	headingh4: 'text-lg font-medium sm:text-xl',
 
-	paragraph:
-		'text-[16px] leading-[24px] font-medium sm:leading-[30px] sm:text-[20px]',
-	span: 'text-[20px] leading-[30px] font-medium',
+	paragraph: 'text-base sm:text-xl font-medium',
+	span: 'text-xl font-medium',
 
 	formInputs:
-		'border-b border-strokeDarker py-6 px-2 lg:px-4 w-[100%] focus:outline-none focus:border-2 focus:border-brandColorGreen '
+		'border-b border-strokeDarker py-6 px-2 lg:px-4 w-[100%] focus:outline-none focus:border-b-2  focus:border-b-brandColorGreen '
 }
 
 export const layout = {
@@ -51,9 +48,9 @@ export const card = {
 	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
 }
 
-// export const hover ={
-// 	hoverBlock: `relative m-auto ease-in`,
-// 	hoverImg:
-// }
+export const hover = {
+	hoverBlock: `relative m-auto ease-in`,
+	hoverButton: `relative m-auto ease-in`
+}
 
 export const hoverBlock = `before:bg-lightPrimary before:hover:rounded-xl before:hover:w-[100%] before:hover:h-[100%] w-10 h-10  `

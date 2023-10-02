@@ -9,6 +9,7 @@ import { z, TypeOf } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
 import { BiError } from 'react-icons/bi'
+import { motion } from 'framer-motion'
 
 export const ContactUsSection = () => {
 	const { mutate, isError, isSuccess } = useSubmitUserData()
@@ -19,7 +20,7 @@ export const ContactUsSection = () => {
 
 	return (
 		<section
-		id="contacts"
+			id='contacts'
 			className={`${styles.paddingX} ${styles.paddingY} max-w-7xl  md:mx-auto relative`}
 		>
 			<section className={`${styles.gridCard} items-center `}>
@@ -127,11 +128,18 @@ const ContactForm: FC<ContactFormProps> = ({ onSubmit }) => {
 			/>
 
 			<div>
-				<input
+				<motion.button
 					type='submit'
-					placeholder='Contact Us'
-					className='text-lightPrimary bg-brandColorGreen py-2 px-6 w-[100%] mt-16 cursor-pointer'
-				/>
+					className='text-lightPrimary bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 w-[100%] mt-16 cursor-pointer'
+				>
+					<motion.p
+						initial={{ marginLeft: 0 }}
+						whileHover={{ marginLeft: '-90%' }}
+						transition={{ duration: 0.6, ease: 'easeInOut' }}
+					>
+						Contact Us
+					</motion.p>
+				</motion.button>
 			</div>
 		</form>
 	)

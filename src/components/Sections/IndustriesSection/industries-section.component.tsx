@@ -16,9 +16,9 @@ export const IndustriesSection: FC = () => {
 	return (
 		<section
 			id='industries'
-			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY}  max-w-7xl  md:mx-auto`}
+			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY}  max-w-7xl  md:mx-auto min-h-screen`}
 		>
-			<div>
+			<div className='self-center'>
 				<ContainerSmall
 					title={industries.title}
 					paragraph={industries.paragraph}
@@ -43,7 +43,7 @@ const DropdownList: FC<DropdownListProps> = ({
 	setActiveItemIndex
 }) => {
 	return (
-		<div className={`flex flex-col gap-4 md:gap-6 `}>
+		<div className={`flex flex-col gap-4 md:gap-6 md:pt-[100px] `}>
 			{industriesDropdown.map((item, index) => (
 				<div key={item.id}>
 					<DropdownItem

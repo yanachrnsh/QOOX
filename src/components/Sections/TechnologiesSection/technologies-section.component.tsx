@@ -2,7 +2,7 @@ import { TitleParagraph } from '../../SectionContainer/section-container.compone
 import { Ref, ReactNode, FC } from 'react'
 import { motion } from 'framer-motion'
 import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
-import { Button } from '../ServicesSection/services-section.component'
+import { ButtonLarge } from '../../Button/button.component'
 import {
 	technologies,
 	technologiesCards
@@ -44,7 +44,7 @@ export const TechnologiesSection = () => {
 			<div className='hidden sm:grid grid-cols-8 sm:grid-cols-4 lg:grid-cols-6  gap-4 lg:gap-6 w-[100%] '>
 				<TechnologiesCard cards={technologiesCards} />
 			</div>
-			<Button style='flex lg:hidden' />
+			<ButtonLarge style='flex lg:hidden' />
 		</section>
 	)
 }
@@ -70,7 +70,7 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 					<span className={`${styles.span} `}>{card.title}</span>
 				</div>
 			))}
-			<Button style='col-span-2 hidden lg:flex sm:p-0 ' />
+			<ButtonLarge style='col-span-2 hidden lg:flex sm:p-0 ' />
 		</>
 	)
 }

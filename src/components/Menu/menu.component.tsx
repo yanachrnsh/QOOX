@@ -1,4 +1,5 @@
 import { navLinks } from '../../constants/content-constants'
+import { motion } from 'framer-motion'
 
 export const Menu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 	const activClass = isMenuOpen
@@ -12,10 +13,15 @@ export const Menu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 					{link.title}
 				</Link>
 			))}
-			<div className=' flex justify-center text-center rounded border-2 border-brandColorGreen  mt-[40px] sm:mt-0 ml-[20px] md:ml-[40px]  min-w-[150px] text-brandColorGreen'>
+			<div className=' flex justify-center items-center text-center rounded border-2 border-brandColorGreen hover:border-brandColorGreenHover mt-[40px] sm:mt-0 ml-[20px] md:ml-[40px]  min-w-[150px] text-brandColorGreen'>
 				<a href='#contacts' className='w-[100%] py-2 px-4 sm:py-0 '>
-					{' '}
-					Send request
+					<motion.button
+						whileHover={{ y: -1 }}
+						initial={{ y: 0 }}
+						exit={{ y: 0 }}
+					>
+						Send request
+					</motion.button>
 				</a>
 			</div>
 		</nav>
@@ -25,9 +31,17 @@ export const Menu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 export const Link = ({ children, id }: { children: string; id: string }) => {
 	return (
 		<div
-			className={`sm:py-1 sm:px-4 py-4 px-3 text-center w-[100%] cursor-pointer`}
+			className={`sm:py-1 sm:px-4 py-4 px-3 text-center w-[100%] cursor-pointer hover:text-brandColorGreenHover`}
 		>
-			<a href={`#${id}`}>{children}</a>
+			<a href={`#${id}`}>
+				<motion.button
+					whileHover={{ y: -1 }}
+					initial={{ y: 0 }}
+					exit={{ y: 0 }}
+				>
+					{children}
+				</motion.button>
+			</a>
 		</div>
 	)
 }
