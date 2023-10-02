@@ -108,7 +108,9 @@ export const caseStudies = [
 			text: 'Type of Project'
 		},
 		button: {
-			text: 'View Full Case'
+			text: 'View Full Case',
+			id: 'cases',
+			svg: '../../src/assets/arrow-right.svg'
 		}
 	},
 	{
@@ -125,7 +127,9 @@ export const caseStudies = [
 			text: 'Type of Project 2'
 		},
 		button: {
-			text: 'View Full Case'
+			text: 'View Full Case',
+			id: 'cases',
+			svg: '../../src/assets/arrow-right.svg'
 		}
 	},
 	{
@@ -142,7 +146,9 @@ export const caseStudies = [
 			text: 'Type of Project 3'
 		},
 		button: {
-			text: 'View Full Case'
+			text: 'View Full Case',
+			id: 'cases',
+			svg: '../../src/assets/arrow-right.svg'
 		}
 	}
 ]
@@ -181,7 +187,8 @@ export const intro = {
 		textColored: 'QOOX'
 	},
 	button: {
-		text: 'Unlock Your Potential'
+		text: 'Unlock Your Potential',
+		id: 'contacts'
 	}
 }
 
@@ -196,7 +203,7 @@ export const industries = {
 		textAfter:
 			'we specialize in providing tailored IT solutions for a wide range of industries. Our expertise and experience enable us to understand the unique challenges and opportunities that businesses in different sectors face. We are proud to serve the following industries.'
 	},
-	button: { text: 'Empower Your Industry' }
+	button: { text: 'Empower Your Industry', id: 'contacts' }
 }
 
 export const industriesDropdown = [

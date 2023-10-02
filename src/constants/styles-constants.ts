@@ -6,7 +6,7 @@ export const styles = {
 	gridCard: 'grid grid-cols-1 md:grid-cols-2 gap-4',
 
 	paddingX: 'xs:px-4 px-4 md:px-[60px]',
-	paddingY: 'xs:py-[88px] py-[100px]',
+	paddingY: 'xs:py-[88px] py-[100px] h-screen',
 	marginX: 'xs:mx-4 mx-4 md:mx-[60px]',
 
 	sectionCol:

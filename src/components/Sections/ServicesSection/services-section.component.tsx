@@ -8,7 +8,7 @@ export const ServicesSection = () => {
 	const { scrollWidth, carousel } = userScrollCarousel()
 
 	return (
-		<section className={`${layout.sectionDark}`}>
+		<section id="services" className={`${layout.sectionDark}`}>
 			<div className='pb-[40px] lg:pb-[70px]'>
 				<Title text='Our Services' />
 			</div>

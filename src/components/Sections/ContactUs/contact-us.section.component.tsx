@@ -19,6 +19,7 @@ export const ContactUsSection = () => {
 
 	return (
 		<section
+		id="contacts"
 			className={`${styles.paddingX} ${styles.paddingY} max-w-7xl  md:mx-auto relative`}
 		>
 			<section className={`${styles.gridCard} items-center `}>

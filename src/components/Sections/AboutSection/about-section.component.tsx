@@ -8,7 +8,7 @@ import { TitleParagraph } from '../../SectionContainer/section-container.compone
 
 export const AboutSection = () => {
 	return (
-		<section className={`${styles.sectionCol} ${styles.paddingX}`}>
+		<section id="about" className={`${styles.sectionCol} ${styles.paddingX}`}>
 			<div className='lg:text-center lg:max-w-[850px] lg:m-auto'>
 				<TitleParagraph
 					title={aboutTitleParagraph.title}

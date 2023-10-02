@@ -21,7 +21,9 @@ export const TechnologiesSection = () => {
 		technologiesCards.length
 	)
 	return (
-		<section className={`${styles.sectionCol} ${styles.paddingX} `}>
+		<section 
+		id="technologies"
+		className={`${styles.sectionCol} ${styles.paddingX} `}>
 			<div className='lg:text-center lg:max-w-[850px] lg:m-auto lg:items-center items-start'>
 				<TitleParagraph
 					title={technologies.title}

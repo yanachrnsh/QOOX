@@ -15,7 +15,8 @@ export const IndustriesSection: FC = () => {
 	const [activeItemIndex, setActiveItemIndex] = useState<number>(0)
 	return (
 		<section
-			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY} items-center min-h-[1100px] md:min-h-[800px]  max-w-7xl  md:mx-auto`}
+			id='industries'
+			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY}  max-w-7xl  md:mx-auto`}
 		>
 			<div>
 				<ContainerSmall
