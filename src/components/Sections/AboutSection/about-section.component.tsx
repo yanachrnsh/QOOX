@@ -8,7 +8,7 @@ import { TitleParagraph } from '../../SectionContainer/section-container.compone
 
 export const AboutSection = () => {
 	return (
-		<section id="about" className={`${styles.sectionCol} ${styles.paddingX}`}>
+		<section id='about' className={`${styles.sectionCol} ${styles.paddingX}`}>
 			<div className='lg:text-center lg:max-w-[850px] lg:m-auto'>
 				<TitleParagraph
 					title={aboutTitleParagraph.title}
@@ -19,7 +19,7 @@ export const AboutSection = () => {
 				</h3>
 			</div>
 
-			<div className='grid auto-cols-auto sm:grid-cols-2 md:grid-cols-3 sm:last:col-span-2 gap-4 md:gap-6'>
+			<div className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6'>
 				{about.map((item: any) => (
 					<Card
 						src={item.src}

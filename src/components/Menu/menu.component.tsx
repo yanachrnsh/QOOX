@@ -13,7 +13,7 @@ export const Menu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 					{link.title}
 				</Link>
 			))}
-			<div className=' flex justify-center items-center text-center rounded border-2 border-brandColorGreen hover:border-brandColorGreenHover mt-[40px] sm:mt-0 ml-[20px] md:ml-[40px]  min-w-[150px] text-brandColorGreen'>
+			<div className='flex justify-center items-center text-center rounded border-2 border-brandColorGreen hover:border-brandColorGreenHover mt-[40px] sm:mt-0 sm:ml-[20px] md:ml-[40px]  min-w-[150px] text-brandColorGreen w-[100%]'>
 				<a href='#contacts' className='w-[100%] py-2 px-4 sm:py-0 '>
 					<motion.button
 						whileHover={{ y: -1 }}

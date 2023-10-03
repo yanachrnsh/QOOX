@@ -43,7 +43,7 @@ const DropdownList: FC<DropdownListProps> = ({
 	setActiveItemIndex
 }) => {
 	return (
-		<div className={`flex flex-col gap-4 md:gap-6 md:pt-[100px] `}>
+		<div className={`flex flex-col gap-4 pt-12 md:gap-6 md:pt-24 `}>
 			{industriesDropdown.map((item, index) => (
 				<div key={item.id}>
 					<DropdownItem

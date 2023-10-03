@@ -45,8 +45,6 @@ export const CaseStudiesSection = () => {
 }
 
 const SwiperContainer = ({ pageIndex }: { pageIndex: number }) => {
-	console.log(caseStudies)
-
 	return (
 		<>
 			{caseStudies.map((content, index) => (

@@ -15,12 +15,13 @@ export const Button: FC<IButton> = ({ text, svg, id }) => {
 		<div className='flex'>
 			<a
 				href={`#${id}`}
-				className='min-w-[200px] max-w-[100%] text-lightPrimary bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 rounded text-center cursor-pointer flex items-center justify-center gap-2'
+				className='min-w-[200px] max-w-[100%] text-lightPrimary bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 rounded text-center cursor-pointer '
 			>
 				<motion.span
 					whileHover={{ y: -1 }}
 					initial={{ y: 0 }}
 					exit={{ y: 0 }}
+					className='flex items-center justify-center gap-2'
 				>
 					{text}
 					{svg && <img src={svg} alt='arrow' />}
@@ -36,7 +37,10 @@ export const ButtonLarge = ({ style = '' }) => {
 			className={`${styles.flexCenter} text-lightPrimary p-9 bg-brandColorGreen relative rounded-xl mt-6 mb-22 w-[100%] sm:self-start sm:p-20  lg:h-[100%] lg:mt-0 lg:mb-0 ${style}`}
 		>
 			<p className='z-10 mr-4'>Discover Our Expertise</p>
-			<BsArrowUpRightCircleFill className=' bg-brandColorGreen' size={24} />
+
+			<div>
+				<BsArrowUpRightCircleFill className=' bg-brandColorGreen' size={24} />
+			</div>
 			{/* <div
 				className={
 					// refactor

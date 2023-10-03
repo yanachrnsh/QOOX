@@ -1,26 +1,3 @@
-// export const socialMedia = [
-//   {
-//     id: "social-media-1",
-//     icon: instagram,
-//     link: "https://www.instagram.com/",
-//   },
-//   {
-//     id: "social-media-2",
-//     icon: facebook,
-//     link: "https://www.facebook.com/",
-//   },
-//   {
-//     id: "social-media-3",
-//     icon: twitter,
-//     link: "https://www.twitter.com/",
-//   },
-//   {
-//     id: "social-media-4",
-//     icon: linkedin,
-//     link: "https://www.linkedin.com/",
-//   },
-// ];
-
 export const navLinks = [
 	{
 		id: 'about',
@@ -115,7 +92,7 @@ export const caseStudies = [
 	},
 	{
 		id: 'case-study-2',
-		src: '../../src/assets/iphone-case.svg',
+		src: '../../src/assets/apple-set.png',
 		title: {
 			text: 'Name of a Project 2'
 		},
@@ -134,7 +111,7 @@ export const caseStudies = [
 	},
 	{
 		id: 'case-study-3',
-		src: '../../src/assets/iphone-case.svg',
+		src: '../../src/assets/ipad-pro.png',
 		title: {
 			text: 'Name of a Project 3'
 		},

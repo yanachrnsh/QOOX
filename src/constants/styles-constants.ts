@@ -30,7 +30,7 @@ export const styles = {
 }
 
 export const layout = {
-	sectionDark: `${styles.paddingX} ${styles.marginX} ${styles.sectionCol} text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-auto bg-no-repeat bg-right rounded-3xl `
+	sectionDark: `${styles.paddingX} ${styles.marginX} ${styles.sectionCol} ${styles.paddingY} text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-auto bg-no-repeat bg-right rounded-3xl `
 }
 
 export const container = {
@@ -40,17 +40,12 @@ export const container = {
 export const card = {
 	cardImg: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]',
 	blockLightGrey: `${styles.flexCard}  bg-lightGrey text-darkPrimary rounded-2xl p-4 sm:p-6`,
-	blockDarkGrey: `${styles.flexCard}  bg-darkGrey text-lightPrimary rounded-2xl p-4 sm:p-6 min-w-[300px] m-w-[350px]`,
-	textLight: 'text-start sm:w-[90%] md:w-[100%] text-lightPrimary',
-	textDark: 'text-start sm:w-[90%] md:w-[100%] text-darkPrimary',
+	blockDarkGrey: `${styles.flexCard}  bg-darkGrey text-lightPrimary rounded-2xl p-4 sm:p-6 min-w-[300px]`,
+	textLight: 'text-start w-[100%] text-lightPrimary',
+	textDark: 'text-start w-[100%] text-darkPrimary',
 	titleGreen: `${styles.headingh4} text-brandColorGreen`,
 	titleGrey: `${styles.headingh2} text-lightPrimary`,
 	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
-}
-
-export const hover = {
-	hoverBlock: `relative m-auto ease-in`,
-	hoverButton: `relative m-auto ease-in`
 }
 
 export const hoverBlock = `before:bg-lightPrimary before:hover:rounded-xl before:hover:w-[100%] before:hover:h-[100%] w-10 h-10  `
