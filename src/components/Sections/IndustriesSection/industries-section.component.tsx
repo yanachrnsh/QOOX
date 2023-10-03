@@ -1,5 +1,4 @@
 import { useState, FC } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { ContainerSmall } from '../../index'
 import {
 	BsFillArrowUpCircleFill,
@@ -12,11 +11,12 @@ import {
 import { styles } from '../../../constants/styles-constants'
 
 export const IndustriesSection: FC = () => {
-	const [activeItemIndex, setActiveItemIndex] = useState<number>(0)
+	const [activeItems, setActiveItems] = useState<number[]>([0])
+
 	return (
 		<section
 			id='industries'
-			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY}  max-w-7xl  md:mx-auto min-h-screen`}
+			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY}  max-w-7xl  md:mx-auto `}
 		>
 			<div className='self-center'>
 				<ContainerSmall
@@ -25,22 +25,19 @@ export const IndustriesSection: FC = () => {
 					button={industries.button}
 				/>
 			</div>
-			<DropdownList
-				activeItemIndex={activeItemIndex}
-				setActiveItemIndex={setActiveItemIndex}
-			/>
+			<DropdownList activeItems={activeItems} setActiveItems={setActiveItems} />
 		</section>
 	)
 }
 
 interface DropdownListProps {
-	activeItemIndex: number
-	setActiveItemIndex: (index: number) => void
+	activeItems: number[]
+	setActiveItems(activeItems: number[]): void
 }
 
 const DropdownList: FC<DropdownListProps> = ({
-	activeItemIndex,
-	setActiveItemIndex
+	activeItems,
+	setActiveItems
 }) => {
 	return (
 		<div className={`flex flex-col gap-4 pt-12 md:gap-6 md:pt-24 `}>
@@ -49,9 +46,9 @@ const DropdownList: FC<DropdownListProps> = ({
 					<DropdownItem
 						title={item.title}
 						paragraph={item.paragraph}
-						activeItemIndex={activeItemIndex}
+						activeItems={activeItems}
 						index={index}
-						setActiveItemIndex={setActiveItemIndex}
+						setActiveItems={setActiveItems}
 					/>
 					<Divider />
 				</div>
@@ -60,71 +57,52 @@ const DropdownList: FC<DropdownListProps> = ({
 	)
 }
 
-const boxAnimation = {
-	initial: {
-		opacity: 0,
-		height: 0
-	},
-	animate: { opacity: 1, height: 'auto' },
-	exit: {
-		opacity: 0,
-		height: 0,
-		transition: { duration: 0.2 }
-	},
-	transition: { duration: 0.4, ease: 'easeInOut' }
-}
-
 interface DropdownItemProps {
 	title: string
 	paragraph: string
-	activeItemIndex: number
+	activeItems: number[]
 	index: number
-	setActiveItemIndex: (index: number) => void
+	setActiveItems(activeItems: number[]): void
 }
 
 const DropdownItem: FC<DropdownItemProps> = ({
 	title,
 	paragraph,
-	activeItemIndex,
+	activeItems,
 	index,
-	setActiveItemIndex
+	setActiveItems
 }) => {
 	return (
-		<motion.div className={`flex flex-col gap-4 pb-4 md:pb-6`}>
-			<div className=' flex flex-row justify-between items-center'>
+		<div className={`flex flex-col gap-4 pb-4 md:pb-6`}>
+			<div className=' flex flex-row justify-between items-center transition'>
 				<h3 className={`${styles.headingh3} flex-1`}>{title}</h3>
-				{index === activeItemIndex ? (
+				{activeItems.includes(index) ? (
 					<BsFillArrowDownCircleFill
-						className='text-brandColorGreen cursor-pointer'
+						className='text-brandColorGreen'
 						size={24}
-						onClick={() => {
-							index === activeItemIndex
-								? setActiveItemIndex(-1)
-								: setActiveItemIndex(index)
-						}}
+						onClick={() =>
+							setActiveItems(prev => prev.filter(item => item !== index))
+						}
 					/>
 				) : (
 					<BsFillArrowUpCircleFill
-						className='text-brandColorGreen cursor-pointer'
+						className='text-brandColorGreen'
 						size={24}
-						onClick={() => {
-							setActiveItemIndex(index)
-						}}
+						onClick={() => setActiveItems(prev => [...prev, index])}
 					/>
 				)}
 			</div>
-			<AnimatePresence>
-				{index === activeItemIndex && (
-					<motion.p
-						{...boxAnimation}
-						key={index}
-						className={`${styles.paragraph} font-normal `}
-					>
-						{paragraph}
-					</motion.p>
-				)}
-			</AnimatePresence>
-		</motion.div>
+			<p
+				className={
+					activeItems.includes(index)
+						? 'active animate-fade-down'
+						: 'hidden transition ease-out'
+				}
+				key={index}
+			>
+				{paragraph}
+			</p>
+		</div>
 	)
 }
 

@@ -30,7 +30,7 @@ export const styles = {
 }
 
 export const layout = {
-	sectionDark: `${styles.paddingX} ${styles.marginX} ${styles.sectionCol} ${styles.paddingY} text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-auto bg-no-repeat bg-right rounded-3xl `
+	sectionDark: `${styles.paddingX} ${styles.marginX} ${styles.sectionCol} ${styles.paddingY} text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-no-repeat bg-right bg-contain rounded-3xl `
 }
 
 export const container = {
@@ -48,4 +48,13 @@ export const card = {
 	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
 }
 
-export const hoverBlock = `before:bg-lightPrimary before:hover:rounded-xl before:hover:w-[100%] before:hover:h-[100%] w-10 h-10  `
+export const hovers = {
+	link: {
+		parent: 'group/link  hover:text-brandColorGreenHover',
+		child: 'group-hover/link:animate-pop-up pointer-events-none'
+	},
+	button: {
+		parent: 'group/button',
+		child: 'group-hover/button:animate-shake pointer-events-none '
+	}
+}

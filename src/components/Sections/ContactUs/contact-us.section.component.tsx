@@ -6,10 +6,10 @@ import { contactUs } from '../../../constants/content-constants'
 import { UserData } from '../../../api/dto/usetData.dto'
 import { useSubmitUserData } from '../../../api/user/useSubmitUserData'
 import { z, TypeOf } from 'zod'
+import { AiOutlineArrowUp } from 'react-icons/ai'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
 import { BiError } from 'react-icons/bi'
-import { motion } from 'framer-motion'
 
 export const ContactUsSection = () => {
 	const { mutate, isError, isSuccess } = useSubmitUserData()
@@ -23,7 +23,16 @@ export const ContactUsSection = () => {
 			id='contacts'
 			className={`${styles.paddingX} ${styles.paddingY} max-w-7xl  md:mx-auto relative`}
 		>
-			<section className={`${styles.gridCard} items-center `}>
+			<section className={`${styles.gridCard} items-center relative `}>
+				<a
+					href='#root'
+					className='hidden sm:inline-block absolute right-0 top-[-5%] text-brandColorGreen hover:text-brandColorGreenHover hover:animate-bounce p-2 '
+				>
+					<AiOutlineArrowUp
+						size={24}
+						className='  text-brandColorGreen hover:text-brandColorGreenHover pointer-events-none'
+					/>
+				</a>
 				<div>
 					<TitleParagraph
 						title={contactUs.title}
@@ -47,7 +56,6 @@ export const ContactUsSection = () => {
 						</h1>
 					</div>
 				)}
-
 				{!isSuccess && !isError && (
 					<ContactForm onSubmit={onSubmit}></ContactForm>
 				)}
@@ -128,18 +136,9 @@ const ContactForm: FC<ContactFormProps> = ({ onSubmit }) => {
 			/>
 
 			<div>
-				<motion.button
-					type='submit'
-					className='text-lightPrimary bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 w-[100%] mt-16 cursor-pointer'
-				>
-					<motion.p
-						initial={{ marginLeft: 0 }}
-						whileHover={{ marginLeft: '-90%' }}
-						transition={{ duration: 0.6, ease: 'easeInOut' }}
-					>
-						Contact Us
-					</motion.p>
-				</motion.button>
+				<button className='group text-lightPrimary bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 w-[100%] mt-16 cursor-pointer'>
+					<p className='group-hover:animate-fade-left'>Contact Us</p>
+				</button>
 			</div>
 		</form>
 	)

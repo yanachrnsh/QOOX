@@ -23,7 +23,7 @@ export const Header = () => {
 					<FiMenu className='cursor-pointer' size={24} />
 				)}
 			</div>
-			<Menu isMenuOpen={isMenuOpen} />
+			<Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 		</header>
 	)
 }

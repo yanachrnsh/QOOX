@@ -13,8 +13,8 @@ module.exports = {
 				surfaceDarkPrimary: '#1C1C1C',
 				strokeDarker: '#515151',
 				strokerLighter: '#9A9A9A',
-				backgroundMain: '#fffdff', 
-				brandColorGreenHover: '#016B4D',
+				backgroundMain: '#fffdff',
+				brandColorGreenHover: '#016B4D'
 			},
 			fontSize: {
 				sm: '0.8rem',
@@ -36,6 +36,63 @@ module.exports = {
 			backgroundImage: {
 				backgroundIntro: "url('./src/assets/bg-intro.gif')",
 				backgroundServices: "url('./src/assets/bg-services.svg')"
+			},
+			keyframes: {
+				shake: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'33%': {
+						transform: 'translateY(5%)'
+					},
+					'66%': {
+						transform: 'translateY(-5%)'
+					}
+				},
+				'pop-up': {
+					'100%': {
+						transform: 'translateY(-5%)'
+					}
+				},
+				'fade-down': {
+					'0%': {
+						transform: 'translateY(-10%)'
+					},
+					'100%': {
+						transform: 'translateY(0%)'
+					}
+				},
+				'fade-up': {
+					'0%': {
+						transform: 'translateY(10%)'
+					},
+					'100%': {
+						transform: 'translateY(0%)'
+					}
+				},
+				'fade-left': {
+					'0%': {
+						transform: 'translateX(0%)'
+					},
+					'100%': {
+						transform: 'translateX(-45%)'
+					}
+				},
+				grow: {
+					'0%': {
+						transform: 'translateX(0%) scale(0)',
+						opacity: 0
+					},
+					'100%': {
+						transform: 'translateX(-400%) scale(4)',
+						opacity: 1
+					}
+				}
+			},
+			animation: {
+				shake: 'shake 0.7s ease-in-out 1 ',
+				'pop-up': 'pop-up 0.2s ease-in-out forwards ',
+				'fade-down': 'fade-down 0.8s ease-in-out forwards',
+				'fade-left': 'fade-left 0.8s ease-in-out forwards',
+				grow: 'grow 0.8s ease-in-out forwards'
 			}
 		},
 		plugins: []

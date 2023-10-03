@@ -21,9 +21,10 @@ export const TechnologiesSection = () => {
 		technologiesCards.length
 	)
 	return (
-		<section 
-		id="technologies"
-		className={`${styles.sectionCol} ${styles.paddingX} `}>
+		<section
+			id='technologies'
+			className={`${styles.sectionCol} ${styles.paddingX} `}
+		>
 			<div className='lg:text-center lg:max-w-[850px] lg:m-auto lg:items-center items-start'>
 				<TitleParagraph
 					title={technologies.title}
@@ -70,7 +71,7 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 					<span className={`${styles.span} `}>{card.title}</span>
 				</div>
 			))}
-			<ButtonLarge style='col-span-2 hidden lg:flex sm:p-0 ' />
+			<ButtonLarge style='col-span-2 hidden lg:flex lg:p-0 ' />
 		</>
 	)
 }
