@@ -14,13 +14,13 @@ export const styles = {
 	sectionRow:
 		'flex md:flex-row flex-col pt-[60px] pb-[300px] sm:pt-[160px] md:pb-[225px] bg-gifBackground bg-auto bg-no-repeat bg-bottom md:bg-right',
 
-	headingh1: 'text-3xl ss:text-6xl w-full font-semibold',
+	headingH1: 'text-3xl ss:text-6xl w-full font-semibold',
 
-	headingh2: 'text-2xl font-medium',
+	headingH2: 'text-2xl font-medium',
 
-	headingh3: 'text-xl font-semibold',
+	headingH3: 'text-xl font-semibold',
 
-	headingh4: 'text-lg font-medium sm:text-xl',
+	headingH4: 'text-lg font-medium sm:text-xl',
 
 	paragraph: 'text-base sm:text-xl font-medium',
 	span: 'text-xl font-medium',
@@ -39,12 +39,8 @@ export const container = {
 
 export const card = {
 	cardImg: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]',
-	blockLightGrey: `${styles.flexCard}  bg-lightGrey text-darkPrimary rounded-2xl p-4 sm:p-6`,
-	blockDarkGrey: `${styles.flexCard}  bg-darkGrey text-lightPrimary rounded-2xl p-4 sm:p-6 min-w-[300px]`,
-	textLight: 'text-start w-[100%] text-lightPrimary',
-	textDark: 'text-start w-[100%] text-darkPrimary',
-	titleGreen: `${styles.headingh4} text-brandColorGreen`,
-	titleGrey: `${styles.headingh2} text-lightPrimary`,
+	block: ` ${styles.flexCard} rounded-2xl p-4 sm:p-6`,
+	text: 'text-start w-[100%]',
 	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
 }
 
@@ -56,5 +52,7 @@ export const hovers = {
 	button: {
 		parent: 'group/button',
 		child: 'group-hover/button:animate-shake pointer-events-none '
-	}
+	},
+	textHoverGreen: 'text-brandColorGreen hover:text-brandColorGreenHover',
+	backgroundHoverGreen: 'bg-brandColorGreen hover:bg-brandColorGreenHover'
 }

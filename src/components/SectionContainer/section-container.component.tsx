@@ -35,7 +35,10 @@ export const ContainerSmall: FC<ContainerSmall> = ({
 	return (
 		<>
 			<TitleParagraph title={title} paragraph={paragraph} />
+			<div className='flex'>
 			<Button text={button.text} id={button.id} svg={button.svg} />
+			</div>
+
 		</>
 	)
 }

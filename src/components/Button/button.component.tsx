@@ -12,18 +12,16 @@ export interface IButton {
 
 export const Button: FC<IButton> = ({ text, svg, id, styles }) => {
 	return (
-		<div className='flex'>
-			<a
-				href={`#${id}`}
-				className={`${hovers.button.parent} hover:bg-brandColorGreenHover min-w-[200px] max-w-[100%] text-lightPrimary bg-brandColorGreen py-2 px-6 rounded text-center ${styles} `}
+		<a
+			href={`#${id}`}
+			className={`${hovers.button.parent} ${hovers.backgroundHoverGreen} flex items-center justify-center min-w-[200px] max-w-[100%] text-lightPrimary py-2 px-6 rounded text-center ${styles} `}
+		>
+			<p
+				className={` ${hovers.button.child} flex items-center justify-center gap-2`}
 			>
-				<p
-					className={` ${hovers.button.child} flex items-center justify-center gap-2`}
-				>
-					{text} {svg && <img src={svg} alt='arrow' />}
-				</p>
-			</a>
-		</div>
+				{text} {svg && <img src={svg} alt='arrow' />}
+			</p>
+		</a>
 	)
 }
 
@@ -33,7 +31,7 @@ export const ButtonLarge = ({ style = '' }) => {
 			text='Discover Our Expertise'
 			svg={arrowIcon}
 			id='cases'
-			styles={`${styles.flexCenter} relative py-9 px-9 rounded-xl mt-6 mb-22 w-[100%] sm:self-start sm:p-20 lg:h-[100%] lg:mt-0 lg:mb-0 ${style}`}
+			styles={`${styles.flexCenter} relative py-9 px-9 rounded-xl mt-6 mb-22 w-[100%] sm:self-start sm:p-20 lg:h-[100%] lg:mt-0 lg:mb-0  ${style}`}
 		></Button>
 	)
 }

@@ -71,8 +71,8 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 					<span className={`${styles.span} `}>{card.title}</span>
 				</div>
 			))}
-			<div className='col-span-2 hidden lg:flex lg:p-0  '>
-				<ButtonLarge />
+			<div className='col-span-2 hidden lg:flex  '>
+				<ButtonLarge style='w-full lg:p-0 ' />
 			</div>
 		</>
 	)

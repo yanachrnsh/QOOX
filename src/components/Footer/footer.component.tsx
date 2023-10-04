@@ -14,11 +14,11 @@ export const Footer = () => {
 			</div>
 			<a
 				href='#root'
-				className=' sm:hidden absolute right-0 top-[5%] text-brandColorGreen hover:text-brandColorGreenHover hover:animate-bounce p-2 '
+				className={`${hovers.textHoverGreen} sm:hidden absolute right-0 top-[5%] hover:animate-bounce p-2`} 
 			>
 				<AiOutlineArrowUp
 					size={24}
-					className='  text-brandColorGreen hover:text-brandColorGreenHover pointer-events-none'
+					className={`${hovers.textHoverGreen} pointer-events-none`}
 				/>
 			</a>
 

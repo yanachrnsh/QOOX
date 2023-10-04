@@ -1,7 +1,7 @@
 import { Title, Card, Scroll } from '../../index'
 import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
 
-import { layout, card } from '../../../constants/styles-constants'
+import { layout, card, styles } from '../../../constants/styles-constants'
 import { services } from '../../../constants/content-constants'
 import { ButtonLarge } from '../../Button/button.component'
 
@@ -9,7 +9,7 @@ export const ServicesSection = () => {
 	const { scrollWidth, carousel } = userScrollCarousel()
 
 	return (
-		<section id="services" className={`${layout.sectionDark}`}>
+		<section id='services' className={`${layout.sectionDark}`}>
 			<div className='pb-[40px] lg:pb-[70px]'>
 				<Title text='Our Services' />
 			</div>
@@ -35,10 +35,10 @@ const ServicesCard = () => {
 				<Card
 					key={service.id}
 					cardStyles={{
-						block: card.blockDarkGrey,
+						block: `${card.block} min-w-[300px] bg-darkGrey  text-lightPrimary `,
 						img: card.img,
-						title: card.titleGreen,
-						text: card.textLight
+						title: `${styles.headingH4} text-brandColorGreen`,
+						text: `${card.text}`
 					}}
 					text={service.text}
 					title={service.title}
@@ -47,5 +47,3 @@ const ServicesCard = () => {
 		</>
 	)
 }
-
-

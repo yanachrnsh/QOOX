@@ -1,23 +1,20 @@
-import { FC } from 'react'
-import { useForm, SubmitHandler } from 'react-hook-form'
-import { styles } from '../../../constants/styles-constants'
+import { SubmitHandler } from 'react-hook-form'
+import { hovers, styles } from '../../../constants/styles-constants'
 import { TitleParagraph } from '../../SectionContainer/section-container.component'
 import { contactUs } from '../../../constants/content-constants'
 import { UserData } from '../../../api/dto/usetData.dto'
 import { useSubmitUserData } from '../../../api/user/useSubmitUserData'
-import { z, TypeOf } from 'zod'
 import { AiOutlineArrowUp } from 'react-icons/ai'
-import { zodResolver } from '@hookform/resolvers/zod'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
 import { BiError } from 'react-icons/bi'
+import { ContactForm } from './contact-form.component'
 
 export const ContactUsSection = () => {
-	const { mutate, isError, isSuccess } = useSubmitUserData()
+	const { mutate, isError, isSuccess, isLoading } = useSubmitUserData()
 
 	const onSubmit: SubmitHandler<UserData> = data => {
 		mutate(data)
 	}
-
 	return (
 		<section
 			id='contacts'
@@ -26,11 +23,11 @@ export const ContactUsSection = () => {
 			<section className={`${styles.gridCard} items-center relative `}>
 				<a
 					href='#root'
-					className='hidden sm:inline-block absolute right-0 top-[-5%] text-brandColorGreen hover:text-brandColorGreenHover hover:animate-bounce p-2 '
+					className={`hidden sm:inline-block absolute right-0 top-[-5%] ${hovers.textHoverGreen} hover:animate-bounce p-2`}
 				>
 					<AiOutlineArrowUp
 						size={24}
-						className='  text-brandColorGreen hover:text-brandColorGreenHover pointer-events-none'
+						className={` ${hovers.textHoverGreen} pointer-events-none`}
 					/>
 				</a>
 				<div>
@@ -57,91 +54,14 @@ export const ContactUsSection = () => {
 					</div>
 				)}
 				{!isSuccess && !isError && (
-					<ContactForm onSubmit={onSubmit}></ContactForm>
+					<ContactForm onSubmit={onSubmit} isLoading={isLoading}></ContactForm>
 				)}
 			</section>
 			<h3
-				className={`${styles.headingh3} text-brandColorGreen absolute bottom-0 pb-1`}
+				className={`${styles.headingH3} text-brandColorGreen absolute bottom-0 pb-1`}
 			>
 				Don't Wait! Your Future Awaits
 			</h3>
 		</section>
-	)
-}
-
-const contactFormSchema = z.object({
-	name: z.string().min(2, { message: 'Name is required' }),
-	email: z.string().email({ message: 'A valid email is required' }),
-	project: z.string().optional()
-})
-
-type ContactFormSchema = TypeOf<typeof contactFormSchema>
-
-interface ContactFormProps {
-	onSubmit: (userData: UserData) => void
-}
-
-const ContactForm: FC<ContactFormProps> = ({ onSubmit }) => {
-	const {
-		register,
-		handleSubmit,
-		formState: { errors }
-	} = useForm<ContactFormSchema>({
-		mode: 'onChange',
-		resolver: zodResolver(contactFormSchema)
-	})
-
-	return (
-		<form className='text-darkSecondary' onSubmit={handleSubmit(onSubmit)}>
-			<p
-				className={`${
-					errors.name ? 'visible' : 'invisible'
-				} text-rose-600 h-[20px] my-2`}
-			>
-				{errors.name?.message}
-			</p>
-			<input
-				type='text'
-				placeholder='Name'
-				className={`${styles.formInputs}`}
-				{...register('name', { required: true })}
-			/>
-
-			<p
-				className={`${
-					errors.email ? 'visible' : 'invisible'
-				} text-rose-600 h-[20px] my-2`}
-			>
-				{errors.email?.message}
-			</p>
-			<input
-				type='email'
-				placeholder='Email'
-				className={`${styles.formInputs}`}
-				{...register('email', { required: true })}
-			/>
-
-			<p
-				className={`${
-					errors.project ? 'visible' : 'invisible'
-				} text-rose-600 h-[20px] my-2`}
-			>
-				{errors.project?.message}
-			</p>
-			<input
-				type='text'
-				className={`${styles.formInputs}`}
-				placeholder='Just a few words about your project (Optional)'
-				{...register('project', { required: false })}
-			/>
-
-			<div>
-				<button className='group/contact text-lightPrimary bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 w-[100%] mt-16 cursor-pointer'>
-					<p className=' group-hover/contact:translate-x-[-45%]  translate-x-0 transition duration-500 ease-in-out'>
-						Contact Us
-					</p>
-				</button>
-			</div>
-		</form>
 	)
 }

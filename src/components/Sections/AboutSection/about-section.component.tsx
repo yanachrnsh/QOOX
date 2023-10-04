@@ -14,7 +14,7 @@ export const AboutSection = () => {
 					title={aboutTitleParagraph.title}
 					paragraph={aboutTitleParagraph.paragraph}
 				/>
-				<h3 className={`${styles.headingh2} pb-[32px] md:pb-[40px]`}>
+				<h3 className={`${styles.headingH2} pb-[32px] md:pb-[40px]`}>
 					<p>Why choose us?</p>
 				</h3>
 			</div>
@@ -27,10 +27,10 @@ export const AboutSection = () => {
 						text={item.text}
 						key={item.id}
 						cardStyles={{
-							block: card.blockLightGrey,
+							block: `${card.block} bg-lightGrey text-darkPrimary`,
 							img: card.img,
-							title: card.titleGreen,
-							text: card.textDark
+							title: `${styles.headingH4} text-brandColorGreen`,
+							text: `${card.text} text-darkPrimary'`
 						}}
 					/>
 				))}

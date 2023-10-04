@@ -3,7 +3,7 @@ import { ContainerLarge } from '../../index'
 import { motion } from 'framer-motion'
 import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs'
 import { caseStudies } from '../../../constants/content-constants'
-import { styles, container } from '../../../constants/styles-constants'
+import { styles, container, hovers} from '../../../constants/styles-constants'
 
 interface CaseStudiesSectionProps {
 	casePageIndex: number
@@ -41,13 +41,13 @@ export const CaseStudiesSection:FC<CaseStudiesSectionProps> = ({setCasePageIndex
 			<div className='hidden md:flex md:gap-8 md:self-center pt-16 '>
 				<PageButton handleClick={prevPage}>
 					<BsArrowLeftCircle
-						className='text-brandColorGreen cursor-pointer hover:text-brandColorGreenHover'
+						className= {`cursor-pointer ${hovers.textHoverGreen}`}
 						size={34}
 					/>
 				</PageButton>
 				<PageButton handleClick={nextPage}>
 					<BsArrowRightCircle
-						className='text-brandColorGreen cursor-pointer hover:text-brandColorGreenHover'
+						className= {`cursor-pointer ${hovers.textHoverGreen}`}
 						size={34}
 					/>
 				</PageButton>
