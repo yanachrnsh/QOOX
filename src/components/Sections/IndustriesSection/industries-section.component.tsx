@@ -1,4 +1,4 @@
-import { useState, FC } from 'react'
+import { useState, FC, SetStateAction, Dispatch } from 'react'
 import { ContainerSmall } from '../../index'
 import {
 	BsFillArrowUpCircleFill,
@@ -30,14 +30,12 @@ export const IndustriesSection: FC = () => {
 	)
 }
 
-interface DropdownListProps {
-	activeItems: number[]
-	setActiveItems(activeItems: number[]): void
-}
-
-const DropdownList: FC<DropdownListProps> = ({
+const DropdownList = ({
 	activeItems,
 	setActiveItems
+}: {
+	activeItems: number[]
+	setActiveItems: Dispatch<SetStateAction<number[]>>
 }) => {
 	return (
 		<div className={`flex flex-col gap-4 pt-12 md:gap-6 md:pt-24 `}>
@@ -62,7 +60,7 @@ interface DropdownItemProps {
 	paragraph: string
 	activeItems: number[]
 	index: number
-	setActiveItems(activeItems: number[]): void
+	setActiveItems: Dispatch<SetStateAction<number[]>>
 }
 
 const DropdownItem: FC<DropdownItemProps> = ({
@@ -78,7 +76,7 @@ const DropdownItem: FC<DropdownItemProps> = ({
 				<h3 className={`${styles.headingh3} flex-1`}>{title}</h3>
 				{activeItems.includes(index) ? (
 					<BsFillArrowDownCircleFill
-						className='text-brandColorGreen'
+						className='text-brandColorGreen '
 						size={24}
 						onClick={() =>
 							setActiveItems(prev => prev.filter(item => item !== index))
@@ -93,11 +91,9 @@ const DropdownItem: FC<DropdownItemProps> = ({
 				)}
 			</div>
 			<p
-				className={
-					activeItems.includes(index)
-						? 'active animate-fade-down'
-						: 'hidden transition ease-out'
-				}
+				className={` ${
+					activeItems.includes(index) ? 'max-h-40 ' : 'max-h-0 opacity-0'
+				} transition-all duration-1000 ease-in-out`}
 				key={index}
 			>
 				{paragraph}
