@@ -74,7 +74,7 @@ module.exports = {
 			animation: {
 				shake: 'shake 0.7s ease-in-out 1 ',
 				'pop-up': 'pop-up 0.2s ease-in-out forwards ',
-				'fade-left': 'fade-left  0.8s ease forwards',
+				'fade-left': 'fade-left  0.8s ease-in-out forwards',
 				grow: 'grow 0.8s ease-in-out forwards'
 			}
 		},

@@ -18,7 +18,7 @@ export const IndustriesSection: FC = () => {
 			id='industries'
 			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY}  max-w-7xl  md:mx-auto `}
 		>
-			<div className='self-center'>
+			<div className='self-center py-[200px]'>
 				<ContainerSmall
 					title={industries.title}
 					paragraph={industries.paragraph}
@@ -38,7 +38,7 @@ const DropdownList = ({
 	setActiveItems: Dispatch<SetStateAction<number[]>>
 }) => {
 	return (
-		<div className={`flex flex-col gap-4 pt-12 md:gap-6 md:pt-24 `}>
+		<div className={`flex flex-col gap-4  md:gap-6 md:pt-24`}>
 			{industriesDropdown.map((item, index) => (
 				<div key={item.id}>
 					<DropdownItem
@@ -76,7 +76,7 @@ const DropdownItem: FC<DropdownItemProps> = ({
 				<h3 className={`${styles.headingh3} flex-1`}>{title}</h3>
 				{activeItems.includes(index) ? (
 					<BsFillArrowDownCircleFill
-						className='text-brandColorGreen '
+						className='text-brandColorGreen cursor-pointer '
 						size={24}
 						onClick={() =>
 							setActiveItems(prev => prev.filter(item => item !== index))
@@ -84,7 +84,7 @@ const DropdownItem: FC<DropdownItemProps> = ({
 					/>
 				) : (
 					<BsFillArrowUpCircleFill
-						className='text-brandColorGreen'
+						className='text-brandColorGreen cursor-pointer'
 						size={24}
 						onClick={() => setActiveItems(prev => [...prev, index])}
 					/>

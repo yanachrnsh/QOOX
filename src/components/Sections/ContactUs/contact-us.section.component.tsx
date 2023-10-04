@@ -136,8 +136,10 @@ const ContactForm: FC<ContactFormProps> = ({ onSubmit }) => {
 			/>
 
 			<div>
-				<button className='group text-lightPrimary bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 w-[100%] mt-16 cursor-pointer'>
-					<p className='group-hover:animate-fade-left'>Contact Us</p>
+				<button className='group/contact text-lightPrimary bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 w-[100%] mt-16 cursor-pointer'>
+					<p className=' group-hover/contact:translate-x-[-45%]  translate-x-0 transition duration-500 ease-in-out'>
+						Contact Us
+					</p>
 				</button>
 			</div>
 		</form>

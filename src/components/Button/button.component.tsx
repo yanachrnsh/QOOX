@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { BsArrowUpRightCircleFill } from 'react-icons/bs'
+import arrowIcon from '../../assets/arrow-right-top.svg'
 
 import { styles, hovers } from '../../constants/styles-constants'
 
@@ -7,14 +7,15 @@ export interface IButton {
 	text: string
 	svg?: string
 	id: string
+	styles?: string
 }
 
-export const Button: FC<IButton> = ({ text, svg, id }) => {
+export const Button: FC<IButton> = ({ text, svg, id, styles }) => {
 	return (
 		<div className='flex'>
 			<a
 				href={`#${id}`}
-				className={`${hovers.button.parent} hover:bg-brandColorGreenHover min-w-[200px] max-w-[100%] text-lightPrimary bg-brandColorGreen py-2 px-6 rounded text-center `}
+				className={`${hovers.button.parent} hover:bg-brandColorGreenHover min-w-[200px] max-w-[100%] text-lightPrimary bg-brandColorGreen py-2 px-6 rounded text-center ${styles} `}
 			>
 				<p
 					className={` ${hovers.button.child} flex items-center justify-center gap-2`}
@@ -28,17 +29,11 @@ export const Button: FC<IButton> = ({ text, svg, id }) => {
 
 export const ButtonLarge = ({ style = '' }) => {
 	return (
-		<div
-			className={`${styles.flexCenter} ${hovers.button.parent} text-lightPrimary p-9 bg-brandColorGreen hover:bg-brandColorGreenHover  relative rounded-xl mt-6 mb-22 w-[100%] sm:self-start sm:p-20  lg:h-[100%] lg:mt-0 lg:mb-0 ${style}`}
-		>
-			<div className={`${hovers.button.child} flex`}>
-				<p className='z-10 mr-4'>Discover Our Expertise</p>
-				<BsArrowUpRightCircleFill
-					className=' bg-brandColorGreen group-hover/button:bg-brandColorGreenHover '
-					size={24}
-				/>
-				{/* <div className='absolute group-hover:animate-grow top-0 w-6 h-6 rounded-full bg-lightPrimary opacity-0 '></div> */}
-			</div>
-		</div>
+		<Button
+			text='Discover Our Expertise'
+			svg={arrowIcon}
+			id='cases'
+			styles={`${styles.flexCenter} relative py-9 px-9 rounded-xl mt-6 mb-22 w-[100%] sm:self-start sm:p-20 lg:h-[100%] lg:mt-0 lg:mb-0 ${style}`}
+		></Button>
 	)
 }

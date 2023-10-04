@@ -1,58 +1,70 @@
-import { ReactElement, useState } from 'react'
+import { ReactElement, FC, Dispatch , SetStateAction} from 'react'
 import { ContainerLarge } from '../../index'
 import { motion } from 'framer-motion'
 import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs'
 import { caseStudies } from '../../../constants/content-constants'
 import { styles, container } from '../../../constants/styles-constants'
 
-export const CaseStudiesSection = () => {
-	const [pageIndex, setPageIndex] = useState(0)
+interface CaseStudiesSectionProps {
+	casePageIndex: number
+	setCasePageIndex: Dispatch<SetStateAction<number>>
+}
+
+
+export const CaseStudiesSection:FC<CaseStudiesSectionProps> = ({setCasePageIndex, casePageIndex}) => {
 
 	const nextPage = () => {
-		if (pageIndex === caseStudies.length - 1) {
-			setPageIndex(0)
+		if (casePageIndex === caseStudies.length - 1) {
+			setCasePageIndex(0)
 			return
 		}
 
-		setPageIndex(prev => prev + 1)
+		setCasePageIndex(prev => prev + 1)
 	}
 
 	const prevPage = () => {
-		if (pageIndex === 0) {
-			setPageIndex(caseStudies.length - 1)
+		if (casePageIndex === 0) {
+			setCasePageIndex(caseStudies.length - 1)
 			return
 		}
 
-		setPageIndex(prev => prev - 1)
+		setCasePageIndex(prev => prev - 1)
 	}
 
 	return (
 		<section
+			id='cases'
 			className={`${styles.sectionCol} ${styles.paddingX}  ${container.titleParagraphContainer}`}
 		>
-			<SwiperContainer pageIndex={pageIndex} />
+			<SwiperContainer casePageIndex={casePageIndex} />
 
 			<div className='hidden md:flex md:gap-8 md:self-center pt-16 '>
 				<PageButton handleClick={prevPage}>
-					<BsArrowLeftCircle className='text-brandColorGreen' size={34} />
+					<BsArrowLeftCircle
+						className='text-brandColorGreen cursor-pointer hover:text-brandColorGreenHover'
+						size={34}
+					/>
 				</PageButton>
 				<PageButton handleClick={nextPage}>
-					<BsArrowRightCircle className='text-brandColorGreen' size={34} />
+					<BsArrowRightCircle
+						className='text-brandColorGreen cursor-pointer hover:text-brandColorGreenHover'
+						size={34}
+					/>
 				</PageButton>
 			</div>
 		</section>
 	)
 }
 
-const SwiperContainer = ({ pageIndex }: { pageIndex: number }) => {
+const SwiperContainer = ({ casePageIndex }: { casePageIndex: number }) => {
 	return (
 		<>
 			{caseStudies.map((content, index) => (
 				<motion.div
 					key={content.id}
-					className={`${index === pageIndex ? 'active' : ''}`}
+					className={`${index === casePageIndex ? 'active' : ''}`}
 				>
-					{index === pageIndex && (
+					{index === casePageIndex && (
 						<motion.div
 							key={content.id}
 							initial={{ opacity: 0, x: -20 }}
