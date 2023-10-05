@@ -1,7 +1,7 @@
 {
 	"name": "QOOX",
 	"homepage": "http://yanachrnsh.github.io/QOOX",
-	"private": true,
+	"private": false,
 	"version": "^4.4.9",
 	"type": "module",
 	"scripts": {
