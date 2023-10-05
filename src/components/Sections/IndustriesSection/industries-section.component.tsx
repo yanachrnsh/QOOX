@@ -11,31 +11,31 @@ import {
 import { styles } from '../../../constants/styles-constants'
 
 export const IndustriesSection: FC = () => {
-	const [activeItems, setActiveItems] = useState<number[]>([0])
+	const [activeItem, setActiveItem] = useState<number>(0)
 
 	return (
 		<section
 			id='industries'
 			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY}  max-w-7xl  md:mx-auto `}
 		>
-			<div className='self-center pb-[100px] md:py-[200px]'>
+			<div className='self-center pb-[100px] md:py-[156px]'>
 				<ContainerSmall
 					title={industries.title}
 					paragraph={industries.paragraph}
 					button={industries.button}
 				/>
 			</div>
-			<DropdownList activeItems={activeItems} setActiveItems={setActiveItems} />
+			<DropdownList activeItem={activeItem} setActiveItem={setActiveItem} />
 		</section>
 	)
 }
 
 const DropdownList = ({
-	activeItems,
-	setActiveItems
+	activeItem,
+	setActiveItem
 }: {
-	activeItems: number[]
-	setActiveItems: Dispatch<SetStateAction<number[]>>
+	activeItem: number
+	setActiveItem: Dispatch<SetStateAction<number>>
 }) => {
 	return (
 		<div className={`flex flex-col gap-4 md:gap-6 md:pt-24`}>
@@ -44,9 +44,9 @@ const DropdownList = ({
 					<DropdownItem
 						title={item.title}
 						paragraph={item.paragraph}
-						activeItems={activeItems}
+						activeItem={activeItem}
 						index={index}
-						setActiveItems={setActiveItems}
+						setActiveItem={setActiveItem}
 					/>
 					<Divider />
 				</div>
@@ -58,42 +58,40 @@ const DropdownList = ({
 interface DropdownItemProps {
 	title: string
 	paragraph: string
-	activeItems: number[]
+	activeItem: number
 	index: number
-	setActiveItems: Dispatch<SetStateAction<number[]>>
+	setActiveItem: Dispatch<SetStateAction<number>>
 }
 
 const DropdownItem: FC<DropdownItemProps> = ({
 	title,
 	paragraph,
-	activeItems,
+	activeItem,
 	index,
-	setActiveItems
+	setActiveItem
 }) => {
 	return (
 		<div className={`flex flex-col gap-4 pb-4 md:pb-6`}>
 			<div className=' flex flex-row justify-between items-center transition'>
 				<h3 className={`${styles.headingH3} flex-1`}>{title}</h3>
-				{activeItems.includes(index) ? (
+				{index !== activeItem ? (
 					<BsFillArrowDownCircleFill
 						className='text-brandColorGreen cursor-pointer '
 						size={24}
-						onClick={() =>
-							setActiveItems(prev => prev.filter(item => item !== index))
-						}
+						onClick={() => setActiveItem(index)}
 					/>
 				) : (
 					<BsFillArrowUpCircleFill
 						className='text-brandColorGreen cursor-pointer'
 						size={24}
-						onClick={() => setActiveItems(prev => [...prev, index])}
+						onClick={() => setActiveItem(prev => (prev === index ? -1 : index))}
 					/>
 				)}
 			</div>
 			<p
 				className={` ${
-					activeItems.includes(index) ? 'max-h-40 ' : 'max-h-0 opacity-0'
-				} transition-all duration-1000 ease-in-out`}
+					index === activeItem ? 'max-h-40 ' : 'max-h-0 opacity-0'
+				} transition-all duration-700 ease-in-out`}
 				key={index}
 			>
 				{paragraph}
