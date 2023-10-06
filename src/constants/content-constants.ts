@@ -1,3 +1,33 @@
+import {
+	appleSet,
+	arrowRight,
+	industriesNeedsKnowledge,
+	industriesNeedsApproach,
+	industriesNeedsScalable,
+	industriesNeedsSecurity,
+	ipadPro,
+	iphoneCase,
+	provenExpertise,
+	reliabilityTrust,
+	html,
+	tailoredSolutions,
+	amazonAWS,
+	angular,
+	docker,
+	elasticssearch,
+	hibernate,
+	java,
+	JS,
+	kafka,
+	kubernetes,
+	mongodb,
+	oracle,
+	postgresql,
+	python,
+	react,
+	spring
+} from '@/assets/index'
+
 export const navLinks = [
 	{
 		id: 'about',
@@ -52,19 +82,19 @@ export const services = [
 export const about = [
 	{
 		id: 'about-1',
-		src: '../../src/assets/proven_expertise.svg',
+		src: `${provenExpertise}`,
 		title: 'Proven Expertise',
 		text: 'With a track record of successful projects and satisfied clients, we bring a wealth of expertise and industry knowledge to the table. Our team of professionals stays up to date with the latest trends and technologies to deliver results that exceed your expectations.'
 	},
 	{
 		id: 'about-2',
-		src: '../../src/assets/tailored_solutions.svg',
+		src: `${tailoredSolutions}`,
 		title: 'Tailored Solutions',
 		text: 'We understand that every business is unique, and we take a personalized approach to address your specific requirements. Our solutions are tailored to your goals, ensuring that you get the most out of your technology investment.'
 	},
 	{
 		id: 'about-3',
-		src: '../../src/assets/reliability_trust.svg',
+		src: `${reliabilityTrust}`,
 		title: 'Reliability and Trust',
 		text: 'We pride ourselves on being a reliable partner you can trust. Our transparent communication, commitment to deadlines, and strong work ethic form the foundation of our long-lasting client relationships.'
 	}
@@ -73,7 +103,7 @@ export const about = [
 export const caseStudies = [
 	{
 		id: 'case-study-1',
-		src: '../../src/assets/iphone-case.svg',
+		src: `${iphoneCase}`,
 		title: {
 			text: 'Name of a Project'
 		},
@@ -87,12 +117,12 @@ export const caseStudies = [
 		button: {
 			text: 'View Full Case',
 			id: 'cases',
-			svg: '../../src/assets/arrow-right.svg'
+			svg: `${arrowRight}`
 		}
 	},
 	{
 		id: 'case-study-2',
-		src: '../../src/assets/apple-set.png',
+		src: `${appleSet}`,
 		title: {
 			text: 'Name of a Project 2'
 		},
@@ -106,12 +136,12 @@ export const caseStudies = [
 		button: {
 			text: 'View Full Case',
 			id: 'cases',
-			svg: '../../src/assets/arrow-right.svg'
+			svg: `${arrowRight}`
 		}
 	},
 	{
 		id: 'case-study-3',
-		src: '../../src/assets/ipad-pro.png',
+		src: `${ipadPro}`,
 		title: {
 			text: 'Name of a Project 3'
 		},
@@ -125,7 +155,7 @@ export const caseStudies = [
 		button: {
 			text: 'View Full Case',
 			id: 'cases',
-			svg: '../../src/assets/arrow-right.svg'
+			svg: `${arrowRight}`
 		}
 	}
 ]
@@ -225,25 +255,25 @@ export const industriesNeeds = {
 export const industriesNeedsCards = [
 	{
 		id: 'industries-needs-card-1',
-		src: '../../src/assets/industries-needs-knowledge.svg',
+		src: `${industriesNeedsKnowledge}`,
 		title: 'In-Depth Industry Knowledge',
 		text: 'In the fast-paced world of media and social platforms, staying ahead of the curve is crucial. We offer innovative IT solutions that help media companies, content creators, and social platforms thrive in this dynamic landscape. From content management systems and social media analytics to interactive user experiences, our solutions empower you to engage your audience and drive growth. '
 	},
 	{
 		id: 'industries-needs-card-2',
-		src: '../../src/assets/industries-needs-approach.svg',
+		src: `${industriesNeedsApproach}`,
 		title: 'Customized Approach',
 		text: `We tailor our solutions to match your industry's specific workflows, compliance standards, and user expectations. Our team works closely with you to identify pain points and devise strategies that address your industry-specific challenges.`
 	},
 	{
 		id: 'industries-needs-card-3',
-		src: '../../src/assets/industries-needs-scalable.svg',
+		src: `${industriesNeedsScalable}`,
 		title: 'Scalable and Agile Solutions',
 		text: `We design our solutions with scalability and flexibility in mind. As your business grows and evolves, our solutions can adapt and scale to meet your changing needs, ensuring long-term success and a competitive edge.`
 	},
 	{
 		id: 'industries-needs-card-4',
-		src: '../../src/assets/industries-needs-security.svg',
+		src: `${industriesNeedsSecurity}`,
 		title: 'Security and Compliance',
 		text: 'Industries such as finance and e-commerce require a high level of security and compliance. We implement robust security measures and adhere to industry-specific regulations to protect sensitive data and maintain the trust of your customers. '
 	}
@@ -264,82 +294,82 @@ export const technologies = {
 export const technologiesCards = [
 	{
 		id: 'technologies-card-1',
-		svg: '../../src/assets/technologiesIcons/python.svg',
+		svg: `${python}`,
 		title: 'Python'
 	},
 	{
 		id: 'technologies-card-2',
-		svg: '../../src/assets/technologiesIcons/java.svg',
+		svg: `${java}`,
 		title: 'Java'
 	},
 	{
 		id: 'technologies-card-3',
-		svg: '../../src/assets/technologiesIcons/kafka.svg',
+		svg: `${kafka}`,
 		title: 'Kafka'
 	},
 	{
 		id: 'technologies-card-4',
-		svg: '../../src/assets/technologiesIcons/elasticsearch.svg',
+		svg: `${elasticssearch}`,
 		title: 'Elasticsearch'
 	},
 	{
 		id: 'technologies-card-5',
-		svg: '../../src/assets/technologiesIcons/amazon_aws.svg',
+		svg: `${amazonAWS}`,
 		title: 'Amazon AWS'
 	},
 	{
 		id: 'technologies-card-6',
-		svg: '../../src/assets/technologiesIcons/html-css.svg',
+		svg: `${html}`,
 		title: 'HTML/CSS'
 	},
 	{
 		id: 'technologies-card-7',
-		svg: '../../src/assets/technologiesIcons/docker.svg',
+		svg: `${docker}`,
 		title: 'Docker'
 	},
 	{
 		id: 'technologies-card-8',
-		svg: '../../src/assets/technologiesIcons/oracle.svg',
+		svg: `${oracle}`,
 		title: 'Oracle DB'
 	},
 	{
 		id: 'technologies-card-9',
-		svg: '../../src/assets/technologiesIcons/postgresql.svg',
+		svg: `${postgresql}`,
 		title: 'PostgreSQL'
 	},
 	{
 		id: 'technologies-card-10',
-		svg: '../../src/assets/technologiesIcons/angular.svg',
+		svg: `${angular}`,
 		title: 'Angular'
 	},
 	{
 		id: 'technologies-card-11',
-		svg: '../../src/assets/technologiesIcons/mongodb.svg',
+		svg: `${mongodb}`,
 		title: 'MongoDB'
 	},
 	{
 		id: 'technologies-card-12',
-		svg: '../../src/assets/technologiesIcons/hibernate.svg',
+		svg: `${hibernate}`,
 		title: 'Hibernate'
 	},
 	{
 		id: 'technologies-card-13',
-		svg: '../../src/assets/technologiesIcons/spring.svg',
+		svg: `${spring}`,
 		title: 'Spring'
 	},
 	{
 		id: 'technologies-card-14',
-		svg: '../../src/assets/technologiesIcons/JS.svg',
+		svg: `${JS}`,
 		title: 'JavaScript'
 	},
 	{
 		id: 'technologies-card-15',
-		svg: '../../src/assets/technologiesIcons/react.svg',
+		svg: `${react}`,
 		title: 'React / Redux'
 	},
 	{
 		id: 'technologies-card-16',
-		svg: '../../src/assets/technologiesIcons/kubernetes.svg',
+		svg: `${kubernetes}`,
 		title: 'Kubernetes'
 	}
 ]

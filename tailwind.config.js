@@ -34,8 +34,8 @@ module.exports = {
 				xl: '1700px'
 			},
 			backgroundImage: {
-				backgroundIntro: "url('@/assets/bg-intro.gif')",
-				backgroundServices: "url('@/assets/bg-services.svg')"
+				backgroundIntro: "url('./src/assets/bg-intro.gif')",
+				backgroundServices: "url('./src/assets/bg-services.svg')"
 			},
 			keyframes: {
 				shake: {
