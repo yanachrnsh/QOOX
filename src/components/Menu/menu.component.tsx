@@ -56,11 +56,9 @@ const RequestButton = ({
 		<a
 			href='#contacts'
 			onClick={() => setIsMenuOpen(false)}
-			className={`${hovers.button.parent} hover:border-brandColorGreenHover w-[100%] flex justify-center items-center text-center rounded border-2 border-brandColorGreen mt-[40px] sm:mt-0 sm:ml-[20px] md:ml-[40px]  min-w-[150px] text-brandColorGreen bg-backgroundMain  `}
+			className={`${hovers.button.parent} hover:border-brandColorGreenHover w-[100%] flex justify-center items-center text-center rounded border-2 border-brandColorGreen mt-[40px] sm:mt-0 sml:ml-[20px] md:ml-[40px]  min-w-[150px] text-brandColorGreen bg-backgroundMain  `}
 		>
-			<p className={`${hovers.button.child} py-2 px-4 sm:py-0 `}>
-				Send request
-			</p>
+			<p className={`${hovers.button.child} py-2 px-4 sm:py-1`}>Send request</p>
 		</a>
 	)
 }

@@ -16,9 +16,9 @@ export const IndustriesSection: FC = () => {
 	return (
 		<section
 			id='industries'
-			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY}  max-w-7xl  md:mx-auto `}
+			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY} max-w-7xl md:mx-auto gap-12 md:gap-[8.25rem]`}
 		>
-			<div className='self-center pb-[100px] md:py-[156px]'>
+			<div className='self-center md:py-[156px]'>
 				<ContainerSmall
 					title={industries.title}
 					paragraph={industries.paragraph}
@@ -38,18 +38,16 @@ const DropdownList = ({
 	setActiveItem: Dispatch<SetStateAction<number>>
 }) => {
 	return (
-		<div className={`flex flex-col gap-4 md:gap-6 md:pt-24`}>
+		<div className={`flex flex-col gap-6 md:pt-24`}>
 			{industriesDropdown.map((item, index) => (
-				<div key={item.id}>
-					<DropdownItem
-						title={item.title}
-						paragraph={item.paragraph}
-						activeItem={activeItem}
-						index={index}
-						setActiveItem={setActiveItem}
-					/>
-					<Divider />
-				</div>
+				<DropdownItem
+					key={item.id}
+					title={item.title}
+					paragraph={item.paragraph}
+					activeItem={activeItem}
+					index={index}
+					setActiveItem={setActiveItem}
+				/>
 			))}
 		</div>
 	)
@@ -60,6 +58,7 @@ interface DropdownItemProps {
 	paragraph: string
 	activeItem: number
 	index: number
+	key: string
 	setActiveItem: Dispatch<SetStateAction<number>>
 }
 
@@ -68,11 +67,15 @@ const DropdownItem: FC<DropdownItemProps> = ({
 	paragraph,
 	activeItem,
 	index,
-	setActiveItem
+	setActiveItem,
+	key
 }) => {
 	return (
-		<div className={`flex flex-col gap-4 pb-4 md:pb-6`}>
-			<div className=' flex flex-row justify-between items-center transition'>
+		<div
+			key={key}
+			className={`flex flex-col pb-4 md:pb-6 border-b border-solid border-strokeDarker`}
+		>
+			<div className={`flex flex-row justify-between items-center pb-4 `}>
 				<h3 className={`${styles.headingH3} flex-1`}>{title}</h3>
 				{index !== activeItem ? (
 					<BsFillArrowDownCircleFill
@@ -97,11 +100,5 @@ const DropdownItem: FC<DropdownItemProps> = ({
 				{paragraph}
 			</p>
 		</div>
-	)
-}
-
-const Divider = () => {
-	return (
-		<div className={`border border-solid bg-lightPrimary  w-[100%] `}></div>
 	)
 }
