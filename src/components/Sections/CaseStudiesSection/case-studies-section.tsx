@@ -1,18 +1,22 @@
-import { ReactElement, FC, Dispatch , SetStateAction} from 'react'
-import { ContainerLarge } from '../../index'
+import { ReactElement, FC, Dispatch, SetStateAction } from 'react'
+import { Button } from '../../Button/button.component'
+import { Title } from '../../Title/title.component'
+import { Paragraph } from '../../Paragraph/paragraph.component'
+import { SubTitle } from '../../SubTitle/subtitle.component'
 import { motion } from 'framer-motion'
 import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs'
 import { caseStudies } from '../../../constants/content-constants'
-import { styles, container, hovers} from '../../../constants/styles-constants'
+import { styles, container, hovers } from '../../../constants/styles-constants'
 
 interface CaseStudiesSectionProps {
 	casePageIndex: number
 	setCasePageIndex: Dispatch<SetStateAction<number>>
 }
 
-
-export const CaseStudiesSection:FC<CaseStudiesSectionProps> = ({setCasePageIndex, casePageIndex}) => {
-
+export const CaseStudiesSection: FC<CaseStudiesSectionProps> = ({
+	setCasePageIndex,
+	casePageIndex
+}) => {
 	const nextPage = () => {
 		if (casePageIndex === caseStudies.length - 1) {
 			setCasePageIndex(0)
@@ -41,13 +45,13 @@ export const CaseStudiesSection:FC<CaseStudiesSectionProps> = ({setCasePageIndex
 			<div className='hidden md:flex md:gap-8 md:self-center pt-16 '>
 				<PageButton handleClick={prevPage}>
 					<BsArrowLeftCircle
-						className= {`cursor-pointer ${hovers.textHoverGreen}`}
+						className={`cursor-pointer ${hovers.textHoverGreen}`}
 						size={34}
 					/>
 				</PageButton>
 				<PageButton handleClick={nextPage}>
 					<BsArrowRightCircle
-						className= {`cursor-pointer ${hovers.textHoverGreen}`}
+						className={`cursor-pointer ${hovers.textHoverGreen}`}
 						size={34}
 					/>
 				</PageButton>
@@ -79,12 +83,18 @@ const SwiperContainer = ({ casePageIndex }: { casePageIndex: number }) => {
 									className=' max-w-[100%] p-16 md:p-0 md:max-w-[50%]'
 								></img>
 								<div>
-									<ContainerLarge
-										subTitle={content.subTitle}
-										title={content.title}
-										paragraph={content.paragraph}
-										button={content.button}
-									/>
+									<SubTitle text={content.subTitle.text} />
+									<Title text={content.title.text} />
+									<div className='pb-[27px] md:pb-10'>
+										<Paragraph text={content.paragraph.text} />
+									</div>
+									<div className='w-fit'>
+										<Button
+											text={content.button.text}
+											id={content.button.id}
+											svg={content.button.svg}
+										/>
+									</div>
 								</div>
 							</div>
 						</motion.div>

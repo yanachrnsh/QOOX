@@ -31,7 +31,7 @@ export const styles = {
 }
 
 export const layout = {
-	sectionDark: `px-4 lg:px-11 mx-2 lg:mx-4 flex flex-col py-[88px] sm:py-[100px] text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-no-repeat bg-right bg-contain rounded-3xl `
+	sectionDark: `px-4 md:px-11 mx-2 md:mx-0 flex flex-col py-[88px] sm:py-[100px] text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-no-repeat bg-right bg-contain rounded-3xl `
 }
 
 export const container = {
@@ -40,7 +40,7 @@ export const container = {
 
 export const card = {
 	cardImg: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]',
-	block: ` ${styles.flexCard} rounded-2xl p-4 sm:p-6`,
+	block: ` ${styles.flexCard} rounded-2xl p-4 md:p-6`,
 	text: 'text-start w-[100%]',
 	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
 }

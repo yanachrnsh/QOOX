@@ -1,4 +1,5 @@
-import { TitleParagraph } from '../../SectionContainer/section-container.component'
+import { Title } from '../../Title/title.component'
+import { Paragraph } from '../../Paragraph/paragraph.component'
 import { Ref, ReactNode, FC } from 'react'
 import { motion } from 'framer-motion'
 import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
@@ -26,10 +27,14 @@ export const TechnologiesSection = () => {
 			className={`${styles.sectionCol} ${styles.paddingX} `}
 		>
 			<div className='lg:text-center lg:max-w-[850px] lg:m-auto lg:items-center items-start'>
-				<TitleParagraph
-					title={technologies.title}
-					paragraph={technologies.paragraph}
-				/>
+				<Title text={technologies.title.text} />
+				<div className='pb-12 md:pb-[72px]'>
+					<Paragraph
+						text={technologies.paragraph.text}
+						textColored={technologies.paragraph.textColored}
+						textAfter={technologies.paragraph.textAfter}
+					/>
+				</div>
 			</div>
 			<div className='flex sm:hidden'>
 				<TechnologiesCardCarousel carousel={carousel} scrollWidth={scrollWidth}>
@@ -61,7 +66,7 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 			{cards.map(card => (
 				<div
 					key={card.id}
-					className={`flex flex-col items-start justify-center p-6 gap-2 bg-lightGrey min-w-[180px]`}
+					className={`flex flex-col items-start justify-center p-6 gap-2 bg-lightGrey min-w-[180px] rounded-lg`}
 				>
 					<img
 						src={card.svg}

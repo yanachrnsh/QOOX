@@ -10,11 +10,16 @@ export const AboutSection = () => {
 	return (
 		<section id='about' className={`${styles.sectionCol} ${styles.paddingX}`}>
 			<div className='lg:text-center lg:max-w-[850px] lg:m-auto'>
-				<TitleParagraph
-					title={aboutTitleParagraph.title}
-					paragraph={aboutTitleParagraph.paragraph}
-				/>
-				<h3 className={`${styles.headingH3} pb-[32px] md:pb-[40px]`}>
+				<div className='pb-12 md:pb-[72px]'>
+					<TitleParagraph
+						title={aboutTitleParagraph.title}
+						paragraph={aboutTitleParagraph.paragraph}
+					/>
+				</div>
+
+				<h3
+					className={`${styles.headingH3} pb-[32px] md:pb-[40px] text-center`}
+				>
 					Why choose us?
 				</h3>
 			</div>

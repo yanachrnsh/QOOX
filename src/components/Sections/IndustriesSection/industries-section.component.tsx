@@ -1,9 +1,11 @@
 import { useState, FC, SetStateAction, Dispatch } from 'react'
-import { ContainerSmall } from '../../index'
 import {
 	BsFillArrowUpCircleFill,
 	BsFillArrowDownCircleFill
 } from 'react-icons/bs'
+import { Button } from '../../Button/button.component'
+import { Title } from '../../Title/title.component'
+import { Paragraph } from '../../Paragraph/paragraph.component'
 import {
 	industries,
 	industriesDropdown
@@ -16,14 +18,20 @@ export const IndustriesSection: FC = () => {
 	return (
 		<section
 			id='industries'
-			className={`${styles.gridCard} ${styles.paddingX} ${styles.paddingY} max-w-7xl md:mx-auto gap-12 md:gap-[8.25rem]`}
+			className={`grid grid-cols-1 md:grid-cols-2 ${styles.paddingX} ${styles.paddingY}  gap-12 md:gap-[8.25rem] max-w-7xl md:mx-auto`}
 		>
 			<div className='self-center md:py-[156px]'>
-				<ContainerSmall
-					title={industries.title}
-					paragraph={industries.paragraph}
-					button={industries.button}
-				/>
+				<Title text={industries.title.text} />
+				<div className='pb-[27px] md:pb-10'>
+					<Paragraph
+						text={industries.paragraph.text}
+						textColored={industries.paragraph.textColored}
+						textAfter={industries.paragraph.textAfter}
+					/>
+				</div>
+				<div className='w-fit'>
+					<Button text={industries.button.text} id={industries.button.id} />
+				</div>
 			</div>
 			<DropdownList activeItem={activeItem} setActiveItem={setActiveItem} />
 		</section>

@@ -20,7 +20,9 @@ export const ContactUsSection = () => {
 			id='contacts'
 			className={`${styles.paddingX} ${styles.paddingY} max-w-7xl  md:mx-auto relative`}
 		>
-			<section className={`${styles.gridCard} items-center relative `}>
+			<section
+				className={`${styles.gridCard} items-center relative gap-[19px] md:gap-48 `}
+			>
 				<a
 					href='#root'
 					className={`hidden sm:inline-block absolute right-0 top-[-5%] ${hovers.textHoverGreen} hover:animate-bounce p-2`}
