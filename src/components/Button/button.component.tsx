@@ -40,7 +40,7 @@ export const ButtonLarge = ({ style = '' }) => {
 					alt='arrow'
 					className='absolute -right-4 rounded-full z-20 hover:text-brandColorGreen '
 				></img>
-				<div className=' bg-lightPrimary absolute -right-4 w-8 h-8 rounded-full transition duration-700 ease-in-out group-hover/large:scale-[5500%] z-10'></div>
+				<span className=' bg-lightPrimary absolute -right-4 w-8 h-8 rounded-full transition duration-700 ease-in-out group-hover/large:scale-[5500%] z-10'></span>
 			</p>
 		</a>
 	)

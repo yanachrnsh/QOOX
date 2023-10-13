@@ -9,20 +9,22 @@ export const ServicesSection = () => {
 	const { scrollWidth, carousel } = userScrollCarousel()
 
 	return (
-		<section id='services' className={`${layout.sectionDark}`}>
-			<div className='pb-[40px] lg:pb-[70px]'>
-				<Title text='Our Services' />
-			</div>
+		<section id='services' className='max-w-7xl md:mx-auto md:px-4'>
+			<div className={`${layout.sectionDark}`}>
+				<div className='pb-[40px] lg:pb-[70px]'>
+					<Title text='Our Services' />
+				</div>
 
-			<div className='hidden lg:grid lg:grid-cols-3 lg:gap-6'>
-				<ServicesCard />
-				<ButtonLarge />
-			</div>
-			<div className='lg:hidden'>
-				<Scroll carousel={carousel} width={scrollWidth}>
+				<div className='hidden lg:grid lg:grid-cols-3 lg:gap-6'>
 					<ServicesCard />
-				</Scroll>
-				<ButtonLarge />
+					<ButtonLarge />
+				</div>
+				<div className='lg:hidden'>
+					<Scroll carousel={carousel} width={scrollWidth}>
+						<ServicesCard />
+					</Scroll>
+					<ButtonLarge />
+				</div>
 			</div>
 		</section>
 	)

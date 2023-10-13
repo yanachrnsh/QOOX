@@ -22,7 +22,9 @@ module.exports = {
 				lg: ['1.125rem', '1.69rem'],
 				xl: ['1.25rem', '1.81rem'],
 				'2xl': ['1.5rem', '1.875rem'],
-				'3xl': ['2rem', '2.187rem'],
+				'3xl': ['1.75rem', '2.1rem'],
+				'4xl': ['2rem', '2.187rem'],
+				'5xl': ['2.75rem', '3.3rem'],
 				'6xl': ['3.5rem', '3.8125rem']
 			},
 			screens: {

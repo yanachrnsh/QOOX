@@ -58,7 +58,6 @@ interface DropdownItemProps {
 	paragraph: string
 	activeItem: number
 	index: number
-	key: string
 	setActiveItem: Dispatch<SetStateAction<number>>
 }
 
@@ -67,12 +66,10 @@ const DropdownItem: FC<DropdownItemProps> = ({
 	paragraph,
 	activeItem,
 	index,
-	setActiveItem,
-	key
+	setActiveItem
 }) => {
 	return (
 		<div
-			key={key}
 			className={`flex flex-col pb-4 md:pb-6 border-b border-solid border-strokeDarker`}
 		>
 			<div className={`flex flex-row justify-between items-center pb-4 `}>

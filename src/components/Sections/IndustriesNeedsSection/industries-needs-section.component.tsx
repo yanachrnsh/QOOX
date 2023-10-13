@@ -44,7 +44,7 @@ const IndustriesNeedsCards = () => {
 					cardStyles={{
 						block: `${styles.flexCard} gap-4 bg-inherit pr-6 pb-6 lg:min-w-[500px] border-b-[1px] border-strokerLighter lg:border-r-[1px] lg:border-b-0`,
 						img: card.img,
-						title: `${styles.headingH2} text-lightPrimary`,
+						title: `${styles.headingH4} text-lightPrimary`,
 						text: `${card.text} ${styles.paragraph} text-lightPrimary`
 					}}
 				/>

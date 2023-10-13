@@ -14,15 +14,16 @@ export const styles = {
 	sectionRow:
 		'flex md:flex-row flex-col pt-[60px] pb-[300px] sm:pt-[160px] md:pb-[225px] bg-gifBackground bg-auto bg-no-repeat bg-bottom md:bg-right',
 
-	headingH1: 'text-3xl ss:text-6xl w-full font-semibold',
+	headingH1: 'text-4xl ss:text-6xl w-full font-semibold',
 
-	headingH2: 'text-2xl font-medium',
+	headingH2: 'text-3xl ss:text-5xl font-semibold',
 
-	headingH3: 'text-xl font-semibold',
+	headingH3: 'text-xl ss:text-2xl font-semibold',
 
-	headingH4: 'text-lg font-medium sm:text-xl',
+	headingH4: 'text-lg sm:text-xl font-medium ',
 
 	paragraph: 'text-base sm:text-xl font-medium',
+
 	span: 'text-xl font-medium',
 
 	formInputs:
@@ -30,7 +31,7 @@ export const styles = {
 }
 
 export const layout = {
-	sectionDark: `${styles.paddingX} ${styles.marginX} ${styles.sectionCol} ${styles.paddingY} text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-no-repeat bg-right bg-contain rounded-3xl `
+	sectionDark: `px-4 lg:px-11 mx-2 lg:mx-4 flex flex-col py-[88px] sm:py-[100px] text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-no-repeat bg-right bg-contain rounded-3xl `
 }
 
 export const container = {

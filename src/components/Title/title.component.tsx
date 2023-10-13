@@ -9,12 +9,12 @@ export interface ITitle {
 export const Title: FC<ITitle> = ({ text, textColored = '' }) => {
 	return (
 		<>
-			<h1 className={`${styles.headingH1} pb-4 pt-2 max-w-[100%]`}>
+			<h2 className={`${styles.headingH2} pb-4 pt-2 max-w-[100%]`}>
 				{text}
 				<span className={textColored ? 'text-brandColorGreen' : 'hidden'}>
 					{textColored}
 				</span>
-			</h1>
+			</h2>
 		</>
 	)
 }
