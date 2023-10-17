@@ -19,7 +19,7 @@ export const Menu = ({
 					{link.title}
 				</Link>
 			))}
-			<RequestButton setIsMenuOpen={setIsMenuOpen} />
+			<RequestAnchorButton setIsMenuOpen={setIsMenuOpen} />
 		</nav>
 	)
 }
@@ -46,7 +46,7 @@ export const Link = ({
 	)
 }
 
-const RequestButton = ({
+const RequestAnchorButton = ({
 	setIsMenuOpen
 }: {
 	setIsMenuOpen(stat: boolean): void

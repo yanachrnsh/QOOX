@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Button, SubTitle } from '../../index'
+import { AnchorButton, SubTitle } from '../../index'
 import { Paragraph } from '../../Paragraph/paragraph.component'
 import { styles } from '../../../constants/styles-constants'
 import { intro } from '../../../constants/content-constants'
@@ -26,7 +26,7 @@ export const IntroSection = () => {
 				</div>
 
 				<div className='w-full sm:w-fit'>
-					<Button text={intro.button.text} id={intro.button.id} />
+					<AnchorButton text={intro.button.text} id={intro.button.id} />
 				</div>
 			</div>
 		</section>

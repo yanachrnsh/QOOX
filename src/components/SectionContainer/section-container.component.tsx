@@ -1,16 +1,16 @@
 import { FC } from 'react'
-import { Button, Title, Paragraph, SubTitle } from '../index'
+import { AnchorButton, Title, Paragraph, SubTitle } from '../index'
 import { ITitle } from '../Title/title.component'
 import { ISubTitle } from '../SubTitle/subtitle.component'
 import { IParagraph } from '../Paragraph/paragraph.component'
-import { IButton } from '../Button/button.component'
+import { IAnchorButton } from '../AnchorButton/anchor-button.component'
 
 interface ContainerLarge extends ContainerSmall {
 	subTitle: ISubTitle
 }
 
 interface ContainerSmall extends TitleParagraph {
-	button: IButton
+	button: IAnchorButton
 }
 
 export const ContainerLarge: FC<ContainerLarge> = ({
@@ -36,9 +36,8 @@ export const ContainerSmall: FC<ContainerSmall> = ({
 		<>
 			<TitleParagraph title={title} paragraph={paragraph} />
 			<div className='flex'>
-			<Button text={button.text} id={button.id} svg={button.svg} />
+				<AnchorButton text={button.text} id={button.id} svg={button.svg} />
 			</div>
-
 		</>
 	)
 }

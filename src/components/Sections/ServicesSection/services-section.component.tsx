@@ -3,7 +3,7 @@ import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
 
 import { layout, card, styles } from '../../../constants/styles-constants'
 import { services } from '../../../constants/content-constants'
-import { ButtonLarge } from '../../Button/button.component'
+import { DiscoverAnchorButton } from '../../AnchorButton/discover-anchor-button.component'
 
 export const ServicesSection = () => {
 	const { scrollWidth, carousel } = userScrollCarousel()
@@ -17,13 +17,13 @@ export const ServicesSection = () => {
 
 				<div className='hidden lg:grid lg:grid-cols-3 lg:gap-6'>
 					<ServicesCard />
-					<ButtonLarge />
+					<DiscoverAnchorButton />
 				</div>
 				<div className='lg:hidden'>
 					<Scroll carousel={carousel} width={scrollWidth}>
 						<ServicesCard />
 					</Scroll>
-					<ButtonLarge />
+					<DiscoverAnchorButton />
 				</div>
 			</div>
 		</section>

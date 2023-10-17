@@ -1,4 +1,4 @@
-import { Button } from './Button/button.component'
+import { AnchorButton } from './AnchorButton/anchor-button.component'
 import { Title } from './Title/title.component'
 import { Paragraph } from './Paragraph/paragraph.component'
 import { SubTitle } from './SubTitle/subtitle.component'
@@ -11,7 +11,7 @@ import {
 import { Divider } from './Divider/divider.component'
 
 export {
-	Button,
+	AnchorButton,
 	Title,
 	Paragraph,
 	SubTitle,

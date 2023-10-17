@@ -3,7 +3,7 @@ import {
 	BsFillArrowUpCircleFill,
 	BsFillArrowDownCircleFill
 } from 'react-icons/bs'
-import { Button } from '../../Button/button.component'
+import { AnchorButton } from '../../AnchorButton/anchor-button.component'
 import { Title } from '../../Title/title.component'
 import { Paragraph } from '../../Paragraph/paragraph.component'
 import {
@@ -30,7 +30,10 @@ export const IndustriesSection: FC = () => {
 					/>
 				</div>
 				<div className='w-fit'>
-					<Button text={industries.button.text} id={industries.button.id} />
+					<AnchorButton
+						text={industries.button.text}
+						id={industries.button.id}
+					/>
 				</div>
 			</div>
 			<DropdownList activeItem={activeItem} setActiveItem={setActiveItem} />

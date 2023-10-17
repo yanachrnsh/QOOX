@@ -3,7 +3,7 @@ import { Paragraph } from '../../Paragraph/paragraph.component'
 import { Ref, ReactNode, FC } from 'react'
 import { motion } from 'framer-motion'
 import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
-import { ButtonLarge } from '../../Button/button.component'
+import { DiscoverAnchorButton } from '../../AnchorButton/discover-anchor-button.component'
 import {
 	technologies,
 	technologiesCards
@@ -50,7 +50,7 @@ export const TechnologiesSection = () => {
 			<div className='hidden sm:grid grid-cols-8 sm:grid-cols-4 lg:grid-cols-6  gap-4 lg:gap-6 w-[100%] '>
 				<TechnologiesCard cards={technologiesCards} />
 			</div>
-			<ButtonLarge style='flex lg:hidden' />
+			<DiscoverAnchorButton style='flex lg:hidden' />
 		</section>
 	)
 }
@@ -77,7 +77,7 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 				</div>
 			))}
 			<div className='col-span-2 hidden lg:flex  '>
-				<ButtonLarge style='w-full lg:p-0 ' />
+				<DiscoverAnchorButton style='w-full lg:p-0 ' />
 			</div>
 		</>
 	)

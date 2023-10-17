@@ -1,5 +1,5 @@
 import { ReactElement, FC, Dispatch, SetStateAction } from 'react'
-import { Button } from '../../Button/button.component'
+import { AnchorButton } from '../../AnchorButton/anchor-button.component'
 import { Title } from '../../Title/title.component'
 import { Paragraph } from '../../Paragraph/paragraph.component'
 import { SubTitle } from '../../SubTitle/subtitle.component'
@@ -89,7 +89,7 @@ const SwiperContainer = ({ casePageIndex }: { casePageIndex: number }) => {
 										<Paragraph text={content.paragraph.text} />
 									</div>
 									<div className='w-fit'>
-										<Button
+										<AnchorButton
 											text={content.button.text}
 											id={content.button.id}
 											svg={content.button.svg}
