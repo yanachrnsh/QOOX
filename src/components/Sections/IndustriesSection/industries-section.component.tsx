@@ -102,7 +102,7 @@ const DropdownItem: FC<DropdownItemProps> = ({
 			</a>
 			<div
 				className={` ${
-					index === activeItem ? 'max-h-52 ' : 'max-h-0 opacity-0'
+					index === activeItem ? 'max-h-56 ' : 'max-h-0 opacity-0'
 				} transition-all duration-300 ease-linear overflow-hidden`}
 				key={index}
 			>

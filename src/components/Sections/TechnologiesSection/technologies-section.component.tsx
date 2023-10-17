@@ -1,8 +1,7 @@
 import { Title } from '../../Title/title.component'
 import { Paragraph } from '../../Paragraph/paragraph.component'
-import { Ref, ReactNode, FC } from 'react'
-import { motion } from 'framer-motion'
-import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
+import { useRef } from 'react'
+import { motion, useScroll } from 'framer-motion'
 import { DiscoverAnchorButton } from '../../AnchorButton/discover-anchor-button.component'
 import {
 	technologies,
@@ -11,7 +10,10 @@ import {
 import { styles } from '../../../constants/styles-constants'
 
 export const TechnologiesSection = () => {
-	const { scrollWidth, carousel } = userScrollCarousel()
+	const carouselRef = useRef(null)
+	useScroll({
+		target: carouselRef
+	})
 
 	const cardsFirstLine = technologiesCards.slice(
 		0,
@@ -21,6 +23,7 @@ export const TechnologiesSection = () => {
 		technologiesCards.length / 2,
 		technologiesCards.length
 	)
+
 	return (
 		<section
 			id='technologies'
@@ -36,16 +39,18 @@ export const TechnologiesSection = () => {
 					/>
 				</div>
 			</div>
-			<div className='flex sm:hidden'>
-				<TechnologiesCardCarousel carousel={carousel} scrollWidth={scrollWidth}>
-					<div className='flex  justify-between gap-4'>
-						<TechnologiesCard cards={cardsFirstLine} />
-					</div>
-					<div className='flex justify-between gap-4'>
-						<TechnologiesCard cards={cardsSecondLine} />
-					</div>
-				</TechnologiesCardCarousel>
-			</div>
+			<motion.div className='flex sm:hidden ' ref={carouselRef}>
+				<motion.div className='overflow-x-scroll cursor-grab'>
+					<motion.div className='grid grid-rows-2 gap-4 w-[100%]'>
+						<div className='flex  justify-between gap-4'>
+							<TechnologiesCard cards={cardsFirstLine} />
+						</div>
+						<div className='flex justify-between gap-4'>
+							<TechnologiesCard cards={cardsSecondLine} />
+						</div>
+					</motion.div>
+				</motion.div>
+			</motion.div>
 
 			<div className='hidden sm:grid grid-cols-8 sm:grid-cols-4 lg:grid-cols-6  gap-4 lg:gap-6 w-[100%] '>
 				<TechnologiesCard cards={technologiesCards} />
@@ -80,29 +85,5 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 				<DiscoverAnchorButton style='w-full lg:p-0 ' />
 			</div>
 		</>
-	)
-}
-
-interface TechnologiesCardCarousel {
-	carousel: Ref<HTMLInputElement>
-	scrollWidth: number
-	children: ReactNode
-}
-
-const TechnologiesCardCarousel: FC<TechnologiesCardCarousel> = ({
-	carousel,
-	scrollWidth,
-	children
-}) => {
-	return (
-		<motion.div ref={carousel} className='cursor-grab overflow-hidden '>
-			<motion.div
-				drag='x'
-				dragConstraints={{ right: 0, left: -scrollWidth }}
-				className={`grid grid-rows-2 gap-4 w-[100%]`}
-			>
-				{children}
-			</motion.div>
-		</motion.div>
 	)
 }

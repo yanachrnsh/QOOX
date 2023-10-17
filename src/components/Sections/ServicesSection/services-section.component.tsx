@@ -1,12 +1,15 @@
-import { Title, Card, Scroll } from '../../index'
-import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
-
+import { useRef } from 'react'
+import { useScroll, motion } from 'framer-motion'
+import { Title, Card } from '../../index'
 import { layout, card, styles } from '../../../constants/styles-constants'
 import { services } from '../../../constants/content-constants'
 import { DiscoverAnchorButton } from '../../AnchorButton/discover-anchor-button.component'
 
 export const ServicesSection = () => {
-	const { scrollWidth, carousel } = userScrollCarousel()
+	const carouselRef = useRef(null)
+	useScroll({
+		target: carouselRef
+	})
 
 	return (
 		<section id='services' className='max-w-7xl md:mx-auto md:px-4'>
@@ -19,12 +22,14 @@ export const ServicesSection = () => {
 					<ServicesCards />
 					<DiscoverAnchorButton />
 				</div>
-				<div className='lg:hidden'>
-					<Scroll carousel={carousel} width={scrollWidth}>
-						<ServicesCards />
-					</Scroll>
+				<motion.div className='lg:hidden ' ref={carouselRef}>
+					<motion.div className='overflow-x-scroll cursor-grab sm:cursor-ew-resize'>
+						<motion.div className='flex gap-4'>
+							<ServicesCards />
+						</motion.div>
+					</motion.div>
 					<DiscoverAnchorButton />
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	)

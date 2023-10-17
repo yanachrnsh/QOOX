@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
-import {Menu} from '../Menu/menu.component'
+import { Menu } from '../Menu/menu.component'
 import { styles } from '../../constants/styles-constants'
 import { Logo } from '../Logo/logo.component'
 
@@ -8,7 +8,11 @@ export const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	useEffect(() => {
-		window.addEventListener('resize', () => setIsMenuOpen(false))
+		window.addEventListener('resize', () => {
+			setIsMenuOpen(false)
+		})
+
+		return () => window.removeEventListener('resize', () => {})
 	}, [])
 
 	return (
@@ -27,6 +31,3 @@ export const Header = () => {
 		</header>
 	)
 }
-
-
-

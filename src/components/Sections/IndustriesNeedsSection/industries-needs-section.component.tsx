@@ -1,7 +1,6 @@
-import { FC } from 'react'
-import { Scroll } from '../../index'
+import { FC, useRef } from 'react'
 import { layout, card, styles } from '../../../constants/styles-constants'
-import { userScrollCarousel } from '../../../hooks/userScrollCarousel'
+import { useScroll, motion } from 'framer-motion'
 import {
 	industriesNeeds,
 	industriesNeedsCards
@@ -11,7 +10,12 @@ import { Paragraph } from '../../Paragraph/paragraph.component'
 import { Card } from '../..'
 
 export const IndustriesNeedsSection: FC = () => {
-	const { scrollWidth, carousel } = userScrollCarousel()
+
+	const carouselRef = useRef(null)
+	useScroll({
+		target: carouselRef
+	})
+
 	return (
 		<section className='max-w-7xl md:mx-auto md:px-4'>
 			<div className={`${layout.sectionDark} bg-right-top`}>
@@ -26,10 +30,12 @@ export const IndustriesNeedsSection: FC = () => {
 					</div>
 				</div>
 
-				<div className='hidden lg:flex '>
-					<Scroll carousel={carousel} width={scrollWidth}>
-						<IndustriesNeedsCards />
-					</Scroll>
+				<div className='hidden lg:flex ' ref={carouselRef}>
+					<motion.div className='overflow-x-scroll cursor-ew-resize'>
+						<motion.div className='flex gap-4'>
+							<IndustriesNeedsCards />
+						</motion.div>
+					</motion.div>
 				</div>
 				<div className='grid grid-col-1 gap-4 lg:hidden'>
 					<IndustriesNeedsCards />
