@@ -83,30 +83,31 @@ const DropdownItem: FC<DropdownItemProps> = ({
 		<div
 			className={`flex flex-col pb-4 md:pb-6 border-b border-solid border-strokeDarker`}
 		>
-			<div className={`flex flex-row justify-between items-center pb-4 `}>
+			<a
+				className={`flex flex-row justify-between items-center pb-4 `}
+				onClick={() => setActiveItem(prev => (prev === index ? -1 : index))}
+			>
 				<h3 className={`${styles.headingH3} flex-1`}>{title}</h3>
 				{index !== activeItem ? (
 					<BsFillArrowDownCircleFill
 						className='text-brandColorGreen cursor-pointer '
 						size={24}
-						onClick={() => setActiveItem(index)}
 					/>
 				) : (
 					<BsFillArrowUpCircleFill
 						className='text-brandColorGreen cursor-pointer'
 						size={24}
-						onClick={() => setActiveItem(prev => (prev === index ? -1 : index))}
 					/>
 				)}
-			</div>
-			<p
+			</a>
+			<div
 				className={` ${
-					index === activeItem ? 'max-h-40 ' : 'max-h-0 opacity-0'
-				} transition-all duration-700 ease-in-out`}
+					index === activeItem ? 'max-h-52 ' : 'max-h-0 opacity-0'
+				} transition-all duration-300 ease-linear overflow-hidden`}
 				key={index}
 			>
-				{paragraph}
-			</p>
+				<p className='my-4'>{paragraph}</p>
+			</div>
 		</div>
 	)
 }

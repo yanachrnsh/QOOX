@@ -16,12 +16,12 @@ export const ServicesSection = () => {
 				</div>
 
 				<div className='hidden lg:grid lg:grid-cols-3 lg:gap-6'>
-					<ServicesCard />
+					<ServicesCards />
 					<DiscoverAnchorButton />
 				</div>
 				<div className='lg:hidden'>
 					<Scroll carousel={carousel} width={scrollWidth}>
-						<ServicesCard />
+						<ServicesCards />
 					</Scroll>
 					<DiscoverAnchorButton />
 				</div>
@@ -30,7 +30,7 @@ export const ServicesSection = () => {
 	)
 }
 
-const ServicesCard = () => {
+const ServicesCards = () => {
 	return (
 		<>
 			{services.map((service: any) => (

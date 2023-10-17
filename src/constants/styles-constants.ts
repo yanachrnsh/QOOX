@@ -31,7 +31,7 @@ export const styles = {
 }
 
 export const layout = {
-	sectionDark: `px-4 md:px-11 mx-2 md:mx-0 flex flex-col py-[88px] sm:py-[100px] text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-no-repeat bg-right bg-contain rounded-3xl `
+	sectionDark: `px-4 md:px-11 mx-2 md:mx-0 flex flex-col py-[88px] sm:py-[100px] text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-no-repeat bg-right-top bg-contain rounded-3xl `
 }
 
 export const container = {

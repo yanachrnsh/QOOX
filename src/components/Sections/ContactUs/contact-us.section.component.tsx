@@ -41,7 +41,7 @@ export const ContactUsSection = () => {
 				{isError && (
 					<div className='flex justify-center items-center gap-2 py-[180px] md:py-0'>
 						<BiError size={24} className='text-rose-600' />
-						<h1>Oops, something went wrong. Please try again later!</h1>
+						<p>Oops, something went wrong. Please try again later!</p>
 					</div>
 				)}
 				{isSuccess && (
@@ -50,9 +50,9 @@ export const ContactUsSection = () => {
 							size={24}
 							className=' bg-backgroundMain text-brandColorGreen'
 						/>
-						<h1>
+						<p>
 							Your application has been sent. We will reach you out really soon!
-						</h1>
+						</p>
 					</div>
 				)}
 				{!isSuccess && !isError && (
