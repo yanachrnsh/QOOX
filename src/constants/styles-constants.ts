@@ -27,11 +27,11 @@ export const styles = {
 	span: 'text-xl font-medium',
 
 	formInputs:
-		'border-b border-strokeDarker py-6 px-2 lg:px-4 w-[100%] focus:outline-none focus:border-b-2  focus:border-b-brandColorGreen '
+		'border-b border-stroke-darker py-6 px-2 lg:px-4 w-[100%] focus:outline-none focus:border-b-2  focus:border-b-brand-green '
 }
 
 export const layout = {
-	sectionDark: `px-4 md:px-11 mx-2 md:mx-0 flex flex-col py-[88px] sm:py-[100px] text-lightPrimary bg-surfaceDarkPrimary bg-backgroundServices bg-no-repeat bg-right-top bg-contain rounded-3xl `
+	sectionDark: `px-4 md:px-11 mx-2 md:mx-0 flex flex-col py-[88px] sm:py-[100px] text-light-primary bg-surface-dark-primary bg-background-services bg-no-repeat bg-right-top bg-contain rounded-3xl `
 }
 
 export const container = {
@@ -47,13 +47,13 @@ export const card = {
 
 export const hovers = {
 	link: {
-		parent: 'group/link  hover:text-brandColorGreenHover',
+		parent: 'group/link  hover:text-brand-green-hover',
 		child: 'group-hover/link:animate-pop-up pointer-events-none'
 	},
 	button: {
 		parent: 'group/button',
 		child: 'group-hover/button:animate-shake pointer-events-none '
 	},
-	textHoverGreen: 'text-brandColorGreen hover:text-brandColorGreenHover',
-	backgroundHoverGreen: 'bg-brandColorGreen hover:bg-brandColorGreenHover'
+	textHoverGreen: 'text-brand-green hover:text-brand-green-hover',
+	backgroundHoverGreen: 'bg-brand-green hover:bg-brand-green-hover'
 }

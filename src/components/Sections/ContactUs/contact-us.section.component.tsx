@@ -48,7 +48,7 @@ export const ContactUsSection = () => {
 					<div className='flex justify-center items-center gap-2 py-[180px] md:py-0'>
 						<BsFillCheckCircleFill
 							size={24}
-							className=' bg-backgroundMain text-brandColorGreen'
+							className=' bg-background-main text-brand-green'
 						/>
 						<p>
 							Your application has been sent. We will reach you out really soon!
@@ -60,7 +60,7 @@ export const ContactUsSection = () => {
 				)}
 			</section>
 			<h3
-				className={`text-xl font-semibold text-brandColorGreen absolute bottom-0 pb-1`}
+				className={`text-xl font-semibold text-brand-green absolute bottom-0 pb-1`}
 			>
 				Don't Wait! Your Future Awaits
 			</h3>

@@ -14,17 +14,19 @@ import {
 } from '../components/Sections'
 
 export const Landing = () => {
-
 	const [casePageIndex, setCasePageIndex] = useState(0)
 
 	return (
-		<div className={`pt-6 text-darkPrimary`}>
+		<div className={`pt-6 text-dark-primary`}>
 			<Header />
 			<IntroSection />
 			<Divider />
 			<AboutSection />
 			<ServicesSection />
-			<CaseStudiesSection casePageIndex ={casePageIndex} setCasePageIndex={setCasePageIndex}/>
+			<CaseStudiesSection
+				casePageIndex={casePageIndex}
+				setCasePageIndex={setCasePageIndex}
+			/>
 			<Divider />
 			<IndustriesSection />
 			<IndustriesNeedsSection />

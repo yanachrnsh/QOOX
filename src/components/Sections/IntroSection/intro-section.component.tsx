@@ -8,7 +8,7 @@ export const IntroSection = () => {
 	return (
 		<section
 			id='intro'
-			className={`flex ${styles.paddingX} pt-[60px] md:pt-48 pb-[311px] sm:pb-[225px] bg-backgroundIntro bg-no-repeat bg-bottom md:bg-right max-w-7xl md:m-auto`}
+			className={`flex ${styles.paddingX} pt-[60px] md:pt-48 pb-[311px] sm:pb-[225px] bg-background-intro bg-no-repeat bg-bottom md:bg-right max-w-7xl md:m-auto`}
 		>
 			<div className={`flex flex-col items-start justify-start md:w-[60%]`}>
 				<SubTitle
@@ -43,7 +43,7 @@ export const TitleLarge: FC<ITitle> = ({ text, textColored }) => {
 		<>
 			<h1 className={`${styles.headingH1} pb-4 pt-2 max-w-[100%]`}>
 				{text}
-				<span className={textColored ? 'text-brandColorGreen' : 'hidden'}>
+				<span className={textColored ? 'text-brand-green' : 'hidden'}>
 					{textColored}
 				</span>
 			</h1>

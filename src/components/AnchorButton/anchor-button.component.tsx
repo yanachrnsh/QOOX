@@ -13,7 +13,7 @@ export const AnchorButton: FC<IAnchorButton> = ({ text, svg, id, styles }) => {
 	return (
 		<a
 			href={`#${id}`}
-			className={`${hovers.button.parent} ${hovers.backgroundHoverGreen} flex items-center justify-center min-w-[200px] max-w-[100%] text-lightPrimary py-2 px-6 rounded text-center ${styles} `}
+			className={`${hovers.button.parent} ${hovers.backgroundHoverGreen} flex items-center justify-center min-w-[200px] max-w-[100%] text-light-primary py-2 px-6 rounded text-center ${styles} `}
 		>
 			<p
 				className={` ${hovers.button.child} flex items-center justify-center gap-2`}
@@ -23,4 +23,3 @@ export const AnchorButton: FC<IAnchorButton> = ({ text, svg, id, styles }) => {
 		</a>
 	)
 }
-

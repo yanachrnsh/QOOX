@@ -29,7 +29,7 @@ export const ContactForm: FC<ContactFormProps> = ({ onSubmit, isLoading }) => {
 	})
 
 	return (
-		<form className='text-darkSecondary' onSubmit={handleSubmit(onSubmit)}>
+		<form className='text-dark-secondary' onSubmit={handleSubmit(onSubmit)}>
 			<p
 				className={`${
 					errors.name ? 'visible' : 'invisible'
@@ -74,7 +74,7 @@ export const ContactForm: FC<ContactFormProps> = ({ onSubmit, isLoading }) => {
 
 			<div>
 				<button
-					className={`group/contact text-lightPrimary rounded bg-brandColorGreen hover:bg-brandColorGreenHover py-2 px-6 w-[100%] mt-16 cursor-pointer ${
+					className={`group/contact text-light-primary rounded bg-brand-green hover:bg-brand-green-hover py-2 px-6 w-[100%] mt-16 cursor-pointer ${
 						isLoading && 'opacity-50 cursor-not-allowed '
 					}`}
 				>

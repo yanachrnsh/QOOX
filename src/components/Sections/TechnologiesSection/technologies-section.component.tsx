@@ -71,7 +71,7 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 			{cards.map(card => (
 				<div
 					key={card.id}
-					className={`flex flex-col items-start justify-center p-6 gap-2 bg-lightGrey min-w-[180px] rounded-lg`}
+					className={`flex flex-col items-start justify-center p-6 gap-2 bg-light-grey min-w-[180px] rounded-lg`}
 				>
 					<img
 						src={card.svg}

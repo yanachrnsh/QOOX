@@ -11,7 +11,7 @@ export const Title: FC<ITitle> = ({ text, textColored = '' }) => {
 		<>
 			<h2 className={`${styles.headingH2} pb-4 pt-2 max-w-[100%]`}>
 				{text}
-				<span className={textColored ? 'text-brandColorGreen' : 'hidden'}>
+				<span className={textColored ? 'text-brand-green' : 'hidden'}>
 					{textColored}
 				</span>
 			</h2>

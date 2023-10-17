@@ -42,9 +42,9 @@ const ServicesCards = () => {
 				<Card
 					key={service.id}
 					cardStyles={{
-						block: `${card.block} min-w-[300px] bg-darkGrey  text-lightPrimary `,
+						block: `${card.block} min-w-[300px] bg-dark-grey  text-light-primary `,
 						img: card.img,
-						title: `${styles.headingH4} text-brandColorGreen`,
+						title: `${styles.headingH4} text-brand-green`,
 						text: `${card.text}`
 					}}
 					text={service.text}

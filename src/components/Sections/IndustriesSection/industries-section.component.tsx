@@ -81,7 +81,7 @@ const DropdownItem: FC<DropdownItemProps> = ({
 }) => {
 	return (
 		<div
-			className={`flex flex-col pb-4 md:pb-6 border-b border-solid border-strokeDarker`}
+			className={`flex flex-col pb-4 md:pb-6 border-b border-solid border-stroke-darker`}
 		>
 			<a
 				className={`flex flex-row justify-between items-center pb-4 `}
@@ -90,19 +90,19 @@ const DropdownItem: FC<DropdownItemProps> = ({
 				<h3 className={`${styles.headingH3} flex-1`}>{title}</h3>
 				{index !== activeItem ? (
 					<BsFillArrowDownCircleFill
-						className='text-brandColorGreen cursor-pointer '
+						className='text-brand-green cursor-pointer '
 						size={24}
 					/>
 				) : (
 					<BsFillArrowUpCircleFill
-						className='text-brandColorGreen cursor-pointer'
+						className='text-brand-green cursor-pointer'
 						size={24}
 					/>
 				)}
 			</a>
 			<div
 				className={` ${
-					index === activeItem ? 'max-h-56 ' : 'max-h-0 opacity-0'
+					index === activeItem ? 'max-h-60 ' : 'max-h-0 opacity-0'
 				} transition-all duration-300 ease-linear overflow-hidden`}
 				key={index}
 			>

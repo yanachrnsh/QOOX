@@ -32,10 +32,10 @@ export const AboutSection = () => {
 						text={item.text}
 						key={item.id}
 						cardStyles={{
-							block: `${card.block} bg-lightGrey text-darkPrimary`,
+							block: `${card.block} bg-light-grey text-dark-primary`,
 							img: card.img,
-							title: `${styles.headingH4} text-brandColorGreen`,
-							text: `${card.text} text-darkPrimary'`
+							title: `${styles.headingH4} text-brand-green`,
+							text: `${card.text} text-dark-primary'`
 						}}
 					/>
 				))}

@@ -4,17 +4,17 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				darkPrimary: '#212121',
-				darkSecondary: '#585858',
-				brandColorGreen: '#008F65',
-				lightPrimary: '#F3F3F3',
-				lightGrey: '#F6F6F6',
-				darkGrey: '#2B2B2B',
-				surfaceDarkPrimary: '#1C1C1C',
-				strokeDarker: '#515151',
-				strokerLighter: '#9A9A9A',
-				backgroundMain: '#fffdff',
-				brandColorGreenHover: '#016B4D'
+				'dark-primary': '#212121',
+				'dark-secondary': '#585858',
+				'brand-green': '#008F65',
+				'light-primary': '#F3F3F3',
+				'light-grey': '#F6F6F6',
+				'dark-grey': '#2B2B2B',
+				'surface-dark-primary': '#1C1C1C',
+				'stroke-darker': '#515151',
+				'stroker-lighter': '#9A9A9A',
+				'background-main': '#fffdff',
+				'brand-green-hover': '#016B4D'
 			},
 			fontSize: {
 				sm: '0.875rem',
@@ -37,8 +37,8 @@ module.exports = {
 				xl: '1700px'
 			},
 			backgroundImage: {
-				backgroundIntro: "url('@/assets/bg-intro.gif')",
-				backgroundServices: "url('@/assets/bg-services.svg')"
+				'background-intro': "url('@/assets/bg-intro.gif')",
+				'background-services': "url('@/assets/bg-services.svg')"
 			},
 			keyframes: {
 				shake: {
@@ -54,31 +54,11 @@ module.exports = {
 					'100%': {
 						transform: 'translateY(-5%)'
 					}
-				},
-				'fade-left': {
-					'0%': {
-						transform: 'translateX(0%)'
-					},
-					'100%': {
-						transform: 'translateX(-45%)'
-					}
-				},
-				grow: {
-					'0%': {
-						transform: 'translateX(0%) scale(0)',
-						opacity: 0
-					},
-					'100%': {
-						transform: 'translateX(-400%) scale(4)',
-						opacity: 1
-					}
 				}
 			},
 			animation: {
 				shake: 'shake 0.7s ease-in-out 1 ',
-				'pop-up': 'pop-up 0.2s ease-in-out forwards ',
-				'fade-left': 'fade-left  0.8s ease-in-out forwards',
-				grow: 'grow 0.8s ease-in-out forwards'
+				'pop-up': 'pop-up 0.2s ease-in-out forwards '
 			}
 		},
 		plugins: []
