@@ -41,7 +41,7 @@ export const container = {
 export const card = {
 	cardImg: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]',
 	block: ` ${styles.flexCard} rounded-2xl p-4 md:p-6`,
-	text: 'text-start w-[100%]',
+	text: 'text-sm sm:text-base text-start w-[100%]',
 	img: 'w-[44px] h-[44px] sm:w-[56px] sm:h-[56px]'
 }
 

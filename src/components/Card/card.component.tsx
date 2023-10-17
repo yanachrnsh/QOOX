@@ -22,7 +22,7 @@ export const Card = ({
 				className={src ? `${cardStyles.img}` : 'hidden'}
 			/>
 			<h4 className={cardStyles.title}>{title}</h4>
-			<p className={cardStyles.text}>{text}</p>
+			<p className={`${cardStyles.text}`}>{text}</p>
 		</div>
 	)
 }

@@ -52,7 +52,7 @@ const IndustriesNeedsCards = () => {
 						block: `${styles.flexCard} gap-4 bg-inherit pr-6 pb-6 lg:min-w-[500px] border-b-[1px] border-strokerLighter lg:border-r-[1px] lg:border-b-0`,
 						img: `w-[48px] h-[48px]`,
 						title: `${styles.headingH4} text-lightPrimary`,
-						text: `${card.text} text-base text-lightPrimary`
+						text: `${card.text} text-lightPrimary`
 					}}
 				/>
 			))}

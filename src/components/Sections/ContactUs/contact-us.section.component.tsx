@@ -60,7 +60,7 @@ export const ContactUsSection = () => {
 				)}
 			</section>
 			<h3
-				className={`${styles.headingH3} text-brandColorGreen absolute bottom-0 pb-1`}
+				className={`text-xl font-semibold text-brandColorGreen absolute bottom-0 pb-1`}
 			>
 				Don't Wait! Your Future Awaits
 			</h3>
