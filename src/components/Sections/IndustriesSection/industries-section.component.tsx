@@ -20,7 +20,7 @@ export const IndustriesSection: FC = () => {
 			id='industries'
 			className={`grid grid-cols-1 md:grid-cols-2 ${styles.paddingX} ${styles.paddingY}  gap-12 md:gap-[8.25rem] max-w-7xl md:mx-auto`}
 		>
-			<div className='self-center md:py-[156px]'>
+			<div className='self-center md:pt-[196px] md:pb-[221px]'>
 				<Title text={industries.title.text} />
 				<div className='pb-[27px] md:pb-10'>
 					<Paragraph

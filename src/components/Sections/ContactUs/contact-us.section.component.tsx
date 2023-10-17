@@ -1,6 +1,6 @@
 import { SubmitHandler } from 'react-hook-form'
 import { hovers, styles } from '../../../constants/styles-constants'
-import { TitleParagraph } from '../../SectionContainer/section-container.component'
+import { TitleParagraph } from '../../TitleParagraph/title-paragraph.component'
 import { contactUs } from '../../../constants/content-constants'
 import { UserData } from '../../../api/dto/usetData.dto'
 import { useSubmitUserData } from '../../../api/user/useSubmitUserData'

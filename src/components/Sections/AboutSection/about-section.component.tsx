@@ -4,7 +4,7 @@ import {
 	about,
 	aboutTitleParagraph
 } from '../../../constants/content-constants'
-import { TitleParagraph } from '../../SectionContainer/section-container.component'
+import { TitleParagraph } from '../../TitleParagraph/title-paragraph.component'
 
 export const AboutSection = () => {
 	return (
