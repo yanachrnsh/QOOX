@@ -7,7 +7,7 @@ export const Logo = () => {
 				<img
 					src={logo}
 					alt='logo'
-					className='sm:w-[88px] sm:h-[28px] w-[74px] h-[24px] shrink-0 cursor-pointer'
+					className='h-[24px] w-[74px] shrink-0 cursor-pointer sm:h-[28px] sm:w-[88px]'
 				></img>
 			</a>
 		</div>

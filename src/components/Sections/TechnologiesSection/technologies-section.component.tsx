@@ -29,7 +29,7 @@ export const TechnologiesSection = () => {
 			id='technologies'
 			className={`${styles.sectionCol} ${styles.paddingX} `}
 		>
-			<div className='lg:text-center lg:max-w-[850px] lg:m-auto lg:items-center items-start'>
+			<div className='items-start lg:m-auto lg:max-w-[850px] lg:items-center lg:text-center'>
 				<Title text={technologies.title.text} />
 				<div className='pb-12 md:pb-[72px]'>
 					<Paragraph
@@ -40,8 +40,8 @@ export const TechnologiesSection = () => {
 				</div>
 			</div>
 			<motion.div className='flex sm:hidden ' ref={carouselRef}>
-				<motion.div className='overflow-x-scroll cursor-grab'>
-					<motion.div className='grid grid-rows-2 gap-4 w-[100%]'>
+				<motion.div className='cursor-grab overflow-x-scroll'>
+					<motion.div className='grid w-[100%] grid-rows-2 gap-4'>
 						<div className='flex  justify-between gap-4'>
 							<TechnologiesCard cards={cardsFirstLine} />
 						</div>
@@ -52,7 +52,7 @@ export const TechnologiesSection = () => {
 				</motion.div>
 			</motion.div>
 
-			<div className='hidden sm:grid grid-cols-8 sm:grid-cols-4 lg:grid-cols-6  gap-4 lg:gap-6 w-[100%] '>
+			<div className='hidden w-[100%] grid-cols-8 gap-4 sm:grid  sm:grid-cols-4 lg:grid-cols-6 lg:gap-6 '>
 				<TechnologiesCard cards={technologiesCards} />
 			</div>
 			<DiscoverAnchorButton style='flex lg:hidden' />
@@ -71,12 +71,12 @@ const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
 			{cards.map(card => (
 				<div
 					key={card.id}
-					className={`flex flex-col items-start justify-center p-6 gap-2 bg-light-grey min-w-[180px] rounded-lg`}
+					className={`flex min-w-[180px] flex-col items-start justify-center gap-2 rounded-lg bg-light-grey p-6`}
 				>
 					<img
 						src={card.svg}
 						alt={card.title}
-						className='w-[40px] h-[40px]'
+						className='h-[40px] w-[40px]'
 					></img>
 					<span className={`${styles.span} `}>{card.title}</span>
 				</div>

@@ -18,7 +18,7 @@ export const IndustriesNeedsSection: FC = () => {
 	return (
 		<section className='max-w-7xl md:mx-auto md:px-4'>
 			<div className={`${layout.sectionDark} bg-right-top`}>
-				<div className='lg:text-center lg:max-w-[850px] lg:m-auto'>
+				<div className='lg:m-auto lg:max-w-[850px] lg:text-center'>
 					<Title text={industriesNeeds.title.text} />
 					<div className='pb-12 md:pb-[72px]'>
 						<Paragraph
@@ -30,13 +30,13 @@ export const IndustriesNeedsSection: FC = () => {
 				</div>
 
 				<div className='hidden lg:flex ' ref={carouselRef}>
-					<motion.div className='overflow-x-scroll cursor-ew-resize'>
+					<motion.div className='cursor-ew-resize overflow-x-scroll'>
 						<motion.div className='flex gap-4'>
 							<IndustriesNeedsCards />
 						</motion.div>
 					</motion.div>
 				</div>
-				<div className='grid grid-col-1 gap-4 lg:hidden'>
+				<div className='grid-col-1 grid gap-4 lg:hidden'>
 					<IndustriesNeedsCards />
 				</div>
 			</div>

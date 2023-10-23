@@ -42,7 +42,7 @@ export const CaseStudiesSection: FC<CaseStudiesSectionProps> = ({
 		>
 			<SwiperContainer casePageIndex={casePageIndex} />
 
-			<div className='hidden md:flex  md:gap-8 md:self-center pt-16 '>
+			<div className='hidden pt-16  md:flex md:gap-8 md:self-center '>
 				<PageButton handleClick={prevPage}>
 					<BsArrowLeftCircle
 						className={`cursor-pointer ${hovers.textHoverGreen}`}
@@ -76,11 +76,11 @@ const SwiperContainer = ({ casePageIndex }: { casePageIndex: number }) => {
 							exit={{ opacity: 0, x: 20 }}
 							transition={{ duration: 0.8, ease: 'easeInOut' }}
 						>
-							<div className='flex flex-col-reverse md:flex-row md:justify-between md:items-center gap-5 md:gap-10 md:min-h-[500px]'>
+							<div className='flex flex-col-reverse gap-5 md:min-h-[500px] md:flex-row md:items-center md:justify-between md:gap-10'>
 								<img
 									src={content.src}
 									alt={content.title.text}
-									className=' max-w-[100%] md:max-w-[50%] ss:m-auto md:m-0'
+									className=' max-w-[100%] ss:m-auto md:m-0 md:max-w-[50%]'
 								></img>
 
 								<div>

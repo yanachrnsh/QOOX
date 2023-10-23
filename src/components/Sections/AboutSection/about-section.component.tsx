@@ -9,7 +9,7 @@ import { TitleParagraph } from '../../TitleParagraph/title-paragraph.component'
 export const AboutSection = () => {
 	return (
 		<section id='about' className={`${styles.sectionCol} ${styles.paddingX}`}>
-			<div className='lg:text-center lg:max-w-[850px] lg:m-auto'>
+			<div className='lg:m-auto lg:max-w-[850px] lg:text-center'>
 				<div className='pb-12 md:pb-[72px]'>
 					<TitleParagraph
 						title={aboutTitleParagraph.title}
@@ -18,13 +18,13 @@ export const AboutSection = () => {
 				</div>
 
 				<h3
-					className={`${styles.headingH3} pb-[32px] md:pb-[40px] text-center`}
+					className={`${styles.headingH3} pb-[32px] text-center md:pb-[40px]`}
 				>
 					Why choose us?
 				</h3>
 			</div>
 
-			<div className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6'>
+			<div className='grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6'>
 				{about.map((item: any) => (
 					<Card
 						src={item.src}

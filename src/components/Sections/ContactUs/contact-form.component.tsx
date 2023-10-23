@@ -33,7 +33,7 @@ export const ContactForm: FC<ContactFormProps> = ({ onSubmit, isLoading }) => {
 			<p
 				className={`${
 					errors.name ? 'visible' : 'invisible'
-				} text-rose-600 h-[20px] my-2`}
+				} my-2 h-[20px] text-rose-600`}
 			>
 				{errors.name?.message}
 			</p>
@@ -47,7 +47,7 @@ export const ContactForm: FC<ContactFormProps> = ({ onSubmit, isLoading }) => {
 			<p
 				className={`${
 					errors.email ? 'visible' : 'invisible'
-				} text-rose-600 h-[20px] my-2`}
+				} my-2 h-[20px] text-rose-600`}
 			>
 				{errors.email?.message}
 			</p>
@@ -61,7 +61,7 @@ export const ContactForm: FC<ContactFormProps> = ({ onSubmit, isLoading }) => {
 			<p
 				className={`${
 					errors.project ? 'visible' : 'invisible'
-				} text-rose-600 h-[20px] my-2`}
+				} my-2 h-[20px] text-rose-600`}
 			>
 				{errors.project?.message}
 			</p>
@@ -74,12 +74,12 @@ export const ContactForm: FC<ContactFormProps> = ({ onSubmit, isLoading }) => {
 
 			<div>
 				<button
-					className={`group/contact text-light-primary rounded bg-brand-green hover:bg-brand-green-hover py-2 px-6 w-[100%] mt-16 cursor-pointer ${
-						isLoading && 'opacity-50 cursor-not-allowed '
+					className={`group/contact mt-16 w-[100%] cursor-pointer rounded bg-brand-green px-6 py-2 text-light-primary hover:bg-brand-green-hover ${
+						isLoading && 'cursor-not-allowed opacity-50 '
 					}`}
 				>
 					<p
-						className={`group-hover/contact:translate-x-[-45%] translate-x-0 transition duration-500 ease-in-out relative  ${
+						className={`relative translate-x-0 transition duration-500 ease-in-out group-hover/contact:translate-x-[-45%]  ${
 							isLoading && 'translate-x-[-45%] '
 						}`}
 					>

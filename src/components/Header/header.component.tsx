@@ -17,7 +17,7 @@ export const Header = () => {
 
 	return (
 		<header
-			className={`${styles.paddingX} flex flex-1 justify-between items-center max-w-7xl m-auto`}
+			className={`${styles.paddingX} m-auto flex max-w-7xl flex-1 items-center justify-between`}
 		>
 			<Logo />
 			<div className='sm:hidden' onClick={() => setIsMenuOpen(prev => !prev)}>

@@ -18,14 +18,14 @@ export const ContactUsSection = () => {
 	return (
 		<section
 			id='contacts'
-			className={`${styles.paddingX} ${styles.paddingY} max-w-7xl  md:mx-auto relative`}
+			className={`${styles.paddingX} ${styles.paddingY} relative  max-w-7xl md:mx-auto`}
 		>
 			<section
-				className={`${styles.gridCard} items-center relative gap-[19px] md:gap-48 `}
+				className={`${styles.gridCard} relative items-center gap-[19px] md:gap-48 `}
 			>
 				<a
 					href='#root'
-					className={`hidden sm:inline-block absolute right-0 top-[-5%] ${hovers.textHoverGreen} hover:animate-bounce p-2`}
+					className={`absolute right-0 top-[-5%] hidden sm:inline-block ${hovers.textHoverGreen} p-2 hover:animate-bounce`}
 				>
 					<AiOutlineArrowUp
 						size={24}
@@ -39,13 +39,13 @@ export const ContactUsSection = () => {
 					/>
 				</div>
 				{isError && (
-					<div className='flex justify-center items-center gap-2 py-[180px] md:py-0'>
+					<div className='flex items-center justify-center gap-2 py-[180px] md:py-0'>
 						<BiError size={24} className='text-rose-600' />
 						<p>Oops, something went wrong. Please try again later!</p>
 					</div>
 				)}
 				{isSuccess && (
-					<div className='flex justify-center items-center gap-2 py-[180px] md:py-0'>
+					<div className='flex items-center justify-center gap-2 py-[180px] md:py-0'>
 						<BsFillCheckCircleFill
 							size={24}
 							className=' bg-background-main text-brand-green'
@@ -60,7 +60,7 @@ export const ContactUsSection = () => {
 				)}
 			</section>
 			<h3
-				className={`text-xl font-semibold text-brand-green absolute bottom-0 pb-1`}
+				className={`absolute bottom-0 pb-1 text-xl font-semibold text-brand-green`}
 			>
 				Don't Wait! Your Future Awaits
 			</h3>

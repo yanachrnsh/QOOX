@@ -39,7 +39,7 @@ export {
 	arrowRight,
 	bgIntro,
 	bgServices,
-  industriesNeedsApproach,
+	industriesNeedsApproach,
 	industriesNeedsKnowledge,
 	industriesNeedsScalable,
 	industriesNeedsSecurity,
@@ -65,6 +65,6 @@ export {
 	postgresql,
 	python,
 	react,
-	spring, 
-  html
+	spring,
+	html
 }

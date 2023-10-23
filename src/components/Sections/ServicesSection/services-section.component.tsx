@@ -23,7 +23,7 @@ export const ServicesSection = () => {
 					<DiscoverAnchorButton />
 				</div>
 				<motion.div className='lg:hidden ' ref={carouselRef}>
-					<motion.div className='overflow-x-scroll cursor-grab sm:cursor-ew-resize'>
+					<motion.div className='cursor-grab overflow-x-scroll sm:cursor-ew-resize'>
 						<motion.div className='flex gap-4'>
 							<ServicesCards />
 						</motion.div>

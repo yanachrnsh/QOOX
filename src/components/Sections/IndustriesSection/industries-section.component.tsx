@@ -18,9 +18,9 @@ export const IndustriesSection: FC = () => {
 	return (
 		<section
 			id='industries'
-			className={`grid grid-cols-1 md:grid-cols-2 ${styles.paddingX} ${styles.paddingY}  gap-12 md:gap-[8.25rem] max-w-7xl md:mx-auto`}
+			className={`grid grid-cols-1 md:grid-cols-2 ${styles.paddingX} ${styles.paddingY}  max-w-7xl gap-12 md:mx-auto md:gap-[8.25rem]`}
 		>
-			<div className='self-center md:pt-[196px] md:pb-[221px]'>
+			<div className='self-center md:pb-[221px] md:pt-[196px]'>
 				<Title text={industries.title.text} />
 				<div className='pb-[27px] md:pb-10'>
 					<Paragraph
@@ -81,21 +81,21 @@ const DropdownItem: FC<DropdownItemProps> = ({
 }) => {
 	return (
 		<div
-			className={`flex flex-col pb-4 md:pb-6 border-b border-solid border-stroke-darker`}
+			className={`flex flex-col border-b border-solid border-stroke-darker pb-4 md:pb-6`}
 		>
 			<a
-				className={`flex flex-row justify-between items-center pb-4 `}
+				className={`flex flex-row items-center justify-between pb-4 `}
 				onClick={() => setActiveItem(prev => (prev === index ? -1 : index))}
 			>
 				<h3 className={`${styles.headingH3} flex-1`}>{title}</h3>
 				{index !== activeItem ? (
 					<BsFillArrowDownCircleFill
-						className='text-brand-green cursor-pointer '
+						className='cursor-pointer text-brand-green '
 						size={24}
 					/>
 				) : (
 					<BsFillArrowUpCircleFill
-						className='text-brand-green cursor-pointer'
+						className='cursor-pointer text-brand-green'
 						size={24}
 					/>
 				)}
@@ -103,7 +103,7 @@ const DropdownItem: FC<DropdownItemProps> = ({
 			<div
 				className={` ${
 					index === activeItem ? 'max-h-60 ' : 'max-h-0 opacity-0'
-				} transition-all duration-300 ease-linear overflow-hidden`}
+				} overflow-hidden transition-all duration-300 ease-linear`}
 				key={index}
 			>
 				<p className='my-4'>{paragraph}</p>

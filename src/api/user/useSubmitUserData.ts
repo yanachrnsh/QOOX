@@ -2,7 +2,6 @@ import { useMutation } from '@tanstack/react-query'
 import { UserData } from '../dto/usetData.dto'
 import { api } from '../../core/api'
 
-
 export const submitUserData = async (userData: UserData) => {
 	await api.post('/users', userData)
 }

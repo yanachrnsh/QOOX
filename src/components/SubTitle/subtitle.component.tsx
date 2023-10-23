@@ -10,7 +10,7 @@ export const SubTitle: FC<ISubTitle> = ({ text, textColored }) => {
 		<>
 			<p className='max-w-[100%]'>
 				{text}
-				<span className='text-brand-green font-bold'>{textColored}</span>
+				<span className='font-bold text-brand-green'>{textColored}</span>
 			</p>
 		</>
 	)

@@ -10,9 +10,9 @@ export const Menu = ({
 }) => {
 	return (
 		<nav
-			className={`sm:flex sm:flex-row sm:items-center sm:pb-0 pb-[70px] absolute sm:static bg-background-main sm:z-auto  w-full sm:w-auto transition-all duration-500 ease-in-out ${
-				isMenuOpen ? 'top-[80px] opacity-100  left-0 ' : 'top-[-430px] left-0 '
-			} sm:opacity-100 opacity-0 bg-background-main`}
+			className={`absolute w-full bg-background-main pb-[70px] transition-all duration-500 ease-in-out sm:static sm:z-auto  sm:flex sm:w-auto sm:flex-row sm:items-center sm:pb-0 ${
+				isMenuOpen ? 'left-0 top-[80px]  opacity-100 ' : 'left-0 top-[-430px] '
+			} bg-background-main opacity-0 sm:opacity-100`}
 		>
 			{navLinks.map((link: { id: string; title: string }) => (
 				<Link key={link.id} id={link.id} setIsMenuOpen={setIsMenuOpen}>
@@ -37,9 +37,9 @@ export const Link = ({
 		<a
 			href={`#${id}`}
 			onClick={() => setIsMenuOpen(false)}
-			className={`${hovers.link.parent} text-center w-[100%] z-100 `}
+			className={`${hovers.link.parent} z-100 w-[100%] text-center `}
 		>
-			<p className={`${hovers.link.child} sm:py-1 sm:px-4 py-4 px-3`}>
+			<p className={`${hovers.link.child} px-3 py-4 sm:px-4 sm:py-1`}>
 				{children}
 			</p>
 		</a>
@@ -55,9 +55,9 @@ const RequestAnchorButton = ({
 		<a
 			href='#contacts'
 			onClick={() => setIsMenuOpen(false)}
-			className={`${hovers.button.parent} hover:border-brand-green-hover flex justify-center items-center text-center rounded border-2 border-brand-green mx-4 mt-[40px] sm:my-0 sm:mt-0 sml:ml-[20px] md:ml-[40px]  min-w-[150px] text-brand-green bg-background-main  `}
+			className={`${hovers.button.parent} mx-4 mt-[40px] flex min-w-[150px] items-center justify-center rounded border-2 border-brand-green bg-background-main text-center text-brand-green hover:border-brand-green-hover sm:my-0  sm:mt-0 sml:ml-[20px] md:ml-[40px]  `}
 		>
-			<p className={`${hovers.button.child} py-2 px-4 sm:py-1`}>Send request</p>
+			<p className={`${hovers.button.child} px-4 py-2 sm:py-1`}>Send request</p>
 		</a>
 	)
 }
