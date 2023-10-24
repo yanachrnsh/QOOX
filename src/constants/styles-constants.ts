@@ -27,7 +27,7 @@ export const styles = {
 	span: 'text-xl font-medium',
 
 	formInputs:
-		'border-b border-stroke-darker py-6 px-2 lg:px-4 w-[100%] focus:outline-none focus:border-b-2  focus:border-b-brand-green '
+		'rounded-none border-b border-stroke-darker py-6 px-2 lg:px-4 w-[100%] focus:outline-none focus:border-b-2  focus:border-b-brand-green '
 }
 
 export const layout = {
