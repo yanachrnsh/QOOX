@@ -1,8 +1,6 @@
-import { SubmitHandler } from 'react-hook-form'
 import { hovers, styles } from '../../../constants/styles-constants'
 import { TitleParagraph } from '../../TitleParagraph/title-paragraph.component'
 import { contactUs } from '../../../constants/content-constants'
-import { UserData } from '../../../api/dto/usetData.dto'
 import { useSubmitUserData } from '../../../api/user/useSubmitUserData'
 import { AiOutlineArrowUp } from 'react-icons/ai'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
@@ -12,9 +10,6 @@ import { RiErrorWarningFill } from 'react-icons/ri'
 export const ContactUsSection = () => {
 	const { mutate, isError, isSuccess, isLoading } = useSubmitUserData()
 
-	const onSubmit: SubmitHandler<UserData> = data => {
-		mutate(data)
-	}
 	return (
 		<section
 			id='contacts'
@@ -56,7 +51,10 @@ export const ContactUsSection = () => {
 					</div>
 				)}
 				{!isSuccess && !isError && (
-					<ContactForm onSubmit={onSubmit} isLoading={isLoading}></ContactForm>
+					<ContactForm
+						onSubmit={data => mutate(data)}
+						isLoading={isLoading}
+					></ContactForm>
 				)}
 			</section>
 			<h3
