@@ -3,6 +3,7 @@ import { z, TypeOf } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { UserData } from '../../../api/dto/usetData.dto'
 import { useForm } from 'react-hook-form'
+import TextareaAutosize from 'react-textarea-autosize'
 import { styles } from '../../../constants/styles-constants'
 
 const contactFormSchema = z.object({
@@ -65,13 +66,12 @@ export const ContactForm: FC<ContactFormProps> = ({ onSubmit, isLoading }) => {
 			>
 				{errors.project?.message}
 			</p>
-			<input
-				type='text'
+			<TextareaAutosize
 				className={`${styles.formInputs}`}
+				minRows={3}
 				placeholder='Just a few words about your project (Optional)'
 				{...register('project', { required: false })}
-			/>
-
+			></TextareaAutosize>
 			<div>
 				<button
 					className={`group/contact mt-16 w-[100%] cursor-pointer rounded bg-brand-green px-6 py-2 text-light-primary hover:bg-brand-green-hover ${

@@ -1,19 +1,20 @@
-export const Card = ({
-	src = '',
-	title,
-	text,
-	cardStyles
-}: {
+import { FC } from 'react'
+
+interface CardStyles {
+	block: string
+	img: string
+	title: string
+	text: string
+}
+
+export interface CardProps {
 	src?: string
 	title: string
 	text: string
-	cardStyles: {
-		block: string
-		img: string
-		title: string
-		text: string
-	}
-}) => {
+	cardStyles: CardStyles
+}
+
+export const Card: FC<CardProps> = ({ src = '', title, text, cardStyles }) => {
 	return (
 		<div className={cardStyles.block}>
 			<img

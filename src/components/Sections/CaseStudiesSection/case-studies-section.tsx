@@ -1,4 +1,4 @@
-import { ReactElement, FC, Dispatch, SetStateAction } from 'react'
+import { ReactElement, FC, useState } from 'react'
 import { AnchorButton } from '../../AnchorButton/anchor-button.component'
 import { Title } from '../../Title/title.component'
 import { Paragraph } from '../../Paragraph/paragraph.component'
@@ -8,15 +8,8 @@ import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs'
 import { caseStudies } from '../../../constants/content-constants'
 import { styles, container, hovers } from '../../../constants/styles-constants'
 
-interface CaseStudiesSectionProps {
-	casePageIndex: number
-	setCasePageIndex: Dispatch<SetStateAction<number>>
-}
-
-export const CaseStudiesSection: FC<CaseStudiesSectionProps> = ({
-	setCasePageIndex,
-	casePageIndex
-}) => {
+export const CaseStudiesSection: FC = () => {
+	const [casePageIndex, setCasePageIndex] = useState(0)
 	const nextPage = () => {
 		if (casePageIndex === caseStudies.length - 1) {
 			setCasePageIndex(0)

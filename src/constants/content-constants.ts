@@ -51,6 +51,12 @@ export const navLinks = [
 	}
 ]
 
+export interface CardService {
+	id: string
+	title: string
+	text: string
+}
+
 export const services = [
 	{
 		id: 'service-1',
@@ -78,6 +84,13 @@ export const services = [
 		text: 'User-centric design is at the heart of what we do. Our UI development and UX-UI design services combine aesthetic appeal with intuitive functionality, creating interfaces that captivate users and enhance their overall experience.'
 	}
 ]
+
+export interface CardAbout {
+	id: string
+	src: string
+	title: string
+	text: string
+}
 
 export const about = [
 	{

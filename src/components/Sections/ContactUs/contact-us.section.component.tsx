@@ -6,8 +6,8 @@ import { UserData } from '../../../api/dto/usetData.dto'
 import { useSubmitUserData } from '../../../api/user/useSubmitUserData'
 import { AiOutlineArrowUp } from 'react-icons/ai'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
-import { BiError } from 'react-icons/bi'
 import { ContactForm } from './contact-form.component'
+import { RiErrorWarningFill } from 'react-icons/ri'
 
 export const ContactUsSection = () => {
 	const { mutate, isError, isSuccess, isLoading } = useSubmitUserData()
@@ -40,7 +40,7 @@ export const ContactUsSection = () => {
 				</div>
 				{isError && (
 					<div className='flex items-center justify-center gap-2 py-[180px] md:py-0'>
-						<BiError size={24} className='text-rose-600' />
+						<RiErrorWarningFill size={24} className='text-rose-600' />
 						<p>Oops, something went wrong. Please try again later!</p>
 					</div>
 				)}

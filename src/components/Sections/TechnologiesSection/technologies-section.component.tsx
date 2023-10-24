@@ -43,17 +43,17 @@ export const TechnologiesSection = () => {
 				<motion.div className='cursor-grab overflow-x-scroll'>
 					<motion.div className='grid w-[100%] grid-rows-2 gap-4'>
 						<div className='flex  justify-between gap-4'>
-							<TechnologiesCard cards={cardsFirstLine} />
+							<TechnologiesCards cards={cardsFirstLine} />
 						</div>
 						<div className='flex justify-between gap-4'>
-							<TechnologiesCard cards={cardsSecondLine} />
+							<TechnologiesCards cards={cardsSecondLine} />
 						</div>
 					</motion.div>
 				</motion.div>
 			</motion.div>
 
 			<div className='hidden w-[100%] grid-cols-8 gap-4 sm:grid  sm:grid-cols-4 lg:grid-cols-6 lg:gap-6 '>
-				<TechnologiesCard cards={technologiesCards} />
+				<TechnologiesCards cards={technologiesCards} />
 			</div>
 			<DiscoverAnchorButton style='flex lg:hidden' />
 		</section>
@@ -65,13 +65,13 @@ interface Cards {
 	svg: string
 	title: string
 }
-const TechnologiesCard = ({ cards }: { cards: Cards[] }) => {
+const TechnologiesCards = ({ cards }: { cards: Cards[] }) => {
 	return (
 		<>
 			{cards.map(card => (
 				<div
 					key={card.id}
-					className={`flex min-w-[180px] flex-col items-start justify-center gap-2 rounded-lg bg-light-grey p-6`}
+					className={`flex min-w-[180px] flex-col items-start justify-center gap-2 rounded-lg bg-light-grey p-6 sm:min-w-fit`}
 				>
 					<img
 						src={card.svg}

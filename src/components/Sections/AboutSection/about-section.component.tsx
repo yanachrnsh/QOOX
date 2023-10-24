@@ -2,7 +2,8 @@ import { Card } from '../../index'
 import { styles, card } from '../../../constants/styles-constants'
 import {
 	about,
-	aboutTitleParagraph
+	aboutTitleParagraph,
+	CardAbout
 } from '../../../constants/content-constants'
 import { TitleParagraph } from '../../TitleParagraph/title-paragraph.component'
 
@@ -25,7 +26,7 @@ export const AboutSection = () => {
 			</div>
 
 			<div className='grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6'>
-				{about.map((item: any) => (
+				{about.map((item: CardAbout) => (
 					<Card
 						src={item.src}
 						title={item.title}

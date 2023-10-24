@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { useScroll, motion } from 'framer-motion'
 import { Title, Card } from '../../index'
 import { layout, card, styles } from '../../../constants/styles-constants'
-import { services } from '../../../constants/content-constants'
+import { services, CardService } from '../../../constants/content-constants'
 import { DiscoverAnchorButton } from '../../AnchorButton/discover-anchor-button.component'
 
 export const ServicesSection = () => {
@@ -38,7 +38,7 @@ export const ServicesSection = () => {
 const ServicesCards = () => {
 	return (
 		<>
-			{services.map((service: any) => (
+			{services.map((service: CardService) => (
 				<Card
 					key={service.id}
 					cardStyles={{
